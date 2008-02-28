@@ -1,0 +1,41 @@
+== Wikipedia
+
+Allows you to get wikipedia content through their API. This uses the
+alpha API, not the deprecated query.php API type
+
+
+== Examples
+
+page = Wikipedia.find( 'Getting Things Done' )
+
+=> #<Wikipedia:Page>
+
+page.title 
+
+=> 'Getting Things Done'
+
+page.content
+
+=> # all the wiki markup appears here...
+
+== Configuration
+
+This is by default configured like this
+
+Wikipedia::Configure {
+  domain 'en.wikipedia.org'
+  path   'w/api.php'
+  action 'query'
+  properties 'content'
+}
+
+
+== Running specs
+
+if you have rspec >= 1.1.3 installed just type in
+
+rake spec
+
+Thanks!
+
+Copyright (c) 2008 [Cyril David], released under the MIT license
