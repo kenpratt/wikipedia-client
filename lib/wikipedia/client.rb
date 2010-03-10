@@ -19,7 +19,7 @@ module Wikipedia
     
     def request( page )
       require 'open-uri'
-      URI.parse( url_for(page) ).read
+      URI.parse( url_for(page) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
     end
     
     protected 
