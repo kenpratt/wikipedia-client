@@ -3,30 +3,42 @@ module Wikipedia
     # see http://en.wikipedia.org/w/api.php
     BASE_URL = "http://:domain/:path?action=:action&format=json"
 
-    # Sample API queries:
-    # http://en.wikipedia.org/w/api.php?action=query&format=xml&prop=revisions%7Clinks%7Cimages%7Ccategories&rvprop=content&titles=Flower_%28video_game%29
-    # http://en.wikipedia.org/w/api.php?action=query&format=xml&prop=imageinfo&iiprop=url&titles=File:Flower.png
-
     attr_accessor :follow_redirects
 
     def initialize
       self.follow_redirects = true
     end
 
-    def find( title )
+    def find( title, options = {} )
       title = Url.new(title).title rescue title
-      page = Page.new( request_page( title ) )
+      page = Page.new( request_page( title, options ) )
       while follow_redirects and page.redirect?
-        page = Page.new( request_page( page.redirect_title ))
+        page = Page.new( request_page( page.redirect_title, options ))
       end
       page
     end
 
+    def find_image( title, options = {} )
+      title = Url.new(title).title rescue title
+      Page.new( request_image( title, options ) )
+    end
+
+    # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions%7Clinks%7Cimages%7Ccategories&rvprop=content&titles=Flower%20(video%20game)
     def request_page( title, options = {} )
       request( {
                  :action => "query",
-                 :prop => "revisions",
+                 :prop => %w{ revisions links images categories },
                  :rvprop => "content",
+                 :titles => title
+               }.merge( options ) )
+    end
+
+    # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&titles=File:Flower.png
+    def request_image( title, options = {} )
+      request( {
+                 :action => "query",
+                 :prop => "imageinfo",
+                 :iiprop => "url",
                  :titles => title
                }.merge( options ) )
     end

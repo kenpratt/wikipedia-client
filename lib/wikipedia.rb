@@ -12,8 +12,10 @@ module Wikipedia
   # client.find('Rails')
   #
   def self.find( page )
-    @client ||= Wikipedia::Client.new
-    @client.find( page )
+    client.find( page )
+  end
+  def self.find_image( title )
+    client.find_image( title )
   end
   
   def self.Configure(&block)
@@ -24,4 +26,10 @@ module Wikipedia
     domain 'en.wikipedia.org'
     path   'w/api.php'
   }
+
+  private
+
+  def self.client
+    @client ||= Wikipedia::Client.new
+  end
 end

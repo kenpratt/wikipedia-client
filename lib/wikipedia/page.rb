@@ -22,6 +22,23 @@ module Wikipedia
     def title
       @data['query']['pages'].values.first['title']
     end
-  end
 
+    def images
+      @data['query']['pages'].values.first['images']
+    end
+
+    def image_url
+      @data['query']['pages'].values.first['imageinfo'].first['url']
+    end
+
+    def image_urls
+      images.map do |i|
+        Wikipedia.find_image( i['title'] ).image_url
+      end
+    end
+
+    def raw_data
+      @data
+    end
+  end
 end
