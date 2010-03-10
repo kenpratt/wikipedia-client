@@ -6,17 +6,35 @@ alpha API, not the deprecated query.php API type
 
 == Examples
 
+require 'wikipedia'
 page = Wikipedia.find( 'Getting Things Done' )
 
 => #<Wikipedia:Page>
 
-page.title 
+page.title
 
 => 'Getting Things Done'
 
 page.content
 
 => # all the wiki markup appears here...
+
+page.categories
+
+=> [..., "Category:Self-help books", ...]
+
+page.links
+
+=> [..., "Business", "Cult following", ...]
+
+page.images
+
+=> ["File:Getting Things Done.jpg", ...]
+
+page.image_urls
+
+=> ["http://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg", ...]]
+
 
 == Configuration
 
@@ -25,9 +43,29 @@ This is by default configured like this
 Wikipedia::Configure {
   domain 'en.wikipedia.org'
   path   'w/api.php'
-  action 'query'
-  properties 'content'
 }
+
+
+== Advanced
+
+See the API spec at http://en.wikipedia.org/w/api.php
+
+If you need data that is not already present, you can override
+parameters.
+
+For example, to retrieve only the page info:
+
+page = Wikipedia.find( 'Getting Things Done', :prop => "info" )
+
+page.title
+
+=> "Getting Things Done"
+
+page.raw_data
+
+=> {"query"=>{"pages"=>{"959928"=>{"pageid"=>959928, "ns"=>0,
+"title"=>"Getting Things Done", "touched"=>"2010-03-10T00:04:09Z",
+"lastrevid"=>348481810, "counter"=>0, "length"=>7891}}}}
 
 
 == Running specs
@@ -39,3 +77,5 @@ rake spec
 Thanks!
 
 Copyright (c) 2008 [Cyril David], released under the MIT license
+
+Adopted by Ken Pratt (ken@kenpratt.net)
