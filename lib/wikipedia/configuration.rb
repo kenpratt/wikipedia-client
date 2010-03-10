@@ -20,6 +20,6 @@ module Wikipedia
       instance.send(directive)
     end
     
-    directives :domain, :path, :action, :properties
+    directives :domain, :path
   end
 end

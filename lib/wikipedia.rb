@@ -23,7 +23,5 @@ module Wikipedia
   Configure {
     domain 'en.wikipedia.org'
     path   'w/api.php'
-    action 'query'
-    properties 'content'
   }
 end
