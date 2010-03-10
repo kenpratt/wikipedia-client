@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 require 'json'
 
-describe Wikipedia::Client, ".find (mocked)" do
+describe Wikipedia::Client, ".find page (mocked)" do
   before(:each) do
     @client = Wikipedia::Client.new
     @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
@@ -26,9 +26,50 @@ describe Wikipedia::Client, ".find (mocked)" do
     @page = @client.find('Edsger_Dijkstra')
     @page.title.should == 'Edsger W. Dijkstra'
   end
+
+  it "should return a page with categories" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+  end
+
+  it "should return a page with links" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+  end
+
+  it "should return a page with images" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+  end
 end
 
-describe Wikipedia::Client, ".find (Edsger_Dijkstra)" do
+describe Wikipedia::Client, ".find image (mocked)" do
+  before(:each) do
+    @client = Wikipedia::Client.new
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/File_Edsger_Wybe_Dijkstra_jpg.json')
+    @client.should_receive(:request).and_return(@edsger_dijkstra)
+  end
+
+  it "should execute a request for the image" do
+    @client.find_image('File:Edsger Wybe Dijkstra.jpg')
+  end
+
+  it "should return a page object" do
+    @client.find_image('File:Edsger Wybe Dijkstra.jpg').should be_an_instance_of(Wikipedia::Page)
+  end
+
+  it "should return a page with a title of File:Edsger Wybe Dijkstra.jpg" do
+    @page = @client.find_image('File:Edsger Wybe Dijkstra.jpg')
+    @page.title.should == 'File:Edsger Wybe Dijkstra.jpg'
+  end
+
+  it "should return a page with an image url" do
+    @page = @client.find_image('File:Edsger Wybe Dijkstra.jpg')
+    @page.image_url.should == "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"
+  end
+end
+
+describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
   before(:each) do
     @client = Wikipedia::Client.new
     @client.follow_redirects = false
@@ -43,5 +84,11 @@ describe Wikipedia::Client, ".find (Edsger_Dijkstra)" do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     @page.should_not be_redirect
+  end
+
+  it "should collect the image urls" do
+    @client.follow_redirects = true
+    @page = @client.find('Edsger Dijkstra')
+    @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/c/cf/Copyright-problem.svg", "http://upload.wikimedia.org/wikipedia/commons/8/85/Dijkstra.ogg", "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "http://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "http://upload.wikimedia.org/wikipedia/commons/d/d6/Wikiquote-logo-en.svg"]
   end
 end
