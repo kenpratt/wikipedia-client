@@ -5,12 +5,16 @@ module Wikipedia
       @data = JSON::load(json)
     end
 
+    def page
+      @data['query']['pages'].values.first
+    end
+
     def content
-      @data['query']['pages'].values.first['revisions'].first.values.first
+      page['revisions'].first.values.first if page['revisions']
     end
 
     def redirect?
-      content.match(/\#REDIRECT\s+\[\[(.*?)\]\]/)
+      content && content.match(/\#REDIRECT\s+\[\[(.*?)\]\]/)
     end
 
     def redirect_title
@@ -20,29 +24,29 @@ module Wikipedia
     end
 
     def title
-      @data['query']['pages'].values.first['title']
+      page['title']
     end
 
     def categories
-      @data['query']['pages'].values.first['categories'].map {|c| c['title'] }
+      page['categories'].map {|c| c['title'] } if page['categories']
     end
 
     def links
-      @data['query']['pages'].values.first['links'].map {|c| c['title'] }
+      page['links'].map {|c| c['title'] } if page['links']
     end
 
     def images
-      @data['query']['pages'].values.first['images'].map {|c| c['title'] }
+      page['images'].map {|c| c['title'] } if page['images']
     end
 
     def image_url
-      @data['query']['pages'].values.first['imageinfo'].first['url']
+      page['imageinfo'].first['url'] if page['imageinfo']
     end
 
     def image_urls
       images.map do |title|
         Wikipedia.find_image( title ).image_url
-      end
+      end if images
     end
 
     def raw_data

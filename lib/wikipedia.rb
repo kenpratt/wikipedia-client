@@ -11,11 +11,11 @@ module Wikipedia
   # client = Wikipedia::Client.new
   # client.find('Rails')
   #
-  def self.find( page )
-    client.find( page )
+  def self.find( page, options = {} )
+    client.find( page, options )
   end
-  def self.find_image( title )
-    client.find_image( title )
+  def self.find_image( title, options = {} )
+    client.find_image( title, options )
   end
   
   def self.Configure(&block)
