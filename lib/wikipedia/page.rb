@@ -84,10 +84,12 @@ module Wikipedia
         # strip citations, redirects, etc
         s.gsub!(/\{\{cite[^\}]+\}\}/i, '')
         s.gsub!(/\{\{redirect[^\}]+\}\}/i, '')
+        s.gsub!(/\{\{ipa[^\}]+\}\}/i, '')
 
         # misc
         s.gsub!("{{featured article}}", '')
         s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
+        s.gsub!('  ', ' ')
 
         s.strip
       end

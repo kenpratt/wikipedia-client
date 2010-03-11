@@ -1,0 +1,28 @@
+{{Infobox Film | 
+ name     = How to Lose Friends and Alienate People |
+ image          = Lose friends and alienate people.jpg |
+ caption        = |
+ director       = [[Robert B. Weide]]|
+ producer       = [[Stephen Woolley]]<br>Elizabeth Karlsen|
+ writer         = [[Peter Straughan]]<br>[[Toby Young]] (memoir)|
+ starring       = [[Simon Pegg]]<br>[[Kirsten Dunst]]<br>[[Megan Fox]]<br>[[Danny Huston]]<br>[[Gillian Anderson]]<br> and<br> [[Jeff Bridges]]|
+| music          = [[David Arnold]]
+| cinematography = [[Oliver Stapleton]]
+| editing        = [[David Freeman]]
+| distributor    = [[Channel Four Films]] <small>(UK)</small><br>[[Paramount Pictures]] <small>(UK/AUS)</small><br>[[Metro-Goldwyn-Mayer]] <small>(US)</small>
+| released       = October 3, 2008
+| runtime        = 110 minutes
+| country        = {{filmUK}}<br>{{filmUS}}
+| language       = [[English language|English]] 
+| budget         = $28 million<ref name="NY"/> 
+| gross          = $19,141,282 (worldwide)<ref name="mojo">{{mojo title|id=howtolosefriends|title=How to Lose Friends & Alienate People}}</ref>
+| preceded_by    = 
+| followed_by    = 
+| website        = http://www.how2losefriends.com/
+| amg_id         = 
+| imdb_id        = 0455538
+}}
+
+'''''How to Lose Friends & Alienate People''''' is a [[2008 in film|2008]] [[comedy film]] based upon [[United Kingdom|British]] writer [[Toby Young]]'s [[2001 in literature|2001]] [[How to Lose Friends and Alienate People (memoir)|memoir of the same name]]. The film follows a similar storyline, about his five year struggle to make it in the [[United States]] after employment at ''Sharps Magazine''.<ref>{{cite news | title = How to Lose Friends & Alienate People | url = http://entertainment.timesonline.co.uk/tol/arts_and_entertainment/film/film_reviews/article4867613.ece | first = Cosmo | last = Landesman | publisher = ''[[The Times]]'' | date = 2008-10-05 | accessdate = 2008-10-05 | location=London}}</ref> The names of the magazine and people Young came into contact with during the time were changed for the film adaptation. The film version (adapted by [[Peter Straughan]]) is a highly fictionalized account, and differs greatly from the work it was built upon. It was distributed in the [[United States]] by [[Metro-Goldwyn-Mayer]], and in the [[United Kingdom]] by [[Paramount Pictures]] and [[Channel Four Films]] (the former also distributed in [[Australia]]).
+
+The film was directed by [[Robert B. Weide]] and stars [[Simon Pegg]] as Sidney Young, [[Kirsten Dunst]] as Alison Olsen, [[Jeff Bridges]] as Clayton Harding, [[Danny Huston]] as Lawrence Maddox, [[Gillian Anderson]] as Eleanor Johnson, and [[Megan Fox]] as Sophie Maes. The cast also includes [[Max Minghella]] and [[Margo Stilley]].  ''How to Lose Friends And Alienate People'' was released in both the United States and United Kingdom on October 3, 2008.

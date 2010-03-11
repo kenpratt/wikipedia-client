@@ -1,0 +1,18 @@
+{{Redirect|MGM}}
+{{Infobox company
+ |company_name  = Metro-Goldwyn-Mayer<br><small>Metro-Goldwyn-Mayer, Inc.</small><br><small>Metro-Goldwyn-Mayer Studios, Inc.</small><br><small>Metro-Goldwyn-Mayer Pictures, Inc.</small> | |
+ |company_logo  = [[Image:MGM logo.png|200px]]
+ |company_type  = [[Privately held company|Private]]
+ |owner         = [[Sony Corporation of America]] <br />[[Comcast]]<br />[[Providence Equity Partners]] <br />[[TPG Capital, L.P.]] <br />[[DLJ Merchant Banking Partners]] <br />[[Quadrangle Group]]<ref>There is confusion over Comcast's ownership of MGM.  At least one source says Comcast sold its interest. See:  [http://www.variety.com/article/VR1118007567.html?categoryid=13&cs=1 McNary, Dave. "Can Cooper Turn Around MGM?"] ''Variety.'' August 21, 2009. Other sources, published on or around the same date, say Comcast still owns part of MGM. See: [http://www.nytimes.com/2009/08/19/business/media/19mgm.html Barnes, Brooks. "MGM Replaces Chief Executive."] ''[[The New York Times]].'' August 18, 2009; [http://www.mediaweek.co.uk/News/MostEmailed/927910/Sloan-ousted-MGM-boss/ O'Carroll, Tristan. "Sloan Ousted as MGM Boss."] ''Media Week.'' August 19, 2009; [http://www.latimes.com/business/la-fi-ct-mgm-sloan19-2009aug19,0,7213585.story Eller, Claudia. "Harry Sloan Out as CEO at MGM."] ''[[Los Angeles Times]].'' August 19, 2009; [http://online.wsj.com/article/SB125061438206040461.html Lattman, Peter and Schuker, Lauren A.E. "MGM Recasts Leadership in Bid to Dig Out of Debt."] ''[[Wall Street Journal]].'' August 19, 2009; [http://www.ft.com/cms/s/0/f0de3aba-8c56-11de-b14f-00144feabdc0.html Li, Kenneth. "MGM Installs New Restructuring Team."] ''[[Financial Times]].'' August 19, 2009; [http://www.google.com/hostednews/ap/article/ALeqM5iJzFImRYd-tFdnhrCxL7e0GAyC6AD9A5KL6G0 Nakashima, Ryan. "Metro-Goldwyn-Mayer Studio Ousts Sloan as CEO."] ''Associated Press.'' August 19, 2009.</ref>
+| foundation     =  April 16, 1924<ref name="Eyman" />
+| location       = [[Century City, Los Angeles, California]], [[United States|U.S.]]
+ |key_people    = Harry Sloan, [[Chairman]]<ref name="Sloan" /><br>Mary Parent, Bedi A. Singh, & Stephen F. Cooper, Office of [[CEO]]<ref name="Sloan" />
+ |num_employees = 400 (as of 2006)<ref>[http://www.hoovers.com/MGM/--ID__47981--/free-co-factsheet.xhtml "Metro-Goldwyn-Mayer Inc."] ''[[Hoover's]].'' No date. Accessed 2009-08-22.</ref>
+ |industry      = [[Motion picture]]s
+ |products      = [[Motion picture]]s<br />[[Television program]]s
+ |revenue       =
+ |parent        = [[MGM Holdings|MGM Holdings, Inc.]]
+ |homepage      = http://www.mgm.com
+}}
+
+'''Metro-Goldwyn-Mayer Inc.''', or '''MGM''', is an [[United States|American]] [[Mass media|media]] company, involved primarily in the production and distribution of [[film]]s and [[television]] programs. MGM was founded in 1924 when the entertainment entrepreneur [[Marcus Loew]] gained control of  [[Metro Pictures]], [[Goldwyn Pictures Corporation]] and [[Louis B. Mayer Pictures]].<ref name="Eyman">Eyman, Scott. ''Lion of Hollywood: The Life and Legend of Louis B. Mayer.'' New York: Simon and Schuster, 2005. ISBN 0743204816</ref><ref name="Balio">Balio, Tino. ''The American Film Industry.'' 2d rev. ed. Madison, Wisc.: University of Wisconsin Press, 1985. ISBN 0299098745</ref>

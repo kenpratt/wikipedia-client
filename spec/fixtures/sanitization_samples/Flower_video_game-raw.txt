@@ -1,0 +1,25 @@
+{{Infobox VG
+|title= Flower
+|image= [[File:Flower.png|alt=A trail of red, yellow and white petals arc over a brown-and-green grassy hill. The sun is in the upper left of the image, set in a clear blue sky, and the word "flower" is overlaid across the image, with the top of the "f" sprouting orange petals as if it were a flower itself.]]
+|caption=
+|developer= [[thatgamecompany]]
+|publisher= [[Sony Computer Entertainment]]
+|distributor= Sony Computer Entertainment
+|designer= [[Jenova Chen]]
+|composer= Vincent Diamante
+|series=
+|engine=
+|version= 1.01
+|released=February 12, 2009
+|genre= [[Poetry|Poetic]] [[Adventure game|Adventure]]<ref name="Genre"/>
+|modes= [[Single-player]]
+|ratings= {{vgratings|ESRB=E}} {{vgratings|PEGI=3+}}
+|platforms= [[PlayStation 3]]
+|media= [[Download]]
+|requirements=
+|input= [[Gamepad]]
+|resolution=[[1080p]]
+}}
+'''''Flower''''' is a [[PlayStation 3]] [[video game]]. It was developed by [[thatgamecompany]], designed by [[Jenova Chen]], and announced at the 2007 [[Tokyo Game Show]]. ''Flower'' was released on February 12, 2009, via the [[PlayStation Network]]. The game was intended as a "[[spiritual successor]]" to ''[[flOw|Flow]]'', a previous title by Chen and thatgamecompany. In it, the player controls the wind, blowing a flower [[petal]] through the air using the movement of the game controller. Flying close to flowers results in the player's petal being followed by other flower petals. Approaching flowers may also have side-effects on the game world, such as bringing vibrant color to previously dead fields or activating stationary windmills. The game features no text or dialogue, forming a narrative arc primarily through visual representation and emotional cues.
+
+''Flower'' was primarily intended to provoke positive emotions in the player, rather than to be a challenging and "fun" game. This focus was sparked by Chen, who felt that the primary purpose of entertainment products like video games was the feelings that they evoked in the audience, and that the emotional range of most games was very limited. The team viewed their efforts as creating a work of art, removing gameplay elements and mechanics that were not provoking the desired response in the players. The music, composed by Vincent Diamante, dynamically responds to the player's actions and corresponds with the emotional cues in the game. ''Flower'' was a critical success, to the surprise of the developers. Reviewers praised the game's music, visuals, and gameplay, calling it a unique and compelling emotional experience. It was named the "best independent game of 2009" at the [[Spike Video Game Awards]] and by ''[[Playboy]]'', and won the "Casual Game of the Year" award by the [[Academy of Interactive Arts and Sciences]].

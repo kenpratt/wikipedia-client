@@ -1,0 +1,19 @@
+{{featured article}}
+{{Infobox Monarch
+| image=[[Image:Ceawlin name.gif|alt=The word Ceaulin, handwritten in old lettering.]]
+| caption=Ceawlin's name as it appears in in the ''Anglo-Saxon Chronicle'', as Ceaulin
+| name=Ceawlin
+| title=King of Wessex<br/>Bretwalda of southern Britain
+| reign=560&ndash;592
+| predecessor=[[Cynric of Wessex|Cynric]]
+| successor=[[Ceol of Wessex|Ceol]]
+| date of death = {{death-date|0593|593}} 
+| father=[[Cynric of Wessex|Cynric]]
+| issue=[[Cuthwine]]
+}}
+
+'''Ceawlin''' (also spelled '''Ceaulin''' and '''Caelin''', died ''c.'' 593) was a King of [[Wessex]]. He may have been the son of [[Cynric of Wessex]] and the grandson of [[Cerdic of Wessex]], whom the ''[[Anglo-Saxon Chronicle]]'' represents as the leader of the first group of [[Saxons]] to come to the land which later became [[Wessex]]. Ceawlin was active during the last years of the [[Anglo-Saxons|Anglo-Saxon]] invasion, with little of southern England remaining in the control of the native [[Britons (historic)|Britons]] by the time of his death.
+
+The chronology of Ceawlin's life is highly uncertain. The historical accuracy and dating of many of the events in the later ''Anglo-Saxon Chronicle'' have been called into question, and his reign is variously listed as lasting seven, seventeen, or thirty-two years.<ref>Stenton, p. 29, accepts the date given for Ceawlin's accession in the Anglo-Saxon Chronicle of 560, but Barbara Yorke in her online DNB article on Ceawlin states that his reign seems to have been deliberately lengthened.</ref> The Chronicle records several battles of Ceawlin's between the years 556 and 592, including the first record of a battle between different groups of Anglo-Saxons, and indicates that under Ceawlin Wessex acquired significant territory, some of which was later to be lost to other [[Heptarchy|Anglo-Saxon kingdoms]].  Ceawlin is also named as one of the eight "''[[bretwalda]]s''", a title given in the Chronicle to eight rulers who had overlordship over southern Britain, although the extent of Ceawlin's control is not known.
+
+Ceawlin died in 593, having been deposed the year before, possibly by his successor, [[Ceol of Wessex|Ceol]].  He is recorded in various sources as having two sons, Cutha and [[Cuthwine]], but the genealogies in which this information is found are known to be unreliable.

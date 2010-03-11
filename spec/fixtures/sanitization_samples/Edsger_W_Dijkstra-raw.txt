@@ -1,0 +1,26 @@
+{{Infobox_Scientist
+| name                    = Edsger Wybe Dijkstra
+| image                   = Edsger Wybe Dijkstra.jpg
+| image_width             = 150px
+| caption                 = 
+| birth_date              = {{Birth date|1930|05|11}}
+| birth_place             = [[Rotterdam]], [[Netherlands]]
+| death_date              = {{death date and age|2002|8|6|1930|05|11}}
+| death_place             = [[Nuenen]], [[Netherlands]]
+| residence               = 
+| citizenship             =
+| nationality             = 
+| ethnicity               =
+| field                   = [[Computer science]]
+| work_institutions       = [[Centrum Wiskunde & Informatica|Mathematisch Centrum]]<br>[[Eindhoven University of Technology]]
+<br>[[University of Texas at Austin|The University of Texas at Austin]]
+| alma_mater              = 
+| doctoral_advisor        = [[Adriaan van Wijngaarden]]
+| doctoral_students       =  [[Nico Habermann]]</br>[[Martin Rem]]</br>[[David Naumann]]</br>[[Cornelis Hemerik]]</br>[[Jan Tijmen Udding]]</br>[[Jan L. A. van de Snepscheut|Johannes van de Snepscheut]]</br>[[Antonetta van Gasteren]]
+| known_for               = [[Dijkstra's algorithm]]<br>[[Structured programming]]<br>[[THE multiprogramming system]]<br>[[Semaphore (programming)|Semaphore]]
+| prizes                  = [[Turing Award]]<br>[[Association for Computing Machinery]]
+| footnotes               = 
+}}
+'''Edsger Wybe Dijkstra''' (May 11, 1930 – August 6, 2002; {{IPA-nl|ˈɛtsxər ˈwibə ˈdɛɪkstra|-|Dijkstra.ogg}}) was a [[Netherlands|Dutch]] [[computer science|computer scientist]]. He received the 1972  [[Turing Award]]  for fundamental contributions to developing programming languages, and was the Schlumberger Centennial Chair of Computer Sciences at The [[University of Texas at Austin]] from 1984 until 2000.
+
+Shortly before his death in 2002, he received the [[Association for Computing Machinery|ACM]] PODC Influential Paper Award in distributed computing for his work on [[self-stabilization]] of program computation. This annual award was renamed the [[Dijkstra Prize]] the following year, in his honour.

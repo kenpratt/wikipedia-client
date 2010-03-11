@@ -1,0 +1,35 @@
+{{Taxobox
+| name = Superb Fairywren
+| status = LC
+| status_system = iucn3.1
+| status_ref =<ref>{{IUCN2006|assessors=[[BirdLife International]]|year=2004|id=50687|title=Malurus cyaneus|downloaded=9 May 2006}}</ref>
+| image = Male superb fairy wren.jpg
+| image_width = 200px
+| image_caption = Male in breeding plumage<br>subspecies ''cyaneus''
+|image_alt=a small long-tailed vivid pale blue and black bird perched among some grasslike vegetation
+| image2 = Female superb fairy wren-edit1.jpg
+| image2_width = 200px
+| image2_caption = Female – Victorian High Country
+|image2_alt=a small pale brown bird with a gaping orange beak, on twiglike foliage
+| regnum = [[Animal]]ia
+| phylum = [[Chordate|Chordata]]
+| classis = [[Bird|Aves]]
+| ordo = [[Passeriformes]]
+| familia = [[Maluridae]]
+| genus = ''[[Malurus]]''
+| species = '''''M. cyaneus'''''
+| binomial = ''Malurus cyaneus''
+| binomial_authority = Ellis, 1782
+| range_map=Dist blue wren.png
+| range_map_width=200px
+| range_map_caption= Superb Fairywren range<div>{{Legend2|#2BA7D7|''M. c. cyanochlamys''|border=1px solid #aaa}}; {{Legend2|#130882|''M. c. cyaneus''|border=1px solid #aaa}}</div>
+| subdivision_ranks=[[Subspecies]]
+| subdivision=
+* ''M. c. cyaneus'' 
+* ''M. c. cyanochlamys'' <small>Sharpe, 1881</small>
+}}
+The '''Superb Fairywren''' (''Malurus cyaneus''), also known as '''Superb Blue-wren''' or colloquially as '''Blue wren''', is a [[passerine]] [[bird]] of the [[Maluridae]] family, common and familiar across south-eastern Australia.  The species is sedentary and [[Territory (animal)|territorial]], also exhibiting a high degree of [[sexual dimorphism]]; the male in breeding plumage has a striking bright blue forehead, ear [[covert (feather)|coverts]], mantle, and tail, with a black mask and black or dark blue throat. Non-breeding males, females and juveniles are predominantly grey-brown in colour; this gave the early impression that males were polygamous as all dull-coloured birds were taken for females. Two subspecies are recognised: the larger and darker [[Tasmania]]n form ''cyaneus'' and the smaller and paler mainland form ''cyanochlamys''.
+
+Like other fairywrens, the Superb Fairywren is notable for several peculiar behavioural characteristics; the birds are socially [[monogamous]] and sexually [[promiscuous]], meaning that although they form pairs between one male and one female, each partner will mate with other individuals and even assist in raising the young from such pairings. Male wrens pluck yellow petals and display them to females as part of a courtship display. 
+
+The Superb Fairywren can be found in almost any area that has at least a little dense undergrowth for shelter, including grasslands with scattered shrubs, moderately thick forest, woodland, heaths, and domestic [[garden]]s. It has adapted well to the urban environment and is common in suburban Sydney, [[Canberra]] and [[Melbourne]]. The Superb Fairywren mainly eats insects and supplements its diet with seeds.
