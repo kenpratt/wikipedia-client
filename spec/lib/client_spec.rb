@@ -89,6 +89,6 @@ describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
   it "should collect the image urls" do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
-    @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/c/cf/Copyright-problem.svg", "http://upload.wikimedia.org/wikipedia/commons/8/85/Dijkstra.ogg", "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "http://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "http://upload.wikimedia.org/wikipedia/commons/d/d6/Wikiquote-logo-en.svg"]
+    @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"]
   end
 end

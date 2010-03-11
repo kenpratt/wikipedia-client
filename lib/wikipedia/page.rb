@@ -44,9 +44,12 @@ module Wikipedia
     end
 
     def image_urls
-      images.map do |title|
-        Wikipedia.find_image( title ).image_url
-      end if images
+      if list = images
+        filtered = list.select {|i| i =~ /^file:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
+        filtered.map do |title|
+          Wikipedia.find_image( title ).image_url
+        end
+      end
     end
 
     def raw_data
