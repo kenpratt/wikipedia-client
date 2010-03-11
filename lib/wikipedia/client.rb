@@ -67,13 +67,22 @@ module Wikipedia
             url << "&#{key}=#{value}"
           end
         end
-        URI.encode( url )
+        url
       end
 
       def urlify_value( val )
         case val
         when Array
-          val.flatten.join( '|' )
+          encode( val.flatten.join( '|' ) )
+        else
+          encode( val )
+        end
+      end
+
+      def encode( val )
+        case val
+        when String
+          URI.encode( val ).gsub( '&', '%26' )
         else
           val
         end

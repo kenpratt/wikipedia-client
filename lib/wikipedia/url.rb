@@ -8,7 +8,7 @@ module Wikipedia
       return @title if @title
       
       uri     = URI.parse( @wiki_url )
-      @title  = uri.path.split('/').last
+      @title  = URI.decode( uri.path.split('/').last )
     end
   end
 end
