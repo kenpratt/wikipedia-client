@@ -43,6 +43,20 @@ describe Wikipedia::Client, ".find page (mocked)" do
   end
 end
 
+describe Wikipedia::Client, ".find page with one section (mocked)" do
+  before(:each) do
+    @client = Wikipedia::Client.new
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra_section_0.json')
+    @edsger_content = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_sanitized_intro.txt').strip
+    @client.should_receive(:request).and_return(@edsger_dijkstra)
+  end
+
+  it "should have the correct sanitized intro" do
+    @page = @client.find('Edsger_Dijkstra', :rvsection => 0)
+    @page.sanitized_content.should == @edsger_content
+  end
+end
+
 describe Wikipedia::Client, ".find image (mocked)" do
   before(:each) do
     @client = Wikipedia::Client.new

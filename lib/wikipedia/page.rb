@@ -2,6 +2,7 @@ module Wikipedia
   class Page
     def initialize(json)
       require 'json'
+      @json = json
       @data = JSON::load(json)
     end
 
@@ -11,6 +12,10 @@ module Wikipedia
 
     def content
       page['revisions'].first.values.first if page['revisions']
+    end
+
+    def sanitized_content
+      self.class.sanitize(content)
     end
 
     def redirect?
@@ -54,6 +59,38 @@ module Wikipedia
 
     def raw_data
       @data
+    end
+
+    def json
+      @json
+    end
+
+    def self.sanitize( s )
+      if s
+        s = s.dup
+
+        # strip info box
+        s.sub!(/^\{\{\s*(infobox|taxobox)[\s\S]+?\n\}\}\n/i, '')
+
+        # strip internal links
+        s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
+        s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
+
+        # convert bold/italic to html
+        s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
+        s.gsub!(/'''(.+?)'''/, '<b>\1</b>')
+        s.gsub!(/''(.+?)''/, '<i>\1</i>')
+
+        # strip citations, redirects, etc
+        s.gsub!(/\{\{cite[^\}]+\}\}/i, '')
+        s.gsub!(/\{\{redirect[^\}]+\}\}/i, '')
+
+        # misc
+        s.gsub!("{{featured article}}", '')
+        s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
+
+        s.strip
+      end
     end
   end
 end
