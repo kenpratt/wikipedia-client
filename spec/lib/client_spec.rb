@@ -8,20 +8,20 @@ describe Wikipedia::Client, ".find page (mocked)" do
     @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
     @client.should_receive(:request).and_return(@edsger_dijkstra)
   end
-  
+
   it "should execute a request for the page" do
     @client.find('Edsger_Dijkstra')
   end
-  
+
   it "should return a page object" do
     @client.find('Edsger_Dijkstra').should be_an_instance_of(Wikipedia::Page)
   end
-  
+
   it "should return a page with the correct content" do
     @page = @client.find('Edsger_Dijkstra')
     @page.content.should == @edsger_content
   end
-  
+
   it "should return a page with a title of Edsger W. Dijkstra" do
     @page = @client.find('Edsger_Dijkstra')
     @page.title.should == 'Edsger W. Dijkstra'
