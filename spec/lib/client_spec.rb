@@ -47,7 +47,7 @@ describe Wikipedia::Client, ".find page with one section (mocked)" do
   before(:each) do
     @client = Wikipedia::Client.new
     @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra_section_0.json')
-    @edsger_content = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_sanitized_intro.txt').strip
+    @edsger_content = File.read(File.dirname(__FILE__) + '/../fixtures/sanitization_samples/Edsger_W_Dijkstra-sanitized.txt').strip
     @client.should_receive(:request).and_return(@edsger_dijkstra)
   end
 

@@ -91,8 +91,15 @@ module Wikipedia
         s.gsub!(/{{[^}]+}}/, '')
         s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
         s.gsub!('  ', ' ')
+        s.strip!
 
-        s.strip
+        # create paragraphs
+        sections = s.split("\n\n")
+        if sections.size > 1
+          s = sections.map {|s| "<p>#{s.strip}</p>" }.join("\n")
+        end
+
+        s
       end
     end
   end
