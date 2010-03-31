@@ -1,0 +1,104 @@
+{{currentevent}}
+{{Redirect|LHC}}
+{{Coord|46|14|N|06|03|E|type:landmark|display=title}}<!--to verify-->
+{{LHC}}
+{{Hadron colliders}}
+
+The '''Large Hadron Collider''' ('''LHC''') is the [[List of accelerators in particle physics#Hadron colliders|world's largest and highest-energy]] [[particle accelerator]], intended to [[collider|collide]] opposing [[Charged particle beam|particle beams]] of either [[proton]]s at an energy of 7&nbsp;[[TeV]] (1.12&nbsp;[[Micro-|micro]][[joules]]) per particle, or [[lead]] [[atomic nucleus|nuclei]] at an energy of 574&nbsp;TeV (92.0&nbsp;[[Micro-|micro]][[joules]]) per nucleus. The term ''[[hadron]]'' refers to particles composed of [[quarks]]. It is expected that it will address the [[Beyond the Standard Model|most fundamental questions]] of [[physics]], hopefully allowing progress in understanding the deepest laws of nature. The LHC lies in a tunnel {{convert|27|km|mi}} in [[circumference]], as much as {{convert|175|m|ft}} beneath the Franco-Swiss border near [[Geneva]], [[Switzerland]].
+
+The Large Hadron Collider was built by the [[CERN|European Organization for Nuclear Research]] (CERN) with the intention of testing various predictions of [[high-energy physics]], including the existence of the hypothesized [[Higgs boson]]<ref>
+{{cite web
+ |year=2008
+ |title=Missing Higgs
+ |url=http://public.web.cern.ch/public/en/Science/Higgs-en.html
+ |publisher=[[CERN]]
+ |accessdate=2008-10-10
+}}</ref> and of the large family of [[superpartner|new particles]] predicted by [[supersymmetry]].<ref>
+{{cite web
+ |year=2008
+ |title=Towards a superforce
+ |url=http://public.web.cern.ch/public/en/Science/Superforce-en.html
+ |publisher=[[CERN]]
+ |accessdate=2008-10-10
+}}</ref> It is funded by and built in collaboration with over 10,000 [[scientist]]s and [[engineer]]s from over 100 countries as well as hundreds of [[university|universities]] and [[laboratory|laboratories]].<ref>
+{{cite web
+ |author=Roger Highfield
+ |date=16 September 2008
+ |title=Large Hadron Collider: Thirteen ways to change the world
+ |url=http://www.telegraph.co.uk/earth/main.jhtml?xml=/earth/2008/09/16/sciwriters116.xml
+ |work=[[Telegraph]]
+ |accessdate=2008-10-10}}</ref>
+
+On 10 September 2008, the proton beams were successfully circulated in the main ring of the LHC for the first time,<ref>
+{{cite press
+ |publisher=CERN Press Office
+ |date=10 September 2008
+ |title=First beam in the LHC&nbsp;– Accelerating science
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2008/PR08.08E.html
+ |accessdate=2008-10-09
+}}</ref> but nine days later, operations were halted due to a serious [[Large Hadron Collider#Construction accidents and delays|fault]] between two superconducting bending magnets.<ref>
+{{cite news
+ |author=Paul Rincon
+ |date=23 September 2008
+ |title=Collider halted until next year
+ |url=http://news.bbc.co.uk/2/hi/science/nature/7632408.stm
+ |publisher=BBC News
+ |accessdate=2008-10-09
+}}</ref> Repairing the resulting damage and installing additional safety features took over a year.<ref name="CERN September">
+{{cite press
+ |publisher=CERN Press Office
+ |date=9 February 2009
+ |title=CERN management confirms new LHC restart schedule
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2009/PR02.09E.html
+ |accessdate=2009-02-10
+}}</ref><ref name="CERN October">
+{{cite press
+ |publisher=CERN Press Office
+ |date=19 June 2009
+ |title=CERN reports on progress towards LHC restart
+ |url=http://press.web.cern.ch/press/lhc-first-physics/
+ |accessdate=2009-07-21
+}}</ref> On 20 November 2009, the proton beams were successfully circulated again,<ref name=LHC-is-back>
+{{cite press
+ |publisher=CERN Press Office
+ |date=20 November 2009
+ |title=The LHC is back
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2009/PR16.09E.html
+ |accessdate=2009-11-20
+}}</ref> with the first proton–proton collisions being recorded three days later at the injection energy of 450 GeV per beam.<ref name=CERN20091123>
+{{cite press
+ |publisher=CERN Press Office
+ |date=23 November 2009
+ |title=Two circulating beams bring first collisions in the LHC
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2009/PR17.09E.html
+ |accessdate=2009-11-23
+}}</ref> The LHC became the world's highest energy particle accelerator on 30 November 2009, achieving a world record 1.18 TeV per beam and beating the record previously held by [[Fermilab]]'s [[Tevatron]].<ref name=CERN20091130>
+{{cite press
+ |publisher=CERN Press Office
+ |date=30 November 2009
+ |title=LHC sets new world record
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2009/PR18.09E.html
+ |accessdate=2010-03-30
+}}</ref> After the 2009 winter shutdown, the LHC was restarted and the beam was ramped up to 3.5 TeV per beam,<ref name=CERN20091130>
+{{cite press
+ |publisher=CERN Press Office
+ |date=19 March 2010
+ |title=LHC sets new record&nbsp;– accelerates beams to 3.5 TeV
+ |url=http://press.web.cern.ch/press/PressReleases/Releases2010/PR05.10E.html
+ |accessdate=2010-03-30
+}}</ref> half its designed energy,<ref name=NYTArticle>
+{{cite press
+ |publisher=The New York Times
+ |date=4 February 2010
+ |title=Collider to Operate Again, Though at Half Power
+ |url=http://www.nytimes.com/2010/02/05/science/05collide.html
+ |accessdate=2010-02-05
+}}</ref> which is planned for after its 2012 shutdown.
+
+On 30 March 2010, the first planned collisions took place between two 3.5 TeV beams, which set a new world record for the highest energy man-made particle collisions.<ref name=bbc20100330>
+{{cite press
+ |publisher=BBC News
+ |date=30 March 2010
+ |title=CERN LHC sees high-energy success
+ |url=http://news.bbc.co.uk/2/hi/science/nature/8593780.stm
+ |accessdate=2010-03-30}}</ref>
