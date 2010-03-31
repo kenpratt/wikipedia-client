@@ -75,6 +75,7 @@ module Wikipedia
         # strip internal links
         s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
         s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
+        s.gsub!(/\[\[File:[^\]]+?\]\]/, '') # remove file links completely
 
         # convert bold/italic to html
         s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
@@ -87,7 +88,7 @@ module Wikipedia
         s.gsub!(/\{\{ipa[^\}]+\}\}/i, '')
 
         # misc
-        s.gsub!("{{featured article}}", '')
+        s.gsub!(/{{[^}]+}}/, '')
         s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
         s.gsub!('  ', ' ')
 
