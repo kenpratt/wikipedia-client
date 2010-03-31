@@ -88,7 +88,7 @@ module Wikipedia
         s.gsub!(/\{\{ipa[^\}]+\}\}/i, '')
 
         # misc
-        s.gsub!(/{{[^\}]+}}/, '')
+        s.gsub!(/\{\{[^\}]+\}\}/, '')
         s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
         s.gsub!(/<!--[^>]+?-->/, '')
         s.gsub!('  ', ' ')
