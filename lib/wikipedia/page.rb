@@ -71,6 +71,7 @@ module Wikipedia
 
         # strip info box
         s.sub!(/^\{\{\s*(infobox|taxobox)[\s\S]+?\n\}\}\n/i, '')
+        s.sub!(/^\{\|[\s\S]+?\n\|\}\n/, '')
 
         # strip internal links
         s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')

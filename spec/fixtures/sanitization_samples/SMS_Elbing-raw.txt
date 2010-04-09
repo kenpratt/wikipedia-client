@@ -1,0 +1,51 @@
+{|{{Infobox Ship Begin}}
+{{Infobox Ship Image
+|Ship image=[[Image:SMS Elbing.jpg|300px]]
+|Ship caption=
+}}
+{{Infobox Ship Career
+|Hide header=
+|Ship country=[[German Empire]]
+|Ship flag=[[Image:War Ensign of Germany 1903-1918.svg|KLM ensign|44px]]
+|Ship name=''Elbing''
+|Ship namesake=City of [[Elbląg|Elbing]]
+|Ship ordered=
+|Ship builder=[[Schichau]], [[Danzig]]
+|Ship laid down=September 1913
+|Ship launched=21 November 1914
+|Ship acquired=
+|Ship commissioned=4 September 1915
+|Ship decommissioned=
+|Ship in service=
+|Ship out of service=
+|Ship struck=
+|Ship reinstated=
+|Ship honours=
+|Ship fate=sunk night of 31 May 1916, at the [[Battle of Jutland]]
+|Ship status=
+|Ship notes=
+}}
+{{Infobox Ship Characteristics
+|Hide header=
+|Header caption=
+|Ship class=[[Pillau class light cruiser|''Pillau'' class]] [[light cruiser]]
+|Ship displacement=4,390 tonnes normal<br>5,252 tonnes full load
+|Ship length={{convert|135.3|m|ft|abbr=on}}
+|Ship beam={{convert|13.6|m|ft|abbr=on}}
+|Ship draught={{convert|5.64|m|ft|abbr=on}}
+|Ship draft=
+|Ship propulsion=2 shaft Navy turbines, 30,000 shp
+|Ship speed={{convert|27.5|knot|km/h|1}}
+|Ship range=
+|Ship complement=442
+|Ship sensors=
+|Ship EW=
+|Ship armament=8 x {{convert|15|cm|in|abbr=on}} SKL/ 45cal (8 x 1), 2 x {{convert|8.8|cm|in|abbr=on}} (2 x 1), 2 x {{convert|50|cm|in|abbr=on}} TT, 120 mines
+|Ship armour=
+|Ship armor=Deck {{convert|3|in|mm|abbr=on}} - {{convert|.5|in|mm|abbr=on}}
+|Ship aircraft=
+|Ship notes=
+}}
+|}
+
+The '''SMS ''Elbing''''' was a [[Germany|German]] ''Pillau'' class [[light cruiser]], named after the East Prussian city of Elbing.  Intended for the Russian navy under the name ''Admiral Newelski'' (named after [[Gennady Nevelskoy|the discoverer of the insularity of Sakhalin]]), the ship was built at F. [[Schichau-Werft]] in [[Danzig]] in 1913-1914.  Following the outbreak of [[World War I]], the ship was confiscated and launched on 21 November 1914 as the SMS ''Elbing''.
