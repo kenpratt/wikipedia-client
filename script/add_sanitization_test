@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "lib")
+require "wikipedia"
+
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+
+def add_sanitization_test(url)
+  title = Wikipedia::Url.new(url).title
+  page = Wikipedia.find(title, :rvsection => 0)
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-raw.txt"), 'w') {|f| f << page.content }
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-sanitized.txt"), 'w') {|f| f << page.sanitized_content }
+end
+
+if __FILE__ == $0
+  unless ARGV.size == 1
+    puts "Usage: #{$0} http://en.wikipedia.org/wiki/Social_Democratic_Party_of_Kyrgyzstan"
+    exit 0
+  end
+  url = ARGV[0]
+  add_sanitization_test(url)
+end
