@@ -80,7 +80,10 @@ module Wikipedia
         # strip internal links
         s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
         s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
-        s.gsub!(/\[\[File:[^\]]+?\]\]/, '') # remove file links completely
+
+        # strip images and file links
+        s.gsub!(/\[\[Image:[^\[\]]+?\]\]/, '')
+        s.gsub!(/\[\[File:[^\[\]]+?\]\]/, '')
 
         # convert bold/italic to html
         s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
