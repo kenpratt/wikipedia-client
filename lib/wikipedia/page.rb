@@ -69,9 +69,13 @@ module Wikipedia
       if s
         s = s.dup
 
+        # strip anything inside curly braces!
+        while s =~ /\{\{[^\{\}]+?\}\}/
+          s.gsub!(/\{\{[^\{\}]+?\}\}/, '')
+        end
+
         # strip info box
-        s.sub!(/^\{\{\s*(infobox|taxobox)[\s\S]+?\n\}\}\n/i, '')
-        s.sub!(/^\{\|[\s\S]+?\n\|\}\n/, '')
+        s.sub!(/^\{\|[^\{\}]+?\n\|\}\n/, '')
 
         # strip internal links
         s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
@@ -83,13 +87,7 @@ module Wikipedia
         s.gsub!(/'''(.+?)'''/, '<b>\1</b>')
         s.gsub!(/''(.+?)''/, '<i>\1</i>')
 
-        # strip citations, redirects, etc
-        s.gsub!(/\{\{cite[^\}]+\}\}/i, '')
-        s.gsub!(/\{\{redirect[^\}]+\}\}/i, '')
-        s.gsub!(/\{\{ipa[^\}]+\}\}/i, '')
-
         # misc
-        s.gsub!(/\{\{[^\}]+\}\}/, '')
         s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
         s.gsub!(/<!--[^>]+?-->/, '')
         s.gsub!('  ', ' ')

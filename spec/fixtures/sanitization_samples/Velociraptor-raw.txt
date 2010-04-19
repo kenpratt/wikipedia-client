@@ -1,0 +1,28 @@
+{{about|the dinosaur|other uses|Raptor}}
+{{italictitle}}{{Taxobox
+| name = ''Velociraptor'' 
+| fossil_range = [[Late Cretaceous]], {{fossil range|75|71}}
+| image = Velociraptor Fighting Dinosaur.jpg
+| image_width = 250px
+| image_caption = Skull of the ''Velociraptor mongoliensis'' "Fighting Dinosaurs" specimen
+| regnum = [[Animal]]ia
+| phylum = [[Chordate|Chordata]]
+| classis = [[Reptile|Reptilia]]
+| superordo = [[Dinosaur]]ia
+| ordo = [[Saurischia]]
+| subordo = [[Theropoda]]
+| infraordo = [[Deinonychosauria]]
+| familia = [[Dromaeosauridae]]
+| genus = '''''Velociraptor'''''
+| genus_authority = [[Henry Fairfield Osborn|Osborn]], 1924
+| subdivision_ranks = [[Species]]
+| subdivision =
+*''V. mongoliensis'' <small>Osborn, 1924 ([[Type (biology)|type]])</small>
+*''V. osmolskae'' <small> Godefroit ''et al.'', 2008</small>
+}}
+
+'''''Velociraptor''''' ({{pron-en|vɨˈlɒsɨræptər}}; meaning 'swift seizer'<ref name=osborn1924a/>) is a [[genus]] of [[dromaeosaurid]] [[Theropoda|theropod]] [[dinosaur]] that existed approximately 75 to 71&nbsp;[[million years ago]] during the later part of the [[Cretaceous]] [[Period (geology)|Period]].<ref name=PGetal2008/> Only two species are currently recognized, although others have been assigned in the past.  The [[type species]] is ''V. mongoliensis''; [[fossil]]s of this species have been discovered in both [[Inner Mongolia|Inner]] and [[Mongolia|Outer Mongolia]] in [[central Asia]].  A second species, ''V. osmolskae'', was named in 2008 for skull material from Inner Mongolia.
+
+Smaller than other dromaeosaurids like ''[[Deinonychus]]'' and ''[[Achillobator]]'', the [[turkey (bird)|turkey]]-sized ''Velociraptor'' nevertheless shared many of the same [[anatomy|anatomical]] features. It was a [[biped]]al, [[feather]]ed [[carnivore]] with a long, stiffened tail and an enlarged sickle-shaped [[claw]] on each hindfoot, which is thought to have been used to kill its [[predation|prey]]. ''Velociraptor'' can be distinguished from other dromaeosaurids by its long and low [[skull]], with an upturned snout.
+
+''Velociraptor'' (commonly shortened to 'raptor') is one of the dinosaur genera most familiar to the general public due to its prominent role in the ''[[Jurassic Park (film)|Jurassic Park]]'' motion picture series. In the films it was shown with anatomical inaccuracies, including being much larger than it was in reality and without feathers. It is also well known to [[paleontology|paleontologist]]s, with over a dozen recovered fossil skeletons—the most of any dromaeosaurid. One particularly famous specimen preserves a ''Velociraptor'' locked in combat with a ''[[Protoceratops]]''.
