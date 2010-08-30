@@ -7,9 +7,9 @@ begin
     gem.name = "wikipedia-client"
     gem.summary = %Q{Ruby client for the Wikipedia API}
     gem.description = %Q{Ruby client for the Wikipedia API}
-    gem.email = "christian.hellsten@gmail.com"
-    gem.homepage = "http://github.com/christianhellsten/wikipedia-client"
-    gem.authors = ["Cyril David", "Ken Pratt"]
+    gem.email = "mike.haugland@gmail.com"
+    gem.homepage = "http://github.com/mhaugland/wikipedia-client"
+    gem.authors = ["Cyril David", "Ken Pratt", "Mike Haugland"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

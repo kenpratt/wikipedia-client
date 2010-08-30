@@ -5,18 +5,19 @@
 
 Gem::Specification.new do |s|
   s.name = %q{wikipedia-client}
-  s.version = "0.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Cyril David", "Ken Pratt"]
-  s.date = %q{2010-08-09}
+  s.authors = ["Cyril David", "Ken Pratt", "Mike Haugland"]
+  s.date = %q{2010-08-30}
   s.description = %q{Ruby client for the Wikipedia API}
-  s.email = %q{christian.hellsten@gmail.com}
+  s.email = %q{mike.haugland@gmail.com}
   s.extra_rdoc_files = [
     "README.textile"
   ]
   s.files = [
-    "MIT-LICENSE",
+    ".gitignore",
+     "MIT-LICENSE",
      "README.textile",
      "Rakefile",
      "VERSION",
@@ -63,12 +64,13 @@ Gem::Specification.new do |s|
      "spec/lib/wikipedia_spec.rb",
      "spec/spec_helper.rb",
      "tasks/wikipedia_tasks.rake",
-     "uninstall.rb"
+     "uninstall.rb",
+     "wikipedia-client.gemspec"
   ]
-  s.homepage = %q{http://github.com/christianhellsten/wikipedia-client}
+  s.homepage = %q{http://github.com/mhaugland/wikipedia-client}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{Ruby client for the Wikipedia API}
   s.test_files = [
     "spec/lib/client_spec.rb",
@@ -82,7 +84,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
