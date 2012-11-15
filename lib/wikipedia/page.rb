@@ -11,7 +11,7 @@ module Wikipedia
     end
 
     def content
-      page['revisions'].first.values.first if page['revisions']
+      page['revisions'].first.fetch('*') if page['revisions']
     end
 
     def sanitized_content
