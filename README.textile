@@ -7,6 +7,10 @@ Wikipedia API reference: "http://en.wikipedia.org/w/api.php":http://en.wikipedia
 
 Adopted from: "http://code.google.com/p/wikipedia-client/":http://code.google.com/p/wikipedia-client/
 
+h2. Installation
+
+<pre><code>gem install wikipedia-client</code></pre>
+
 h2. Examples
 
 <pre><code>require 'wikipedia'
