@@ -88,12 +88,12 @@ describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
     @client = Wikipedia::Client.new
     @client.follow_redirects = false
   end
-  
+
   it "should get a redirect when trying Edsger Dijkstra" do
     @page = @client.find('Edsger Dijkstra')
     @page.should be_redirect
   end
-  
+
   it "should get a final page when follow_redirects is true" do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
@@ -103,6 +103,6 @@ describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
   it "should collect the image urls" do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
-    @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"]
+    @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"]
   end
 end
