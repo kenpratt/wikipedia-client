@@ -28,8 +28,8 @@ end
 
 desc 'Test the wikipedia plugin.'
 task :spec do
-    spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
-      system("spec -cfs #{spec_path}")
+  spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
+  system("rspec -cfs #{spec_path}")
 end
 
 begin
@@ -49,7 +49,7 @@ task :spec => :check_dependencies
 
 task :default => :spec
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
