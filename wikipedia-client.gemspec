@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Cyril David", "Ken Pratt", "Mike Haugland"]
-  s.date = "2013-06-05"
+  s.date = "2013-06-06"
   s.description = "Ruby client for the Wikipedia API"
   s.email = "mike.haugland@gmail.com"
   s.extra_rdoc_files = [
