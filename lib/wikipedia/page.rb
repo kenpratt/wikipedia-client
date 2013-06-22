@@ -57,6 +57,10 @@ module Wikipedia
       end
     end
 
+    def image_descriptionurl
+      page['imageinfo'].first['descriptionurl'] if page['imageinfo']
+    end    
+
     def raw_data
       @data
     end
