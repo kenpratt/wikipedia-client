@@ -59,7 +59,11 @@ module Wikipedia
 
     def image_descriptionurl
       page['imageinfo'].first['descriptionurl'] if page['imageinfo']
-    end    
+    end
+
+    def coordinates
+      page['coordinates'].first.values if page['coordinates']
+    end
 
     def raw_data
       @data
