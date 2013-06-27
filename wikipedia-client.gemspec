@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "wikipedia-client"
-  s.version = "1.1.2"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Cyril David", "Ken Pratt", "Mike Haugland"]
-  s.date = "2013-06-26"
+  s.date = "2013-06-27"
   s.description = "Ruby client for the Wikipedia API"
   s.email = "mike.haugland@gmail.com"
   s.extra_rdoc_files = [
