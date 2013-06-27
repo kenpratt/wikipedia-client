@@ -42,6 +42,14 @@ page.image_urls
 
 => ["http://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg", ...]]</code></pre>
 
+page.coordinates
+
+=> [48.853, 2.3498, "", "earth"] 
+
+page.templates
+
+=> [..., "Template:About", ...]
+
 h2. Configuration
 
 This is by default configured like this:
