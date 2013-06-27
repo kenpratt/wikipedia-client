@@ -69,6 +69,10 @@ module Wikipedia
       @data
     end
 
+    def templates
+      page['templates'].map {|c| c['title'] } if page['templates']
+    end
+
     def json
       @json
     end
