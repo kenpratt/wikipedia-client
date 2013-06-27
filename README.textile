@@ -40,15 +40,18 @@ page.images
 
 page.image_urls
 
-=> ["http://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg", ...]]</code></pre>
+=> ["http://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg"]
+
+page.image_descriptionurls
+=> ["http://en.wikipedia.org/wiki/File:Getting_Things_Done.jpg"]
 
 page.coordinates
 
-=> [48.853, 2.3498, "", "earth"] 
+=> [48.853, 2.3498, "", "earth"]
 
 page.templates
 
-=> [..., "Template:About", ...]
+=> [..., "Template:About", ...]</code></pre>
 
 h2. Configuration
 

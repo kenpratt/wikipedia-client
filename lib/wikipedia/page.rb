@@ -48,17 +48,16 @@ module Wikipedia
       page['imageinfo'].first['url'] if page['imageinfo']
     end
 
-    def image_urls
-      if list = images
-        filtered = list.select {|i| i =~ /^file:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
-        filtered.map do |title|
-          Wikipedia.find_image( title ).image_url
-        end
-      end
-    end
-
     def image_descriptionurl
       page['imageinfo'].first['descriptionurl'] if page['imageinfo']
+    end
+
+    def image_urls
+      image_metadata.map {|img| img.image_url }
+    end
+
+    def image_descriptionurls
+      image_metadata.map {|img| img.image_descriptionurl }
     end
 
     def coordinates
@@ -67,6 +66,16 @@ module Wikipedia
 
     def raw_data
       @data
+    end
+
+    def image_metadata
+      unless @cached_image_metadata
+        if list = images
+          filtered = list.select {|i| i =~ /^file:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
+          @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
+        end
+      end
+      @cached_image_metadata || []
     end
 
     def templates
