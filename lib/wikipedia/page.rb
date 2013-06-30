@@ -40,6 +40,10 @@ module Wikipedia
       page['links'].map {|c| c['title'] } if page['links']
     end
 
+    def extlinks
+      page['extlinks'].map {|c| c['*'] } if page['extlinks']
+    end
+
     def images
       page['images'].map {|c| c['title'] } if page['images']
     end
