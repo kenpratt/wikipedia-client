@@ -13,7 +13,7 @@ module Wikipedia
       title = Url.new(title).title rescue title
       page = Page.new( request_page( title, options ) )
       while follow_redirects and page.redirect?
-        page = Page.new( request_page( page.redirect_title, options ))
+        page = Page.new( request_page( page.redirect_title, options ) )
       end
       page
     end
@@ -27,7 +27,7 @@ module Wikipedia
     def request_page( title, options = {} )
       request( {
                  :action => "query",
-                 :prop => %w{ revisions links images categories coordinates templates },
+                 :prop => %w{ revisions links extlinks images categories coordinates templates },
                  :rvprop => "content",
                  :titles => title
                }.merge( options ) )
