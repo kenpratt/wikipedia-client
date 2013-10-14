@@ -1,22 +1,6 @@
+$:.push File.expand_path("../lib", __FILE__)
 require 'rubygems'
 require 'rake'
-
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "wikipedia-client"
-    gem.summary = %Q{Ruby client for the Wikipedia API}
-    gem.description = %Q{Ruby client for the Wikipedia API}
-    gem.email = "mike.haugland@gmail.com"
-    gem.homepage = "http://github.com/mhaugland/wikipedia-client"
-    gem.authors = ["Cyril David", "Ken Pratt", "Mike Haugland"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-  end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
-end
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
@@ -50,8 +34,9 @@ task :spec => :check_dependencies
 task :default => :spec
 
 require 'rdoc/task'
+require "wikipedia/version"
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = Wikipedia::VERSION
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "wikipedia-client #{version}"
