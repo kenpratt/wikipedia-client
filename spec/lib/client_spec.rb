@@ -106,3 +106,22 @@ describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
     @page.image_urls.should == ["http://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"]
   end
 end
+
+describe Wikipedia::Client, ".find page (Rails) at jp" do
+  before(:each) do
+    Wikipedia.Configure { domain "ja.wikipedia.org" }
+    @client = Wikipedia::Client.new
+    @client.follow_redirects = false
+  end
+
+  it "should get a redirect when trying Rails" do
+    @page = @client.find('Rails')
+    @page.should be_redirect
+  end
+
+  it "should get a final page when follow_redirects is true" do
+    @client.follow_redirects = true
+    @page = @client.find('Rails')
+    @page.should_not be_redirect
+  end
+end
