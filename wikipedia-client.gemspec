@@ -13,9 +13,6 @@ spec = Gem::Specification.new do |s|
   s.date             = "2013-06-30"
   s.description      = "Ruby client for the Wikipedia API"
   s.email            = "mike.haugland@gmail.com"
-  s.extra_rdoc_files = [
-    "README.textile"
-  ]
 
   s.homepage         = "http://github.com/mhaugland/wikipedia-client"
   s.rubygems_version = "1.8.23"
@@ -25,11 +22,11 @@ spec = Gem::Specification.new do |s|
   s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.has_rdoc         = true
-  s.extra_rdoc_files = ['README.rdoc']
+  s.extra_rdoc_files = ['README.textile']
   s.bindir           = 'bin'
 
   s.require_paths    << 'lib'
-  s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << 'README.rdoc' << '-ri'
+  s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
 
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
