@@ -32,6 +32,14 @@ module Wikipedia
       page['title']
     end
 
+    def fullurl
+      page['fullurl']
+    end
+
+    def editurl
+      page['editurl']
+    end
+
     def categories
       page['categories'].map {|c| c['title'] } if page['categories']
     end
