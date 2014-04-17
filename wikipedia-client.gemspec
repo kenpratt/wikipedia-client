@@ -10,7 +10,7 @@ spec = Gem::Specification.new do |s|
 
   s.license          = 'MIT'
   s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland"]
-  s.date             = "2013-06-30"
+  s.date             = "2014-04-16"
   s.description      = "Ruby client for the Wikipedia API"
   s.email            = "mike.haugland@gmail.com"
 
