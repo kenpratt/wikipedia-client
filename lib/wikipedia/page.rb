@@ -75,7 +75,7 @@ module Wikipedia
     def image_metadata
       unless @cached_image_metadata
         if list = images
-          filtered = list.select {|i| i =~ /^file:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
+          filtered = list.select {|i| i =~ /^((B|b)estand|(F|f)ile):.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?("LinkFA-star") }
           @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
         end
       end
