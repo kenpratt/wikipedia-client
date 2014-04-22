@@ -32,6 +32,14 @@ module Wikipedia
       page['title']
     end
 
+    def fullurl
+      page['fullurl']
+    end
+
+    def editurl
+      page['editurl']
+    end
+
     def categories
       page['categories'].map {|c| c['title'] } if page['categories']
     end
@@ -75,7 +83,7 @@ module Wikipedia
     def image_metadata
       unless @cached_image_metadata
         if list = images
-          filtered = list.select {|i| i =~ /^(F|f)ile:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
+          filtered = list.select {|i| i =~ /:.+\.(jpg|jpeg|png|gif)$/i && !i.include?("LinkFA-star") }
           @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
         end
       end
