@@ -22,6 +22,14 @@ page.title
 
 => 'Getting Things Done'
 
+page.fullurl
+
+=> 'http://en.wikipedia.org/wiki/Getting_Things_Done'
+
+page.text
+
+=> 'Getting Things Done is a time-management method...'
+
 page.content
 
 => # all the wiki markup appears here...
