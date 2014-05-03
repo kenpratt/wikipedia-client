@@ -27,9 +27,10 @@ module Wikipedia
     def request_page( title, options = {} )
       request( {
                  :action => "query",
-                 :prop => %w{ revisions links extlinks images categories coordinates templates },
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
                  :rvprop => "content",
                  :inprop => "url",
+                 :explaintext => "",
                  :titles => title
                }.merge( options ) )
     end
