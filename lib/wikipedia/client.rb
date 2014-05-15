@@ -29,6 +29,7 @@ module Wikipedia
                  :action => "query",
                  :prop => %w{ revisions links extlinks images categories coordinates templates },
                  :rvprop => "content",
+                 :inprop => "url",
                  :titles => title
                }.merge( options ) )
     end
