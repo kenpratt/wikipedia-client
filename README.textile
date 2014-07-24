@@ -103,8 +103,7 @@ page.thumb_url
 
 Scale by height using `:iiurlheight` parameter.
 
-
-
+</code></pre>
 
 h2. Running specs
 
