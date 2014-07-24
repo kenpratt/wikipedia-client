@@ -104,6 +104,8 @@ page.thumb_url
 Scale by height using `:iiurlheight` parameter.
 
 
+
+
 h2. Running specs
 
 if you have rspec >= 1.1.3 installed just type in
