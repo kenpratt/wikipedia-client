@@ -125,3 +125,15 @@ describe Wikipedia::Client, ".find page (Rails) at jp" do
     @page.should_not be_redirect
   end
 end
+
+describe Wikipedia::Client, ".find random page" do
+  before(:each) do
+    @client = Wikipedia::Client.new
+  end
+
+  it "should get random pages" do
+    @page1 = @client.find_random().title
+    @page2 = @client.find_random().title
+    @page1.should_not == @page2
+  end
+end

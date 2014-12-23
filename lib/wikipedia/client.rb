@@ -23,6 +23,13 @@ module Wikipedia
       Page.new( request_image( title, options ) )
     end
 
+    def find_random( options = {} )
+      require 'json'
+      data = JSON::load( request_random( options ) )
+      title = data["query"]["pages"].values[0]["title"]
+      find( title, options )
+    end
+
     # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions%7Clinks%7Cimages%7Ccategories&rvprop=content&titles=Flower%20(video%20game)
     def request_page( title, options = {} )
       request( {
@@ -41,6 +48,16 @@ module Wikipedia
                  :prop => "imageinfo",
                  :iiprop => "url",
                  :titles => title
+               }.merge( options ) )
+    end
+
+    # http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info
+    def request_random( options = {} )
+      request( {
+                 :action => "query",
+                 :generator => "random",
+                 :grnnamespace => "0",
+                 :prop => "info"
                }.merge( options ) )
     end
 
