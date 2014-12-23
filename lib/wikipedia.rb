@@ -16,8 +16,13 @@ module Wikipedia
   def self.find( page, options = {} )
     client.find( page, options )
   end
+
   def self.find_image( title, options = {} )
     client.find_image( title, options )
+  end
+
+  def self.find_random( options = {} )
+    client.find_random( options )
   end
 
   def self.Configure(&block)
