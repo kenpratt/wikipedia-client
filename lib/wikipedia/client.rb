@@ -9,6 +9,12 @@ module Wikipedia
       self.follow_redirects = true
     end
 
+    # Find a wikipedia page given a hash of options
+    #
+    # @overload find(title, options)
+    #   @param title [String] a wikipedia page title
+    #   @param options [Hash] an options hash
+    #   @return [Object] new page item
     def find( title, options = {} )
       title = Url.new(title).title rescue title
       page = Page.new( request_page( title, options ) )
@@ -18,11 +24,23 @@ module Wikipedia
       page
     end
 
+    # Find a image from the API given a hash of options
+    #
+    # @overload find_image(title, options)
+    #   @param title [String] a wikipedia page title
+    #   @param options [Hash] an options hash
+    #   @return [Object] a new image item
     def find_image( title, options = {} )
       title = Url.new(title).title rescue title
       Page.new( request_image( title, options ) )
     end
 
+    # Helper function called for requesting a page by the find method
+    #
+    # @overload request_page(title, options)
+    #   @param title [String] a wikipedia page title
+    #   @param options [Hash] an options hash
+    #   @return [Request] returns a request item
     # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions%7Clinks%7Cimages%7Ccategories&rvprop=content&titles=Flower%20(video%20game)
     def request_page( title, options = {} )
       request( {
@@ -34,6 +52,12 @@ module Wikipedia
                }.merge( options ) )
     end
 
+    # Helper function called for requesting an image by the find_image method
+    #
+    # @overload request_image(title, options)
+    #   @param title [String] a wikipedia page title
+    #   @param options [Hash] an options hash
+    #   @return [Request] returns a request item
     # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&titles=File:Flower.png
     def request_image( title, options = {} )
       request( {
@@ -44,10 +68,7 @@ module Wikipedia
                }.merge( options ) )
     end
 
-    def request( options )
-      require 'open-uri'
-      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
-    end
+    
 
     protected
       def configuration_options
@@ -58,6 +79,21 @@ module Wikipedia
         }
       end
 
+      # Helper function that performs a request given configuration options
+      #
+      # @overload request(options)
+      #   @param options [Hash] an options hash
+      #   @return [Request] returns a request item
+      def request( options )
+        require 'open-uri'
+        URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
+      end
+
+      # Given an options hash, returns a URL string for the options
+      #
+      # @overload url_for(options)
+      #   @param options [Hash] an options hash
+      #   @return [String] returns a url string
       def url_for( options )
         url = BASE_URL.dup
         options = configuration_options.merge( options )
@@ -72,6 +108,11 @@ module Wikipedia
         url
       end
 
+      # Encodes value to url. Flattens if it is array
+      #
+      # @overload urlify_value(val)
+      #   @param val [Object] 
+      #   @return [String] returns a urlified value
       def urlify_value( val )
         case val
         when Array
