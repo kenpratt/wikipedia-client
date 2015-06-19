@@ -46,7 +46,8 @@ module Wikipedia
 
     def request( options )
       require 'open-uri'
-      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
+      require 'open_uri_redirections'
+      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}",  :allow_redirections => :safe)
     end
 
     protected
