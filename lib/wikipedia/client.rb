@@ -46,15 +46,15 @@ module Wikipedia
 
     def request( options )
       require 'open-uri'
-      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
     end
 
     protected
       def configuration_options
         {
-          :protocol => Configuration[:protocol],
-          :domain   => Configuration[:domain],
-          :path     => Configuration[:path]
+          :protocol   => Configuration[:protocol],
+          :domain     => Configuration[:domain],
+          :path       => Configuration[:path],
         }
       end
 

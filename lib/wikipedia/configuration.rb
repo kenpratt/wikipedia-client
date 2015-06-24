@@ -15,11 +15,11 @@ module Wikipedia
         end
       end
     end
-    
+
     def self.[](directive)
       instance.send(directive)
     end
-    
-    directives :protocol, :domain, :path
+
+    directives :protocol, :domain, :path, :user_agent
   end
 end
