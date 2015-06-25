@@ -50,6 +50,10 @@ page.image_descriptionurls
 
 => ["http://en.wikipedia.org/wiki/File:Getting_Things_Done.jpg"]
 
+page.thumb_url
+
+=> ["http://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Getting_Things_Done.jpg/100px-Getting_Things_Done.jpg"]
+
 page.coordinates
 
 => [48.853, 2.3498, "", "earth"]
@@ -87,6 +91,19 @@ page.raw_data
 => {"query"=>{"pages"=>{"959928"=>{"pageid"=>959928, "ns"=>0,
 "title"=>"Getting Things Done", "touched"=>"2010-03-10T00:04:09Z",
 "lastrevid"=>348481810, "counter"=>0, "length"=>7891}}}}</code></pre>
+
+
+To retrieve a scaled image thumbnail with 100px width:
+
+<pre><code>page = Wikipedia.find_image( "http://en.wikipedia.org/wiki/File:Getting_Things_Done.jpg", :iiurlwidth =>"100" )
+
+page.thumb_url
+
+=> ["http://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Getting_Things_Done.jpg/100px-Getting_Things_Done.jpg"]
+
+Scale by height using `:iiurlheight` parameter.
+
+</code></pre>
 
 h2. Running specs
 

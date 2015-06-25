@@ -76,6 +76,10 @@ module Wikipedia
       page['coordinates'].first.values if page['coordinates']
     end
 
+    def thumb_url
+      page['imageinfo'].first['thumburl'] if page['imageinfo']
+    end
+
     def raw_data
       @data
     end
