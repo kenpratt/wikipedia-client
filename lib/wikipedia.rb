@@ -29,7 +29,7 @@ module Wikipedia
     domain    'en.wikipedia.org'
     path      'w/api.php'
     user_agent(
-      'wikipedia-client/1.3 (https://github.com/manuisfunny/wikipedia-client)'
+      'wikipedia-client/1.3 (https://github.com/kenpratt/wikipedia-client)'
     )
   }
 
