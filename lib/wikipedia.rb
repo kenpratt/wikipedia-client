@@ -25,7 +25,7 @@ module Wikipedia
   end
   
   Configure {
-    protocol  'http'
+    protocol  'https'
     domain    'en.wikipedia.org'
     path      'w/api.php'
   }
