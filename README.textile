@@ -90,14 +90,48 @@ page.raw_data
 "title"=>"Getting Things Done", "touched"=>"2010-03-10T00:04:09Z",
 "lastrevid"=>348481810, "counter"=>0, "length"=>7891}}}}</code></pre>
 
-h2. Running specs
+h2. Contributing
 
-if you have rspec >= 1.1.3 installed just type in
+h3. Getting the code, and running the tests
 
-rake spec
+<pre><code>git clone git@github.com:kenpratt/wikipedia-client.git
+cd wikipedia-client
+gem install bundler
+bundle exec rake spec</code></pre>
+
+h3. Pushing a new release of the Gem
+
+Edit <code>lib/wikipedia/version.rb</code>, changing <code>VERSION</code>.
+
+Edit <code>wikipedia-client.gemspec</code>, changing <code>s.date</code> to today's date.
+
+Build the gem: <code>bundle exec gem build wikipedia-client.gemspec</code>
+
+Commit the changes: <code>git commit -a -m 'Version bump to 1.4.0' && git push</code>
+
+Publish the resurt to RubyGems: <code>bundle exec gem push wikipedia-client-1.4.0.gem</code>
 
 h2. Thanks!
 
 Copyright (c) 2008 [Cyril David], released under the MIT license
 
 Adopted by Ken Pratt (ken@kenpratt.net) in 2010/03
+
+h3. Contributors
+
+Aishwarya Subramanian <aishwarya923@gmail.com>
+Bryce <brycedneal@gmail.com>
+cdr-data <b_rhettbarber@yahoo.com>
+Christian Hellsten <christian.hellsten@gmail.com>
+Christopher Quackenbush <christopher@quackenbush.me>
+Cyril David
+Francesco Serra <afnecors@gmail.com>
+ivobenedito <ivobenedito@gmail.com>
+Justin Harrison <justin@matthin.com>
+Ken Pratt <ken@kenpratt.net>
+Manu Manu <manuisfunny@gmail.com>
+Mike Haugland <mike.haugland@bravenet.com>
+Pietro F. Menna <pietromenna@yahoo.com>
+Sophie Rapoport <sfrapoport@gmail.com>
+tsukasaoishi <tsukasa.oishi@gmail.com>
+V <thevalentino@gmail.com>
