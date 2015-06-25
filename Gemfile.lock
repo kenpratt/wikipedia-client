@@ -31,7 +31,7 @@ GEM
       nokogiri (= 1.5.10)
       rake
       rdoc
-    json (1.8.0)
+    json (1.8.3)
     jwt (0.1.8)
       multi_json (>= 1.5)
     multi_json (1.8.1)
@@ -69,3 +69,6 @@ DEPENDENCIES
   rspec
   thoughtbot-shoulda
   wikipedia-client!
+
+BUNDLED WITH
+   1.10.5
