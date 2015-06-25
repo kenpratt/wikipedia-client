@@ -46,7 +46,7 @@ module Wikipedia
 
     def request( options )
       require 'open-uri'
-      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}" )
+      URI.parse( url_for( options ) ).read( "User-Agent" => "Ruby/#{RUBY_VERSION}")
     end
 
     protected

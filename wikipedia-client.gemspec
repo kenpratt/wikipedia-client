@@ -33,6 +33,7 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency('rdoc')
   s.add_development_dependency('jeweler')
 
+
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
