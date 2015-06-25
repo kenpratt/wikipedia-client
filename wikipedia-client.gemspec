@@ -9,12 +9,12 @@ spec = Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
   s.license          = 'MIT'
-  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland"]
-  s.date             = "2014-04-16"
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+  s.date             = "2015-06-25"
   s.description      = "Ruby client for the Wikipedia API"
-  s.email            = "mike.haugland@gmail.com"
+  s.email            = "ken@kenpratt.net"
 
-  s.homepage         = "http://github.com/mhaugland/wikipedia-client"
+  s.homepage         = "http://github.com/kenpratt/wikipedia-client"
   s.rubygems_version = "1.8.23"
   s.summary          = "Ruby client for the Wikipedia API"
   s.platform         = Gem::Platform::RUBY
