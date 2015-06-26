@@ -40,6 +40,10 @@ module Wikipedia
       page['editurl']
     end
 
+    def text
+      page['extract']
+    end
+
     def categories
       page['categories'].map {|c| c['title'] } if page['categories']
     end

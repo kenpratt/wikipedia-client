@@ -27,6 +27,16 @@ describe Wikipedia::Client, ".find page (mocked)" do
     @page.title.should == 'Edsger W. Dijkstra'
   end
 
+  it "should return a page with the correct URL" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.fullurl.should == 'http://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
+  end
+
+  it "should return a page with the correct plain text extract" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.text.should start_with 'Edsger Wybe Dijkstra (Dutch pronunciation: '
+  end
+
   it "should return a page with categories" do
     @page = @client.find('Edsger_Dijkstra')
     @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
