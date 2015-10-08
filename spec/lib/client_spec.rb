@@ -113,7 +113,7 @@ describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
   it "should collect the image urls" do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
-    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
   end
 end
 
