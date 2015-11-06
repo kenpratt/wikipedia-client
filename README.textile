@@ -117,7 +117,7 @@ Build the gem: <code>bundle exec gem build wikipedia-client.gemspec</code>
 
 Commit the changes: <code>git commit -a -m 'Version bump to 1.4.0' && git push</code>
 
-Publish the resurt to RubyGems: <code>bundle exec gem push wikipedia-client-1.4.0.gem</code>
+Publish the result to RubyGems: <code>bundle exec gem push wikipedia-client-1.4.0.gem</code>
 
 h2. Thanks!
 
