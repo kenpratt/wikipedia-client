@@ -44,6 +44,10 @@ module Wikipedia
       page['extract']
     end
 
+    def summary
+      s = (page['extract'].split(pattern="=="))[0].strip
+    end
+
     def categories
       page['categories'].map {|c| c['title'] } if page['categories']
     end
