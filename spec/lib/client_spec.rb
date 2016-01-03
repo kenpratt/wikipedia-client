@@ -147,3 +147,18 @@ describe Wikipedia::Client, ".find random page" do
     @page1.should_not == @page2
   end
 end
+
+describe Wikipedia::Client, "page.summary (mocked)" do
+  before(:each) do
+    @client = Wikipedia::Client.new
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+    @client.should_receive(:request).and_return(@edsger_dijkstra)
+  end
+
+  it "should return only the summary" do
+    @page = @client.find('Edsger_Dijkstra')
+    @page.summary.should == 'Edsger Wybe Dijkstra (Dutch pronunciation: [ˈɛtsxər ˈʋibə ˈdɛikstra] ( ); 11 May 1930 – 6 August 2002) was a Dutch computer scientist. He received the 1972 Turing Award for fundamental contributions to developing programming languages, and was the Schlumberger Centennial Chair of Computer Sciences at The University of Texas at Austin from 1984 until 2000.
+Shortly before his death in 2002, he received the ACM PODC Influential Paper Award in distributed computing for his work on self-stabilization of program computation. This annual award was renamed the Dijkstra Prize the following year, in his honor.'
+  end
+end

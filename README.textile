@@ -36,6 +36,10 @@ page.content
 
 => # all the wiki markup appears here...
 
+page.summary
+
+=> # only the wiki summary appears here...
+
 page.categories
 
 => [..., "Category:Self-help books", ...]
