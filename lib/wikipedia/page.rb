@@ -45,7 +45,7 @@ module Wikipedia
     end
 
     def summary
-      (page['extract'].split(pattern="=="))[0].strip
+      (page['extract'].split("=="))[0].strip
     end
 
     def categories
