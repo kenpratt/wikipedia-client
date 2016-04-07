@@ -45,7 +45,7 @@ module Wikipedia
     end
 
     def summary
-      s = (page['extract'].split(pattern="=="))[0].strip
+      (page['extract'].split("=="))[0].strip
     end
 
     def categories
@@ -140,7 +140,7 @@ module Wikipedia
         # create paragraphs
         sections = s.split("\n\n")
         if sections.size > 1
-          s = sections.map {|s| "<p>#{s.strip}</p>" }.join("\n")
+          s = sections.map {|paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
         end
 
         s
