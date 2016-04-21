@@ -1,6 +1,6 @@
 h1. Wikipedia
 
-!https://travis-ci.org/kenpratt/wikipedia-client.svg?branch=master!:https://travis-ci.org/kenpratt/wikipedia-client
+!https://badge.fury.io/rb/wikipedia-client.svg!:https://badge.fury.io/rb/wikipedia-client !https://travis-ci.org/kenpratt/wikipedia-client.svg?branch=master!:https://travis-ci.org/kenpratt/wikipedia-client
 
 Allows you to get wikipedia content through their API. This uses the
 alpha API, not the deprecated query.php API type
