@@ -7,7 +7,7 @@ module Wikipedia
     end
 
     def page
-      @data['query']['pages'].values.first
+      @data['query']['pages'].values.first if @data['query']['pages']
     end
 
     def content
