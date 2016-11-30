@@ -7,7 +7,7 @@ module Wikipedia
     end
 
     def page
-      @data['query']['pages'].values.first
+      @data['query']['pages'].values.first if @data['query']['pages']
     end
 
     def content
@@ -45,7 +45,7 @@ module Wikipedia
     end
 
     def summary
-      (page['extract'].split("=="))[0].strip if page['extract']
+      (page['extract'].split("=="))[0].strip if page['extract'] && page['extract'] != ''
     end
 
     def categories
