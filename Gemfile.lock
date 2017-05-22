@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wikipedia-client (1.6.1)
+    wikipedia-client (1.6.3)
 
 GEM
   remote: https://rubygems.org/
@@ -71,4 +71,4 @@ DEPENDENCIES
   wikipedia-client!
 
 BUNDLED WITH
-   1.10.5
+   1.15.0
