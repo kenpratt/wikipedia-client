@@ -1,0 +1,1046 @@
+Inspecting 19 files
+[32m.[0m[32m.[0m[33mC[0m[33mC[0m[32m.[0m[35mW[0m[33mC[0m[33mC[0m[35mW[0m[33mC[0m[33mC[0m[35mW[0m[33mC[0m[33mC[0m[33mC[0m[33mC[0m[33mC[0m[32m.[0m[32m.[0m
+
+Offenses:
+
+[36minstall.rb[0m:1:51: [33mC[0m: Final newline missing.
+puts File.read(File.dirname(__FILE__) + '/README')
+                                                  
+[36mRakefile[0m:1:1: [33mC[0m: Prefer [33m$LOAD_PATH[0m over [33m$:[0m.
+$:.push File.expand_path("../lib", __FILE__)
+^^
+[36mRakefile[0m:1:26: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+$:.push File.expand_path("../lib", __FILE__)
+                         ^^^^^^^^
+[36mRakefile[0m:12:1: [33mC[0m: Extra blank line detected.
+[36mRakefile[0m:28:11: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mRakefile[0m:28:81: [33mC[0m: Line is too long. [98/80]
+    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
+                                                                                ^^^^^^^^^^^^^^^^^^
+[36mRakefile[0m:32:6: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+task :default => :spec
+     ^^^^^^^^^^^
+[36mRakefile[0m:35:9: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "wikipedia/version"
+        ^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:2:1: [33mC[0m: Add an empty line after magic comments.
+$:.push File.expand_path("../lib", __FILE__)
+^
+[36mwikipedia-client.gemspec[0m:2:1: [33mC[0m: Prefer [33m$LOAD_PATH[0m over [33m$:[0m.
+$:.push File.expand_path("../lib", __FILE__)
+^^
+[36mwikipedia-client.gemspec[0m:2:26: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+$:.push File.expand_path("../lib", __FILE__)
+                         ^^^^^^^^
+[36mwikipedia-client.gemspec[0m:3:9: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "wikipedia/version"
+        ^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:5:1: [35mW[0m: Useless assignment to variable - [33mspec[0m.
+spec = Gem::Specification.new do |s|
+^^^^
+[36mwikipedia-client.gemspec[0m:5:8: [33mC[0m: Block has too many lines. [35/25]
+spec = Gem::Specification.new do |s| [33m...[0m
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:6:15: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.name    = "wikipedia-client"
+              ^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:9:54: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+                                                     ^^^^^^
+[36mwikipedia-client.gemspec[0m:9:81: [33mC[0m: Line is too long. [105/80]
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:25: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                        ^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:40: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                       ^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:53: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                                    ^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:70: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:81: [33mC[0m: Line is too long. [128/80]
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:95: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                                                                              ^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:12:111: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.authors          = ["Cyril David", "Ken Pratt", "Mike Haugland", "Aishwarya Subramanian", "Pietro Menna", "Sophie Rapoport"]
+                                                                                                              ^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:14:24: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.description      = "Ruby client for the Wikipedia API"
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:15:24: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.email            = "ken@kenpratt.net"
+                       ^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:17:24: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.homepage         = "http://github.com/kenpratt/wikipedia-client"
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:18:24: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.rubygems_version = "1.8.23"
+                       ^^^^^^^^
+[36mwikipedia-client.gemspec[0m:19:24: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  s.summary          = "Ruby client for the Wikipedia API"
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:23:63: [33mC[0m: Space missing to the left of {.
+  s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+                                                              ^
+[36mwikipedia-client.gemspec[0m:23:81: [33mC[0m: Line is too long. [86/80]
+  s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+                                                                                ^^^^^^
+[36mwikipedia-client.gemspec[0m:37:1: [33mC[0m: Extra blank line detected.
+[36mwikipedia-client.gemspec[0m:38:43: [33mC[0m: Do not use [33mthen[0m for multi-line [33mif[0m.
+  if s.respond_to? :specification_version then
+                                          ^^^^
+[36mwikipedia-client.gemspec[0m:41:68: [33mC[0m: Do not use [33mthen[0m for multi-line [33mif[0m.
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+                                                                   ^^^^
+[36mwikipedia-client.gemspec[0m:42:36: [33mC[0m: [33m%q[0m-literals should be delimited by [33m([0m and [33m)[0m.
+      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:42:36: [33mC[0m: Use [33m%q[0m only for strings that contain both single quotes and double quotes.
+      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:42:61: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                                                            ^^^^^^
+[36mwikipedia-client.gemspec[0m:44:24: [33mC[0m: [33m%q[0m-literals should be delimited by [33m([0m and [33m)[0m.
+      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                       ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:44:24: [33mC[0m: Use [33m%q[0m only for strings that contain both single quotes and double quotes.
+      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                       ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:44:49: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                                                ^^^^^^
+[36mwikipedia-client.gemspec[0m:47:22: [33mC[0m: [33m%q[0m-literals should be delimited by [33m([0m and [33m)[0m.
+    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                     ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:47:22: [33mC[0m: Use [33m%q[0m only for strings that contain both single quotes and double quotes.
+    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                     ^^^^^^^^^^^^^^^^^^^^^^
+[36mwikipedia-client.gemspec[0m:47:47: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+                                              ^^^^^^
+[36mlib/wikipedia/client.rb[0m:2:3: [33mC[0m: Missing top-level class documentation comment.
+  class Client
+  ^^^^^
+[36mlib/wikipedia/client.rb[0m:4:16: [33mC[0m: Freeze mutable objects assigned to constants.
+    BASE_URL = ":protocol://:domain/:path?action=:action&format=json"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:4:16: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    BASE_URL = ":protocol://:domain/:path?action=:action&format=json"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:12:14: [33mC[0m: Space inside parentheses detected.
+    def find( title, options = {} )
+             ^
+[36mlib/wikipedia/client.rb[0m:12:34: [33mC[0m: Space inside parentheses detected.
+    def find( title, options = {} )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:13:15: [33mC[0m: Avoid using [33mrescue[0m in its modifier form.
+      title = Url.new(title).title rescue title
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:14:23: [33mC[0m: Space inside parentheses detected.
+      page = Page.new( request_page( title, options ) )
+                      ^
+[36mlib/wikipedia/client.rb[0m:14:37: [33mC[0m: Space inside parentheses detected.
+      page = Page.new( request_page( title, options ) )
+                                    ^
+[36mlib/wikipedia/client.rb[0m:14:52: [33mC[0m: Space inside parentheses detected.
+      page = Page.new( request_page( title, options ) )
+                                                   ^
+[36mlib/wikipedia/client.rb[0m:14:54: [33mC[0m: Space inside parentheses detected.
+      page = Page.new( request_page( title, options ) )
+                                                     ^
+[36mlib/wikipedia/client.rb[0m:15:30: [33mC[0m: Use [33m&&[0m instead of [33mand[0m.
+      while follow_redirects and page.redirect?
+                             ^^^
+[36mlib/wikipedia/client.rb[0m:16:25: [33mC[0m: Space inside parentheses detected.
+        page = Page.new( request_page( page.redirect_title, options ) )
+                        ^
+[36mlib/wikipedia/client.rb[0m:16:39: [33mC[0m: Space inside parentheses detected.
+        page = Page.new( request_page( page.redirect_title, options ) )
+                                      ^
+[36mlib/wikipedia/client.rb[0m:16:68: [33mC[0m: Space inside parentheses detected.
+        page = Page.new( request_page( page.redirect_title, options ) )
+                                                                   ^
+[36mlib/wikipedia/client.rb[0m:16:70: [33mC[0m: Space inside parentheses detected.
+        page = Page.new( request_page( page.redirect_title, options ) )
+                                                                     ^
+[36mlib/wikipedia/client.rb[0m:21:20: [33mC[0m: Space inside parentheses detected.
+    def find_image( title, options = {} )
+                   ^
+[36mlib/wikipedia/client.rb[0m:21:40: [33mC[0m: Space inside parentheses detected.
+    def find_image( title, options = {} )
+                                       ^
+[36mlib/wikipedia/client.rb[0m:22:15: [33mC[0m: Avoid using [33mrescue[0m in its modifier form.
+      title = Url.new(title).title rescue title
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:23:16: [33mC[0m: Space inside parentheses detected.
+      Page.new( request_image( title, options ) )
+               ^
+[36mlib/wikipedia/client.rb[0m:23:31: [33mC[0m: Space inside parentheses detected.
+      Page.new( request_image( title, options ) )
+                              ^
+[36mlib/wikipedia/client.rb[0m:23:46: [33mC[0m: Space inside parentheses detected.
+      Page.new( request_image( title, options ) )
+                                             ^
+[36mlib/wikipedia/client.rb[0m:23:48: [33mC[0m: Space inside parentheses detected.
+      Page.new( request_image( title, options ) )
+                                               ^
+[36mlib/wikipedia/client.rb[0m:26:21: [33mC[0m: Space inside parentheses detected.
+    def find_random( options = {} )
+                    ^
+[36mlib/wikipedia/client.rb[0m:26:34: [33mC[0m: Space inside parentheses detected.
+    def find_random( options = {} )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:28:18: [33mC[0m: Do not use [33m::[0m for method calls.
+      data = JSON::load( request_random( options ) )
+                 ^^
+[36mlib/wikipedia/client.rb[0m:28:20: [33mC[0m: Prefer [33mJSON.parse[0m over [33mJSON.load[0m.
+      data = JSON::load( request_random( options ) )
+                   ^^^^
+[36mlib/wikipedia/client.rb[0m:28:25: [33mC[0m: Space inside parentheses detected.
+      data = JSON::load( request_random( options ) )
+                        ^
+[36mlib/wikipedia/client.rb[0m:28:41: [33mC[0m: Space inside parentheses detected.
+      data = JSON::load( request_random( options ) )
+                                        ^
+[36mlib/wikipedia/client.rb[0m:28:49: [33mC[0m: Space inside parentheses detected.
+      data = JSON::load( request_random( options ) )
+                                                ^
+[36mlib/wikipedia/client.rb[0m:28:51: [33mC[0m: Space inside parentheses detected.
+      data = JSON::load( request_random( options ) )
+                                                  ^
+[36mlib/wikipedia/client.rb[0m:29:20: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      title = data["query"]["pages"].values[0]["title"]
+                   ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:29:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      title = data["query"]["pages"].values[0]["title"]
+                            ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:29:48: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      title = data["query"]["pages"].values[0]["title"]
+                                               ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:30:12: [33mC[0m: Space inside parentheses detected.
+      find( title, options )
+           ^
+[36mlib/wikipedia/client.rb[0m:30:27: [33mC[0m: Space inside parentheses detected.
+      find( title, options )
+                          ^
+[36mlib/wikipedia/client.rb[0m:34:22: [33mC[0m: Space inside parentheses detected.
+    def request_page( title, options = {} )
+                     ^
+[36mlib/wikipedia/client.rb[0m:34:42: [33mC[0m: Space inside parentheses detected.
+    def request_page( title, options = {} )
+                                         ^
+[36mlib/wikipedia/client.rb[0m:35:15: [33mC[0m: Space inside parentheses detected.
+      request( {
+              ^
+[36mlib/wikipedia/client.rb[0m:36:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :action => "query",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:36:18: [33mC[0m: Use 2 spaces for indentation in a hash, relative to the start of the line where the left curly brace is.
+                 :action => "query",
+                 ^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:36:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :action => "query",
+                            ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:37:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
+                 ^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:37:27: [33mC[0m: [33m%w[0m-literals should be delimited by [33m[[0m and [33m][0m.
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:37:30: [33mC[0m: Do not use spaces inside percent literal delimiters.
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
+                             ^
+[36mlib/wikipedia/client.rb[0m:37:81: [33mC[0m: Line is too long. [111/80]
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:37:109: [33mC[0m: Do not use spaces inside percent literal delimiters.
+                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
+                                                                                                            ^
+[36mlib/wikipedia/client.rb[0m:38:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :rvprop => "content",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:38:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :rvprop => "content",
+                            ^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:39:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :inprop => "url",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:39:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :inprop => "url",
+                            ^^^^^
+[36mlib/wikipedia/client.rb[0m:40:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :explaintext => "",
+                 ^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:40:34: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :explaintext => "",
+                                 ^^
+[36mlib/wikipedia/client.rb[0m:41:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :titles => title
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:42:16: [33mC[0m: Indent the right brace the same as the start of the line where the left brace is.
+               }.merge( options ) )
+               ^
+[36mlib/wikipedia/client.rb[0m:42:24: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                       ^
+[36mlib/wikipedia/client.rb[0m:42:32: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                               ^
+[36mlib/wikipedia/client.rb[0m:42:34: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:46:23: [33mC[0m: Space inside parentheses detected.
+    def request_image( title, options = {} )
+                      ^
+[36mlib/wikipedia/client.rb[0m:46:43: [33mC[0m: Space inside parentheses detected.
+    def request_image( title, options = {} )
+                                          ^
+[36mlib/wikipedia/client.rb[0m:47:15: [33mC[0m: Space inside parentheses detected.
+      request( {
+              ^
+[36mlib/wikipedia/client.rb[0m:48:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :action => "query",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:48:18: [33mC[0m: Use 2 spaces for indentation in a hash, relative to the start of the line where the left curly brace is.
+                 :action => "query",
+                 ^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:48:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :action => "query",
+                            ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:49:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :prop => "imageinfo",
+                 ^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:49:27: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :prop => "imageinfo",
+                          ^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:50:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :iiprop => "url",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:50:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :iiprop => "url",
+                            ^^^^^
+[36mlib/wikipedia/client.rb[0m:51:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :titles => title
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:52:16: [33mC[0m: Indent the right brace the same as the start of the line where the left brace is.
+               }.merge( options ) )
+               ^
+[36mlib/wikipedia/client.rb[0m:52:24: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                       ^
+[36mlib/wikipedia/client.rb[0m:52:32: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                               ^
+[36mlib/wikipedia/client.rb[0m:52:34: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:56:24: [33mC[0m: Space inside parentheses detected.
+    def request_random( options = {} )
+                       ^
+[36mlib/wikipedia/client.rb[0m:56:37: [33mC[0m: Space inside parentheses detected.
+    def request_random( options = {} )
+                                    ^
+[36mlib/wikipedia/client.rb[0m:57:15: [33mC[0m: Space inside parentheses detected.
+      request( {
+              ^
+[36mlib/wikipedia/client.rb[0m:58:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :action => "query",
+                 ^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:58:18: [33mC[0m: Use 2 spaces for indentation in a hash, relative to the start of the line where the left curly brace is.
+                 :action => "query",
+                 ^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:58:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :action => "query",
+                            ^^^^^^^
+[36mlib/wikipedia/client.rb[0m:59:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :generator => "random",
+                 ^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:59:32: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :generator => "random",
+                               ^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:60:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :grnnamespace => "0",
+                 ^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:60:35: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :grnnamespace => "0",
+                                  ^^^
+[36mlib/wikipedia/client.rb[0m:61:18: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+                 :prop => "info"
+                 ^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:61:27: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+                 :prop => "info"
+                          ^^^^^^
+[36mlib/wikipedia/client.rb[0m:62:16: [33mC[0m: Indent the right brace the same as the start of the line where the left brace is.
+               }.merge( options ) )
+               ^
+[36mlib/wikipedia/client.rb[0m:62:24: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                       ^
+[36mlib/wikipedia/client.rb[0m:62:32: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                               ^
+[36mlib/wikipedia/client.rb[0m:62:34: [33mC[0m: Space inside parentheses detected.
+               }.merge( options ) )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:65:17: [33mC[0m: Space inside parentheses detected.
+    def request( options )
+                ^
+[36mlib/wikipedia/client.rb[0m:65:25: [33mC[0m: Space inside parentheses detected.
+    def request( options )
+                        ^
+[36mlib/wikipedia/client.rb[0m:67:17: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                ^
+[36mlib/wikipedia/client.rb[0m:67:26: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                         ^
+[36mlib/wikipedia/client.rb[0m:67:34: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:67:36: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                   ^
+[36mlib/wikipedia/client.rb[0m:67:44: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                           ^
+[36mlib/wikipedia/client.rb[0m:67:45: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                            ^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:67:81: [33mC[0m: Line is too long. [88/80]
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                                                                ^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:67:87: [33mC[0m: Space inside parentheses detected.
+      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+                                                                                      ^
+[36mlib/wikipedia/client.rb[0m:70:5: [33mC[0m: Keep a blank line before and after [33mprotected[0m.
+    protected
+    ^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:71:7: [33mC[0m: Inconsistent indentation detected.
+      def configuration_options [33m...[0m
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:73:11: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+          :protocol   => Configuration[:protocol],
+          ^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:74:11: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+          :domain     => Configuration[:domain],
+          ^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:75:11: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+          :path       => Configuration[:path],
+          ^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:75:46: [33mC[0m: Avoid comma after the last item of a hash.
+          :path       => Configuration[:path],
+                                             ^
+[36mlib/wikipedia/client.rb[0m:79:7: [33mC[0m: Method has too many lines. [11/10]
+      def url_for( options ) [33m...[0m
+      ^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:79:7: [33mC[0m: Inconsistent indentation detected.
+      def url_for( options ) [33m...[0m
+      ^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:79:19: [33mC[0m: Space inside parentheses detected.
+      def url_for( options )
+                  ^
+[36mlib/wikipedia/client.rb[0m:79:27: [33mC[0m: Space inside parentheses detected.
+      def url_for( options )
+                          ^
+[36mlib/wikipedia/client.rb[0m:81:47: [33mC[0m: Space inside parentheses detected.
+        options = configuration_options.merge( options )
+                                              ^
+[36mlib/wikipedia/client.rb[0m:81:55: [33mC[0m: Space inside parentheses detected.
+        options = configuration_options.merge( options )
+                                                      ^
+[36mlib/wikipedia/client.rb[0m:83:32: [33mC[0m: Space inside parentheses detected.
+          value = urlify_value( val )
+                               ^
+[36mlib/wikipedia/client.rb[0m:83:36: [33mC[0m: Space inside parentheses detected.
+          value = urlify_value( val )
+                                   ^
+[36mlib/wikipedia/client.rb[0m:84:27: [33mC[0m: Space inside parentheses detected.
+          if url.include?( ":#{key}" )
+                          ^
+[36mlib/wikipedia/client.rb[0m:84:37: [33mC[0m: Space inside parentheses detected.
+          if url.include?( ":#{key}" )
+                                    ^
+[36mlib/wikipedia/client.rb[0m:93:7: [33mC[0m: Inconsistent indentation detected.
+      def urlify_value( val ) [33m...[0m
+      ^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:93:24: [33mC[0m: Space inside parentheses detected.
+      def urlify_value( val )
+                       ^
+[36mlib/wikipedia/client.rb[0m:93:28: [33mC[0m: Space inside parentheses detected.
+      def urlify_value( val )
+                           ^
+[36mlib/wikipedia/client.rb[0m:96:18: [33mC[0m: Space inside parentheses detected.
+          encode( val.flatten.join( '|' ) )
+                 ^
+[36mlib/wikipedia/client.rb[0m:96:36: [33mC[0m: Space inside parentheses detected.
+          encode( val.flatten.join( '|' ) )
+                                   ^
+[36mlib/wikipedia/client.rb[0m:96:40: [33mC[0m: Space inside parentheses detected.
+          encode( val.flatten.join( '|' ) )
+                                       ^
+[36mlib/wikipedia/client.rb[0m:96:42: [33mC[0m: Space inside parentheses detected.
+          encode( val.flatten.join( '|' ) )
+                                         ^
+[36mlib/wikipedia/client.rb[0m:98:18: [33mC[0m: Space inside parentheses detected.
+          encode( val )
+                 ^
+[36mlib/wikipedia/client.rb[0m:98:22: [33mC[0m: Space inside parentheses detected.
+          encode( val )
+                     ^
+[36mlib/wikipedia/client.rb[0m:102:7: [33mC[0m: Inconsistent indentation detected.
+      def encode( val ) [33m...[0m
+      ^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/client.rb[0m:102:18: [33mC[0m: Space inside parentheses detected.
+      def encode( val )
+                 ^
+[36mlib/wikipedia/client.rb[0m:102:22: [33mC[0m: Space inside parentheses detected.
+      def encode( val )
+                     ^
+[36mlib/wikipedia/client.rb[0m:105:22: [33mC[0m: Space inside parentheses detected.
+          URI.encode( val ).gsub( '&', '%26' )
+                     ^
+[36mlib/wikipedia/client.rb[0m:105:26: [33mC[0m: Space inside parentheses detected.
+          URI.encode( val ).gsub( '&', '%26' )
+                         ^
+[36mlib/wikipedia/client.rb[0m:105:34: [33mC[0m: Space inside parentheses detected.
+          URI.encode( val ).gsub( '&', '%26' )
+                                 ^
+[36mlib/wikipedia/client.rb[0m:105:45: [33mC[0m: Space inside parentheses detected.
+          URI.encode( val ).gsub( '&', '%26' )
+                                            ^
+[36mlib/wikipedia/configuration.rb[0m:4:3: [33mC[0m: Missing top-level class documentation comment.
+  class Configuration
+  ^^^^^
+[36mlib/wikipedia/configuration.rb[0m:10:11: [33mC[0m: Use a guard clause instead of wrapping the code inside a conditional expression.
+          if args.empty?
+          ^^
+[36mlib/wikipedia/page.rb[0m:2:3: [33mC[0m: Class has too many lines. [107/100]
+  class Page [33m...[0m
+  ^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:2:3: [33mC[0m: Missing top-level class documentation comment.
+  class Page
+  ^^^^^
+[36mlib/wikipedia/page.rb[0m:6:19: [33mC[0m: Do not use [33m::[0m for method calls.
+      @data = JSON::load(json)
+                  ^^
+[36mlib/wikipedia/page.rb[0m:6:21: [33mC[0m: Prefer [33mJSON.parse[0m over [33mJSON.load[0m.
+      @data = JSON::load(json)
+                    ^^^^
+[36mlib/wikipedia/page.rb[0m:26:7: [33mC[0m: Use a guard clause instead of wrapping the code inside a conditional expression.
+      if matches = redirect?
+      ^^
+[36mlib/wikipedia/page.rb[0m:26:18: [35mW[0m: Assignment in condition - you probably meant to use [33m==[0m.
+      if matches = redirect?
+                 ^
+[36mlib/wikipedia/page.rb[0m:48:7: [33mC[0m: Don't use parentheses around a method call.
+      (page['extract'].split("=="))[0].strip if page['extract'] && page['extract'] != ''
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:48:30: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      (page['extract'].split("=="))[0].strip if page['extract'] && page['extract'] != ''
+                             ^^^^
+[36mlib/wikipedia/page.rb[0m:48:81: [33mC[0m: Line is too long. [88/80]
+      (page['extract'].split("=="))[0].strip if page['extract'] && page['extract'] != ''
+                                                                                ^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:52:30: [33mC[0m: Space between { and | missing.
+      page['categories'].map {|c| c['title'] } if page['categories']
+                             ^^
+[36mlib/wikipedia/page.rb[0m:56:25: [33mC[0m: Space between { and | missing.
+      page['links'].map {|c| c['title'] } if page['links']
+                        ^^
+[36mlib/wikipedia/page.rb[0m:60:28: [33mC[0m: Space between { and | missing.
+      page['extlinks'].map {|c| c['*'] } if page['extlinks']
+                           ^^
+[36mlib/wikipedia/page.rb[0m:64:26: [33mC[0m: Space between { and | missing.
+      page['images'].map {|c| c['title'] } if page['images']
+                         ^^
+[36mlib/wikipedia/page.rb[0m:76:26: [33mC[0m: Space between { and | missing.
+      image_metadata.map {|img| img.image_url }
+                         ^^
+[36mlib/wikipedia/page.rb[0m:76:26: [33mC[0m: Pass [33m&:image_url[0m as an argument to [33mmap[0m instead of a block.
+      image_metadata.map {|img| img.image_url }
+                         ^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:80:26: [33mC[0m: Space between { and | missing.
+      image_metadata.map {|img| img.image_descriptionurl }
+                         ^^
+[36mlib/wikipedia/page.rb[0m:80:26: [33mC[0m: Pass [33m&:image_descriptionurl[0m as an argument to [33mmap[0m instead of a block.
+      image_metadata.map {|img| img.image_descriptionurl }
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:93:17: [35mW[0m: Assignment in condition - you probably meant to use [33m==[0m.
+        if list = images
+                ^
+[36mlib/wikipedia/page.rb[0m:94:34: [33mC[0m: Space between { and | missing.
+          filtered = list.select {|i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?("LinkFA-star") }
+                                 ^^
+[36mlib/wikipedia/page.rb[0m:94:81: [33mC[0m: Line is too long. [106/80]
+          filtered = list.select {|i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?("LinkFA-star") }
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:94:91: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+          filtered = list.select {|i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?("LinkFA-star") }
+                                                                                          ^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:95:49: [33mC[0m: Space between { and | missing.
+          @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
+                                                ^^
+[36mlib/wikipedia/page.rb[0m:95:81: [33mC[0m: Line is too long. [86/80]
+          @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
+                                                                                ^^^^^^
+[36mlib/wikipedia/page.rb[0m:102:29: [33mC[0m: Space between { and | missing.
+      page['templates'].map {|c| c['title'] } if page['templates']
+                            ^^
+[36mlib/wikipedia/page.rb[0m:105:5: [33mC[0m: Use [33mattr_reader[0m to define trivial reader methods.
+    def json
+    ^^^
+[36mlib/wikipedia/page.rb[0m:109:5: [33mC[0m: Assignment Branch Condition size for sanitize is too high. [21.42/15]
+    def self.sanitize( s )
+    ^^^
+[36mlib/wikipedia/page.rb[0m:109:5: [33mC[0m: Method has too many lines. [23/10]
+    def self.sanitize( s ) [33m...[0m
+    ^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:109:23: [33mC[0m: Space inside parentheses detected.
+    def self.sanitize( s )
+                      ^
+[36mlib/wikipedia/page.rb[0m:109:25: [33mC[0m: Space inside parentheses detected.
+    def self.sanitize( s )
+                        ^
+[36mlib/wikipedia/page.rb[0m:110:7: [33mC[0m: Use a guard clause instead of wrapping the code inside a conditional expression.
+      if s
+      ^^
+[36mlib/wikipedia/page.rb[0m:114:9: [33mC[0m: Favor modifier [33mwhile[0m usage when having a single-line body.
+        while s =~ /\{\{[^\{\}]+?\}\}/
+        ^^^^^
+[36mlib/wikipedia/page.rb[0m:135:17: [33mC[0m: Use [33m%r[0m around regular expression.
+        s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mlib/wikipedia/page.rb[0m:143:28: [33mC[0m: Space between { and | missing.
+          s = sections.map {|paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
+                           ^^
+[36mlib/wikipedia/url.rb[0m:2:3: [33mC[0m: Missing top-level class documentation comment.
+  class Url
+  ^^^^^
+[36mlib/wikipedia/url.rb[0m:6:1: [33mC[0m: Trailing whitespace detected.
+[36mlib/wikipedia/url.rb[0m:9:1: [33mC[0m: Trailing whitespace detected.
+[36mlib/wikipedia/url.rb[0m:10:27: [33mC[0m: Space inside parentheses detected.
+      uri     = URI.parse( @wiki_url )
+                          ^
+[36mlib/wikipedia/url.rb[0m:10:37: [33mC[0m: Space inside parentheses detected.
+      uri     = URI.parse( @wiki_url )
+                                    ^
+[36mlib/wikipedia/url.rb[0m:11:28: [33mC[0m: Space inside parentheses detected.
+      @title  = URI.decode( uri.path.split('/').last )
+                           ^
+[36mlib/wikipedia/url.rb[0m:11:53: [33mC[0m: Space inside parentheses detected.
+      @title  = URI.decode( uri.path.split('/').last )
+                                                    ^
+[36mlib/wikipedia/version.rb[0m:2:13: [33mC[0m: Freeze mutable objects assigned to constants.
+  VERSION = "1.6.3"
+            ^^^^^^^
+[36mlib/wikipedia/version.rb[0m:2:13: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  VERSION = "1.6.3"
+            ^^^^^^^
+[36mlib/wikipedia.rb[0m:5:1: [33mC[0m: Missing top-level module documentation comment.
+module Wikipedia
+^^^^^^
+[36mlib/wikipedia.rb[0m:16:17: [33mC[0m: Space inside parentheses detected.
+  def self.find( page, options = {} )
+                ^
+[36mlib/wikipedia.rb[0m:16:36: [33mC[0m: Space inside parentheses detected.
+  def self.find( page, options = {} )
+                                   ^
+[36mlib/wikipedia.rb[0m:17:17: [33mC[0m: Space inside parentheses detected.
+    client.find( page, options )
+                ^
+[36mlib/wikipedia.rb[0m:17:31: [33mC[0m: Space inside parentheses detected.
+    client.find( page, options )
+                              ^
+[36mlib/wikipedia.rb[0m:20:23: [33mC[0m: Space inside parentheses detected.
+  def self.find_image( title, options = {} )
+                      ^
+[36mlib/wikipedia.rb[0m:20:43: [33mC[0m: Space inside parentheses detected.
+  def self.find_image( title, options = {} )
+                                          ^
+[36mlib/wikipedia.rb[0m:21:23: [33mC[0m: Space inside parentheses detected.
+    client.find_image( title, options )
+                      ^
+[36mlib/wikipedia.rb[0m:21:38: [33mC[0m: Space inside parentheses detected.
+    client.find_image( title, options )
+                                     ^
+[36mlib/wikipedia.rb[0m:24:24: [33mC[0m: Space inside parentheses detected.
+  def self.find_random( options = {} )
+                       ^
+[36mlib/wikipedia.rb[0m:24:37: [33mC[0m: Space inside parentheses detected.
+  def self.find_random( options = {} )
+                                    ^
+[36mlib/wikipedia.rb[0m:25:24: [33mC[0m: Space inside parentheses detected.
+    client.find_random( options )
+                       ^
+[36mlib/wikipedia.rb[0m:25:32: [33mC[0m: Space inside parentheses detected.
+    client.find_random( options )
+                               ^
+[36mlib/wikipedia.rb[0m:28:12: [33mC[0m: Use snake_case for method names.
+  def self.Configure(&block)
+           ^^^^^^^^^
+[36mlib/wikipedia.rb[0m:32:13: [33mC[0m: Avoid using [33m{...}[0m for multi-line blocks.
+  Configure {
+            ^
+[36mlib/wikipedia.rb[0m:41:3: [35mW[0m: Useless [33mprivate[0m access modifier.
+  private
+  ^^^^^^^
+[36mlib/wikipedia.rb[0m:43:3: [35mW[0m: [33mprivate[0m (on line 41) does not make singleton methods private. Use [33mprivate_class_method[0m or [33mprivate[0m inside a [33mclass << self[0m block instead.
+  def self.client
+  ^^^
+[36mscript/add_sanitization_test[0m:3:54: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "lib")
+                                                     ^^^^
+[36mscript/add_sanitization_test[0m:3:60: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "lib")
+                                                           ^^^^^
+[36mscript/add_sanitization_test[0m:4:9: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "wikipedia"
+        ^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:6:62: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+                                                             ^^^^
+[36mscript/add_sanitization_test[0m:6:68: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+                                                                   ^^^^^^
+[36mscript/add_sanitization_test[0m:6:76: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+                                                                           ^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:6:81: [33mC[0m: Line is too long. [110/80]
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:6:88: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+SANITIZATION_SAMPLE_PATH = File.join(File.dirname(__FILE__), "..", "spec", "fixtures", "sanitization_samples")
+                                                                                       ^^^^^^^^^^^^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:10:32: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+  page = Wikipedia.find(title, :rvsection => 0)
+                               ^^^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:11:75: [33mC[0m: Space between { and | missing.
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-raw.txt"), 'w') {|f| f << page.content }
+                                                                          ^^
+[36mscript/add_sanitization_test[0m:11:81: [33mC[0m: Line is too long. [98/80]
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-raw.txt"), 'w') {|f| f << page.content }
+                                                                                ^^^^^^^^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:12:81: [33mC[0m: Line is too long. [114/80]
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-sanitized.txt"), 'w') {|f| f << page.sanitized_content }
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mscript/add_sanitization_test[0m:12:81: [33mC[0m: Space between { and | missing.
+  File.open(File.join(SANITIZATION_SAMPLE_PATH, "#{title}-sanitized.txt"), 'w') {|f| f << page.sanitized_content }
+                                                                                ^^
+[36mscript/add_sanitization_test[0m:15:16: [33mC[0m: Prefer [33m$PROGRAM_NAME[0m over [33m$0[0m.
+if __FILE__ == $0
+               ^^
+[36mscript/add_sanitization_test[0m:17:20: [33mC[0m: Prefer [33m$PROGRAM_NAME[0m over [33m$0[0m.
+    puts "Usage: #{$0} http://en.wikipedia.org/wiki/Social_Democratic_Party_of_Kyrgyzstan"
+                   ^^
+[36mscript/add_sanitization_test[0m:17:90: [33mC[0m: Line is too long. [90/80]
+    puts "Usage: #{$0} http://en.wikipedia.org/wiki/Social_Democratic_Party_of_Kyrgyzstan"
+                                                                                         ^
+[36mspec/lib/client_spec.rb[0m:4:1: [33mC[0m: Block has too many lines. [40/25]
+describe Wikipedia::Client, ".find page (mocked)" do [33m...[0m
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:4:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find page (mocked)" do
+                            ^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:7:81: [33mC[0m: Line is too long. [94/80]
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
+                                                                                ^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:8:28: [33mC[0m: Do not use [33m::[0m for method calls.
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                           ^^
+[36mspec/lib/client_spec.rb[0m:8:30: [33mC[0m: Prefer [33mJSON.parse[0m over [33mJSON.load[0m.
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                             ^^^^
+[36mspec/lib/client_spec.rb[0m:8:81: [33mC[0m: Line is too long. [115/80]
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:12:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should execute a request for the page" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:16:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page object" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:20:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with the correct content" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:25:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with a title of Edsger W. Dijkstra" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:30:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with the correct URL" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:35:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with the correct plain text extract" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:40:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with categories" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:33: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                ^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:57: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                        ^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:81: [33mC[0m: Line is too long. [446/80]
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:81: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:119: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:172: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:233: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:263: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:301: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:330: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:42:385: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.categories.should == ["Category:1930 births", "Category:2002 deaths", "Category:All pages needing cleanup", "Category:Articles needing cleanup from April 2009", "Category:Articles with close paraphrasing from April 2009", "Category:Computer pioneers", "Category:Dutch computer scientists", "Category:Dutch physicists", "Category:Eindhoven University of Technology faculty", "Category:Fellows of the Association for Computing Machinery"]
+                                                                                                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:45:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with links" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:28: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                           ^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:48: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                               ^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:57: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                        ^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:69: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                    ^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:81: [33mC[0m: Line is too long. [194/80]
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:83: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:110: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:140: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                                                                           ^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:152: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                                                                                       ^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:167: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                                                                                                      ^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:47:180: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.links.should == ["ACM Turing Award", "ALGOL", "ALGOL 60", "Adi Shamir", "Adriaan van Wijngaarden", "Agile software development", "Alan Kay", "Alan Perlis", "Algorithm", "Allen Newell"]
+                                                                                                                                                                                   ^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:50:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with images" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:59: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                                                          ^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:80: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:81: [33mC[0m: Line is too long. [166/80]
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:113: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:52:138: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.images.should == ["File:Copyright-problem.svg", "File:Dijkstra.ogg", "File:Edsger Wybe Dijkstra.jpg", "File:Speaker Icon.svg", "File:Wikiquote-logo-en.svg"]
+                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:56:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find page with one section (mocked)" do
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:59:81: [33mC[0m: Line is too long. [104/80]
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra_section_0.json')
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:60:81: [33mC[0m: Line is too long. [131/80]
+    @edsger_content = File.read(File.dirname(__FILE__) + '/../fixtures/sanitization_samples/Edsger_W_Dijkstra-sanitized.txt').strip
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:64:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should have the correct sanitized intro" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:65:45: [33mC[0m: Use the new Ruby 1.9 hash syntax.
+    @page = @client.find('Edsger_Dijkstra', :rvsection => 0)
+                                            ^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:70:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find image (mocked)" do
+                            ^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:73:81: [33mC[0m: Line is too long. [108/80]
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/File_Edsger_Wybe_Dijkstra_jpg.json')
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:77:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should execute a request for the image" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:81:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page object" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:82:81: [33mC[0m: Line is too long. [97/80]
+    @client.find_image('File:Edsger Wybe Dijkstra.jpg').should be_an_instance_of(Wikipedia::Page)
+                                                                                ^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:85:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with a title of File:Edsger Wybe Dijkstra.jpg" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:90:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a page with an image url" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:92:31: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_url.should == "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:92:107: [33mC[0m: Line is too long. [107/80]
+    @page.image_url.should == "http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg"
+                                                                                                          ^
+[36mspec/lib/client_spec.rb[0m:96:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find page (Edsger_Dijkstra)" do
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:102:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should get a redirect when trying Edsger Dijkstra" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:107:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should get a final page when follow_redirects is true" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:113:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should collect the image urls" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:33: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:81: [33mC[0m: Line is too long. [725/80]
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:100: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:178: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:257: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:337: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:417: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:493: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:581: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:116:653: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @page.image_urls.should == ["https://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg", "https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dining_philosophers.png", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Edsger_Dijkstra_1994.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg", "https://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Rail-semaphore-signal-Dave-F.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wikiquote-logo.svg"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:120:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find page (Rails) at jp" do
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:122:34: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    Wikipedia.Configure { domain "ja.wikipedia.org" }
+                                 ^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:127:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should get a redirect when trying Rails" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:132:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should get a final page when follow_redirects is true" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:139:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, ".find random page" do
+                            ^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:144:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should get random pages" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:145:33: [33mC[0m: Do not use parentheses for method calls with no arguments.
+    @page1 = @client.find_random().title
+                                ^
+[36mspec/lib/client_spec.rb[0m:146:33: [33mC[0m: Do not use parentheses for method calls with no arguments.
+    @page2 = @client.find_random().title
+                                ^
+[36mspec/lib/client_spec.rb[0m:151:29: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Client, "page.summary (mocked)" do
+                            ^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:154:81: [33mC[0m: Line is too long. [94/80]
+    @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
+                                                                                ^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:155:28: [33mC[0m: Do not use [33m::[0m for method calls.
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                           ^^
+[36mspec/lib/client_spec.rb[0m:155:30: [33mC[0m: Prefer [33mJSON.parse[0m over [33mJSON.load[0m.
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                             ^^^^
+[36mspec/lib/client_spec.rb[0m:155:81: [33mC[0m: Line is too long. [115/80]
+    @edsger_content  = JSON::load(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:159:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return only the summary" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:161:81: [33mC[0m: Line is too long. [386/80]
+    @page.summary.should == 'Edsger Wybe Dijkstra (Dutch pronunciation: [ˈɛtsxər ˈʋibə ˈdɛikstra] ( ); 11 May 1930 – 6 August 2002) was a Dutch computer scientist. He received the 1972 Turing Award for fundamental contributions to developing programming languages, and was the Schlumberger Centennial Chair of Computer Sciences at The University of Texas at Austin from 1984 until 2000.
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/client_spec.rb[0m:162:81: [33mC[0m: Line is too long. [250/80]
+Shortly before his death in 2002, he received the ACM PODC Influential Paper Award in distributed computing for his work on self-stabilization of program computation. This annual award was renamed the Dijkstra Prize the following year, in his honor.'
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/sanitize_spec.rb[0m:4:27: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Page, ".sanitize wiki markup" do
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/sanitize_spec.rb[0m:5:81: [33mC[0m: Line is too long. [100/80]
+  Dir[File.dirname(__FILE__) + '/../fixtures/sanitization_samples/*-raw.txt'].each do |raw_filename|
+                                                                                ^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/sanitize_spec.rb[0m:6:29: [33mC[0m: Use [33m%r[0m around regular expression.
+    name = raw_filename.sub(/\/(.+?)\-raw\.txt$/, '\1')
+                            ^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/url_spec.rb[0m:3:26: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia::Url, "like http://en.wikipedia.org/wiki/Getting_Things_Done" do
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/url_spec.rb[0m:3:81: [33mC[0m: Line is too long. [83/80]
+describe Wikipedia::Url, "like http://en.wikipedia.org/wiki/Getting_Things_Done" do
+                                                                                ^^^
+[36mspec/lib/url_spec.rb[0m:4:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should have a title of Getting_Things_Done" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/url_spec.rb[0m:8:4: [33mC[0m: Final newline missing.
+end
+   
+[36mspec/lib/wikipedia_spec.rb[0m:3:21: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+describe Wikipedia, ".find" do
+                    ^^^^^^^
+[36mspec/lib/wikipedia_spec.rb[0m:4:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a Wikipedia::Page instance" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/wikipedia_spec.rb[0m:8:1: [33mC[0m: Trailing whitespace detected.
+[36mspec/lib/wikipedia_spec.rb[0m:9:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a Page with a title" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/wikipedia_spec.rb[0m:13:1: [33mC[0m: Trailing whitespace detected.
+[36mspec/lib/wikipedia_spec.rb[0m:14:6: [33mC[0m: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "should return a Page given a URL" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36mspec/lib/wikipedia_spec.rb[0m:16:1: [33mC[0m: Trailing whitespace detected.
+
+19 files inspected, [31m351 offenses[0m detected
