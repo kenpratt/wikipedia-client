@@ -25,22 +25,29 @@ module Wikipedia
     client.find_random( options )
   end
 
-  def self.Configure(&block)
+  def self.configure(&block)
     Configuration.instance.instance_eval(&block)
   end
 
-  Configure {
+  # rubocop:disable Style/MethodName
+  def self.Configure(&block)
+    configure(&block)
+  end
+
+  configure do
     protocol  'https'
     domain    'en.wikipedia.org'
     path      'w/api.php'
     user_agent(
       'wikipedia-client/1.3 (https://github.com/kenpratt/wikipedia-client)'
     )
-  }
+  end
 
-  private
+  class << self
+    private
 
-  def self.client
-    @client ||= Wikipedia::Client.new
+    def client
+      @client ||= Wikipedia::Client.new
+    end
   end
 end

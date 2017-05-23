@@ -76,7 +76,7 @@ h2. Configuration
 
 This is by default configured like this:
 
-<pre><code>Wikipedia.Configure {
+<pre><code>Wikipedia.configure {
   domain 'en.wikipedia.org'
   path   'w/api.php'
 }</code></pre>

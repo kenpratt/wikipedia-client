@@ -132,7 +132,7 @@ end
 
 describe Wikipedia::Client, ".find page (Rails) at jp" do
   before(:each) do
-    Wikipedia.Configure { domain "ja.wikipedia.org" }
+    Wikipedia.configure { domain "ja.wikipedia.org" }
     @client = Wikipedia::Client.new
     @client.follow_redirects = false
   end
