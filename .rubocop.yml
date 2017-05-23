@@ -13,3 +13,6 @@ Style/RescueModifier:
 
 Style/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
