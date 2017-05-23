@@ -1,5 +1,4 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'rubygems'
 require 'rake'
 require 'rubocop/rake_task'
 require 'rspec/core/rake_task'
@@ -12,17 +11,10 @@ RSpec::Core::RakeTask.new(:spec)
 desc 'Run rubocop'
 RuboCop::RakeTask.new(:rubocop)
 
-begin
-  require 'rcov/rcovtask'
-  Rcov::RcovTask.new do |test|
-    test.libs << 'test'
-    test.pattern = 'test/**/test_*.rb'
-    test.verbose = true
-  end
-rescue LoadError
-  task :rcov do
-    abort 'RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov'
-  end
+desc 'Run spec with coverage'
+task :coverage do
+  ENV['COVERAGE'] = 'true'
+  Rake::Task['spec'].execute
 end
 
 require 'rdoc/task'
