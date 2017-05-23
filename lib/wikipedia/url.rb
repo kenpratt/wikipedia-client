@@ -1,5 +1,4 @@
 module Wikipedia
-  # Class to hold and decode URLs
   class Url
     def initialize(wiki_url)
       @wiki_url = wiki_url

@@ -1,5 +1,4 @@
 module Wikipedia
-  # Basic Wikipedia page construct to interface with pages
   class Page
     attr_reader :json
 

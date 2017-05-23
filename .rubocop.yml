@@ -16,3 +16,6 @@ Style/SpaceInsidePercentLiteralDelimiters:
 
 Style/RegexpLiteral:
   AllowInnerSlashes: true
+
+Style/Documentation:
+  Enabled: false

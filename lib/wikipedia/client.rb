@@ -1,5 +1,4 @@
 module Wikipedia
-  # Basic Wikipedia client construct to fetch media
   class Client
     # see http://en.wikipedia.org/w/api.php
     BASE_URL = ':protocol://:domain/:path?action=:action&format=json'.freeze
