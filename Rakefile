@@ -13,7 +13,7 @@ end
 desc 'Test the wikipedia plugin.'
 task :spec do
   spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
-  system("rspec -cfs #{spec_path}")
+  exec("rspec -cfs #{spec_path}")
 end
 
 begin
