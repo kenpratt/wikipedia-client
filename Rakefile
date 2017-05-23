@@ -2,24 +2,15 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'rubygems'
 require 'rake'
 require 'rubocop/rake_task'
+require 'rspec/core/rake_task'
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
+task default: [:spec, :rubocop]
 
 desc 'Test the wikipedia plugin.'
-task :spec do
-  spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
-  system("rspec -cfs #{spec_path}")
-end
+RSpec::Core::RakeTask.new(:spec)
 
 desc 'Run rubocop'
-task :rubocop do
-  RuboCop::RakeTask.new
-end
+RuboCop::RakeTask.new(:rubocop)
 
 begin
   require 'rcov/rcovtask'
@@ -33,8 +24,6 @@ rescue LoadError
     abort 'RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov'
   end
 end
-
-task default: [:spec, :rubocop]
 
 require 'rdoc/task'
 require 'wikipedia/version'
