@@ -1,38 +1,20 @@
-$:.push File.expand_path("../lib", __FILE__)
-require 'rubygems'
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'rake'
+require 'rspec/core/rake_task'
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
+task default: :spec
 
 desc 'Test the wikipedia plugin.'
-task :spec do
-  spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
-  exec("rspec -cfs #{spec_path}")
-end
+RSpec::Core::RakeTask.new(:spec)
 
-begin
-  require 'rcov/rcovtask'
-  Rcov::RcovTask.new do |test|
-    test.libs << 'test'
-    test.pattern = 'test/**/test_*.rb'
-    test.verbose = true
-  end
-rescue LoadError
-  task :rcov do
-    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
-  end
+desc 'Run spec with coverage'
+task :coverage do
+  ENV['COVERAGE'] = 'true'
+  Rake::Task['spec'].execute
 end
-
-task :default => :spec
 
 require 'rdoc/task'
-require "wikipedia/version"
+require 'wikipedia/version'
 Rake::RDocTask.new do |rdoc|
   version = Wikipedia::VERSION
 
