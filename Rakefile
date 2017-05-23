@@ -1,6 +1,7 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'rubygems'
 require 'rake'
+require 'rubocop/rake_task'
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
@@ -13,6 +14,11 @@ desc 'Test the wikipedia plugin.'
 task :spec do
   spec_path = File.expand_path(File.dirname(__FILE__) + '/spec/**/*.rb')
   system("rspec -cfs #{spec_path}")
+end
+
+desc 'Run rubocop'
+task :rubocop do
+  RuboCop::RakeTask.new
 end
 
 begin
@@ -28,7 +34,7 @@ rescue LoadError
   end
 end
 
-task default: :spec
+task default: [:spec, :rubocop]
 
 require 'rdoc/task'
 require 'wikipedia/version'

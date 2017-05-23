@@ -19,3 +19,6 @@ Style/RegexpLiteral:
 
 Style/Documentation:
   Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
