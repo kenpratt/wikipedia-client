@@ -2,5 +2,14 @@ Metrics/LineLength:
   Max: 120
   AllowURI: true
 
+Metrics/MethodLength:
+  Max: 15
+
 Style/SpaceInsideParens:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
