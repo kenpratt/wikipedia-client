@@ -115,8 +115,6 @@ h3. Pushing a new release of the Gem
 
 Edit <code>lib/wikipedia/version.rb</code>, changing <code>VERSION</code>.
 
-Edit <code>wikipedia-client.gemspec</code>, changing <code>s.date</code> to today's date.
-
 Build the gem: <code>bundle exec gem build wikipedia-client.gemspec</code>
 
 Commit the changes: <code>git commit -a -m 'Version bump to 1.4.0' && git push</code>
