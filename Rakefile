@@ -1,4 +1,4 @@
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'rubygems'
 require 'rake'
 
@@ -8,7 +8,6 @@ Rake::TestTask.new(:test) do |test|
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
 end
-
 
 desc 'Test the wikipedia plugin.'
 task :spec do
@@ -25,14 +24,14 @@ begin
   end
 rescue LoadError
   task :rcov do
-    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
+    abort 'RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov'
   end
 end
 
-task :default => :spec
+task default: :spec
 
 require 'rdoc/task'
-require "wikipedia/version"
+require 'wikipedia/version'
 Rake::RDocTask.new do |rdoc|
   version = Wikipedia::VERSION
 
