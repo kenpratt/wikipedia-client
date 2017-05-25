@@ -5,3 +5,5 @@
 *.tmp
 *.log
 pkg/*
+coverage/
+rdoc/

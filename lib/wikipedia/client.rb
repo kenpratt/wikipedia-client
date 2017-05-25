@@ -1,7 +1,7 @@
 module Wikipedia
   class Client
     # see http://en.wikipedia.org/w/api.php
-    BASE_URL = ":protocol://:domain/:path?action=:action&format=json"
+    BASE_URL = ':protocol://:domain/:path?action=:action&format=json'.freeze
 
     attr_accessor :follow_redirects
 
@@ -12,7 +12,7 @@ module Wikipedia
     def find( title, options = {} )
       title = Url.new(title).title rescue title
       page = Page.new( request_page( title, options ) )
-      while follow_redirects and page.redirect?
+      while follow_redirects && page.redirect?
         page = Page.new( request_page( page.redirect_title, options ) )
       end
       page
@@ -25,87 +25,88 @@ module Wikipedia
 
     def find_random( options = {} )
       require 'json'
-      data = JSON::load( request_random( options ) )
-      title = data["query"]["pages"].values[0]["title"]
+      data = JSON.parse( request_random( options ) )
+      title = data['query']['pages'].values[0]['title']
       find( title, options )
     end
 
     # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions%7Clinks%7Cimages%7Ccategories&rvprop=content&titles=Flower%20(video%20game)
     def request_page( title, options = {} )
       request( {
-                 :action => "query",
-                 :prop => %w{ info revisions links extlinks images categories coordinates templates extracts },
-                 :rvprop => "content",
-                 :inprop => "url",
-                 :explaintext => "",
-                 :titles => title
-               }.merge( options ) )
+        action: 'query',
+        prop: %w[ info revisions links extlinks images categories coordinates templates extracts ],
+        rvprop: 'content',
+        inprop: 'url',
+        explaintext: '',
+        titles: title
+      }.merge( options ) )
     end
 
     # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&titles=File:Flower.png
     def request_image( title, options = {} )
       request( {
-                 :action => "query",
-                 :prop => "imageinfo",
-                 :iiprop => "url",
-                 :titles => title
-               }.merge( options ) )
+        action: 'query',
+        prop: 'imageinfo',
+        iiprop: 'url',
+        titles: title
+      }.merge( options ) )
     end
 
     # http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info
     def request_random( options = {} )
       request( {
-                 :action => "query",
-                 :generator => "random",
-                 :grnnamespace => "0",
-                 :prop => "info"
-               }.merge( options ) )
+        action: 'query',
+        generator: 'random',
+        grnnamespace: '0',
+        prop: 'info'
+      }.merge( options ) )
     end
 
     def request( options )
       require 'open-uri'
-      URI.parse( url_for( options ) ).read( "User-Agent" => Configuration[:user_agent] )
+      URI.parse( url_for( options ) ).read( 'User-Agent' => Configuration[:user_agent] )
     end
 
     protected
-      def configuration_options
-        {
-          :protocol   => Configuration[:protocol],
-          :domain     => Configuration[:domain],
-          :path       => Configuration[:path],
-        }
-      end
 
-      def url_for( options )
-        url = BASE_URL.dup
-        options = configuration_options.merge( options )
-        options.each do |key, val|
-          value = urlify_value( val )
-          if url.include?( ":#{key}" )
-            url.sub! ":#{key}", value
-          else
-            url << "&#{key}=#{value}"
-          end
-        end
-        url
-      end
+    def configuration_options
+      {
+        protocol: Configuration[:protocol],
+        domain:   Configuration[:domain],
+        path:     Configuration[:path]
+      }
+    end
 
-      def urlify_value( val )
-        case val
-        when Array
-          encode( val.flatten.join( '|' ) )
+    def url_for( options )
+      url = BASE_URL.dup
+      options = configuration_options.merge( options )
+      options.each do |key, val|
+        value = urlify_value( val )
+        if url.include?( ":#{key}" )
+          url.sub! ":#{key}", value
         else
-          encode( val )
+          url << "&#{key}=#{value}"
         end
       end
+      url
+    end
 
-      def encode( val )
-        case val
-        when String
-          URI.encode( val ).gsub( '&', '%26' )
-        else
-          val
-        end
+    def urlify_value( val )
+      case val
+      when Array
+        encode( val.flatten.join( '|' ) )
+      else
+        encode( val )
       end
+    end
+
+    def encode( val )
+      case val
+      when String
+        URI.encode( val ).gsub( '&', '%26' )
+      else
+        val
+      end
+    end
   end
 end

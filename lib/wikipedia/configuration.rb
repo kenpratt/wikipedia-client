@@ -7,11 +7,9 @@ module Wikipedia
     def self.directives(*directives)
       directives.each do |directive|
         define_method directive do |*args|
-          if args.empty?
-            return instance_variable_get("@#{directive}")
-          else
-            instance_variable_set("@#{directive}", args.first)
-          end
+          return instance_variable_get("@#{directive}") if args.empty?
+
+          instance_variable_set("@#{directive}", args.first)
         end
       end
     end

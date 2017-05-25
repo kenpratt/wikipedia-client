@@ -1,9 +1,11 @@
 module Wikipedia
   class Page
+    attr_reader :json
+
     def initialize(json)
       require 'json'
       @json = json
-      @data = JSON::load(json)
+      @data = JSON.parse(json)
     end
 
     def page
@@ -23,9 +25,7 @@ module Wikipedia
     end
 
     def redirect_title
-      if matches = redirect?
-        matches[1]
-      end
+      redirect?[1] rescue nil
     end
 
     def title
@@ -45,23 +45,23 @@ module Wikipedia
     end
 
     def summary
-      (page['extract'].split("=="))[0].strip if page['extract'] && page['extract'] != ''
+      page['extract'].split('==')[0].strip if page['extract'] && page['extract'] != ''
     end
 
     def categories
-      page['categories'].map {|c| c['title'] } if page['categories']
+      page['categories'].map { |c| c['title'] } if page['categories']
     end
 
     def links
-      page['links'].map {|c| c['title'] } if page['links']
+      page['links'].map { |c| c['title'] } if page['links']
     end
 
     def extlinks
-      page['extlinks'].map {|c| c['*'] } if page['extlinks']
+      page['extlinks'].map { |c| c['*'] } if page['extlinks']
     end
 
     def images
-      page['images'].map {|c| c['title'] } if page['images']
+      page['images'].map { |c| c['title'] } if page['images']
     end
 
     def image_url
@@ -73,11 +73,11 @@ module Wikipedia
     end
 
     def image_urls
-      image_metadata.map {|img| img.image_url }
+      image_metadata.map(&:image_url)
     end
 
     def image_descriptionurls
-      image_metadata.map {|img| img.image_descriptionurl }
+      image_metadata.map(&:image_descriptionurl)
     end
 
     def coordinates
@@ -90,61 +90,54 @@ module Wikipedia
 
     def image_metadata
       unless @cached_image_metadata
-        if list = images
-          filtered = list.select {|i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?("LinkFA-star") }
-          @cached_image_metadata = filtered.map {|title| Wikipedia.find_image(title) }
-        end
+        return if images.nil?
+        filtered = images.select { |i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?('LinkFA-star') }
+        @cached_image_metadata = filtered.map { |title| Wikipedia.find_image(title) }
       end
       @cached_image_metadata || []
     end
 
     def templates
-      page['templates'].map {|c| c['title'] } if page['templates']
+      page['templates'].map { |c| c['title'] } if page['templates']
     end
 
-    def json
-      @json
-    end
-
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/AbcSize
     def self.sanitize( s )
-      if s
-        s = s.dup
+      return unless s
 
-        # strip anything inside curly braces!
-        while s =~ /\{\{[^\{\}]+?\}\}/
-          s.gsub!(/\{\{[^\{\}]+?\}\}/, '')
-        end
+      # strip anything inside curly braces!
+      s.gsub!(/\{\{[^\{\}]+?\}\}/, '') while s =~ /\{\{[^\{\}]+?\}\}/
 
-        # strip info box
-        s.sub!(/^\{\|[^\{\}]+?\n\|\}\n/, '')
+      # strip info box
+      s.sub!(/^\{\|[^\{\}]+?\n\|\}\n/, '')
 
-        # strip internal links
-        s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
-        s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
+      # strip internal links
+      s.gsub!(/\[\[([^\]\|]+?)\|([^\]\|]+?)\]\]/, '\2')
+      s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
 
-        # strip images and file links
-        s.gsub!(/\[\[Image:[^\[\]]+?\]\]/, '')
-        s.gsub!(/\[\[File:[^\[\]]+?\]\]/, '')
+      # strip images and file links
+      s.gsub!(/\[\[Image:[^\[\]]+?\]\]/, '')
+      s.gsub!(/\[\[File:[^\[\]]+?\]\]/, '')
 
-        # convert bold/italic to html
-        s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
-        s.gsub!(/'''(.+?)'''/, '<b>\1</b>')
-        s.gsub!(/''(.+?)''/, '<i>\1</i>')
+      # convert bold/italic to html
+      s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
+      s.gsub!(/'''(.+?)'''/, '<b>\1</b>')
+      s.gsub!(/''(.+?)''/, '<i>\1</i>')
 
-        # misc
-        s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
-        s.gsub!(/<!--[^>]+?-->/, '')
-        s.gsub!('  ', ' ')
-        s.strip!
+      # misc
+      s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
+      s.gsub!(/<!--[^>]+?-->/, '')
+      s.gsub!('  ', ' ')
+      s.strip!
 
-        # create paragraphs
-        sections = s.split("\n\n")
-        if sections.size > 1
-          s = sections.map {|paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
-        end
-
-        s
+      # create paragraphs
+      sections = s.split("\n\n")
+      if sections.size > 1
+        s = sections.map { |paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
       end
+
+      s
     end
   end
 end
