@@ -7,7 +7,7 @@ describe Wikipedia::Client, '.find page (mocked)' do
     @client = Wikipedia::Client.new
     @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
     @edsger_content  = JSON.parse(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
-    @client.should_receive(:request).and_return(@edsger_dijkstra)
+    expect(@client).to receive(:request).and_return(@edsger_dijkstra)
   end
 
   it 'should execute a request for the page' do
@@ -15,27 +15,27 @@ describe Wikipedia::Client, '.find page (mocked)' do
   end
 
   it 'should return a page object' do
-    @client.find('Edsger_Dijkstra').should be_an_instance_of(Wikipedia::Page)
+    expect(@client.find('Edsger_Dijkstra')).to be_an_instance_of(Wikipedia::Page)
   end
 
   it 'should return a page with the correct content' do
     @page = @client.find('Edsger_Dijkstra')
-    @page.content.should == @edsger_content
+    expect(@page.content).to eq(@edsger_content)
   end
 
   it 'should return a page with a title of Edsger W. Dijkstra' do
     @page = @client.find('Edsger_Dijkstra')
-    @page.title.should == 'Edsger W. Dijkstra'
+    expect(@page.title).to eq('Edsger W. Dijkstra')
   end
 
   it 'should return a page with the correct URL' do
     @page = @client.find('Edsger_Dijkstra')
-    @page.fullurl.should == 'http://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
+    expect(@page.fullurl).to eq('http://en.wikipedia.org/wiki/Edsger_W._Dijkstra')
   end
 
   it 'should return a page with the correct plain text extract' do
     @page = @client.find('Edsger_Dijkstra')
-    @page.text.should start_with 'Edsger Wybe Dijkstra (Dutch pronunciation: '
+    expect(@page.text).to start_with 'Edsger Wybe Dijkstra (Dutch pronunciation: '
   end
 
   it 'should return a page with categories' do
@@ -47,7 +47,7 @@ describe Wikipedia::Client, '.find page (mocked)' do
       'Category:Dutch physicists', 'Category:Articles needing cleanup from April 2009',
       'Category:All pages needing cleanup', 'Category:Dutch computer scientists'
     ].each do |category|
-      @page.categories.should include(category)
+      expect(@page.categories).to include(category)
     end
   end
 
@@ -57,7 +57,7 @@ describe Wikipedia::Client, '.find page (mocked)' do
       'ALGOL', 'Alan Kay', 'ALGOL 60', 'Agile software development', 'ACM Turing Award',
       'Algorithm', 'Adi Shamir', 'Alan Perlis', 'Allen Newell', 'Adriaan van Wijngaarden'
     ].each do |link|
-      @page.links.should include(link)
+      expect(@page.links).to include(link)
     end
   end
 
@@ -70,7 +70,7 @@ describe Wikipedia::Client, '.find page (mocked)' do
       'File:Copyright-problem.svg',
       'File:Edsger Wybe Dijkstra.jpg'
     ].each do |file|
-      @page.images.should include(file)
+      expect(@page.images).to include(file)
     end
   end
 end
@@ -81,12 +81,12 @@ describe Wikipedia::Client, '.find page with one section (mocked)' do
     dir_name = File.dirname(__FILE__)
     @edsger_dijkstra = File.read(dir_name + '/../fixtures/Edsger_Dijkstra_section_0.json')
     @edsger_content = File.read(dir_name + '/../fixtures/sanitization_samples/Edsger_W_Dijkstra-sanitized.txt').strip
-    @client.should_receive(:request).and_return(@edsger_dijkstra)
+    expect(@client).to receive(:request).and_return(@edsger_dijkstra)
   end
 
   it 'should have the correct sanitized intro' do
     @page = @client.find('Edsger_Dijkstra', rvsection: 0)
-    @page.sanitized_content.should == @edsger_content
+    expect(@page.sanitized_content).to eq(@edsger_content)
   end
 end
 
@@ -94,7 +94,7 @@ describe Wikipedia::Client, '.find image (mocked)' do
   before(:each) do
     @client = Wikipedia::Client.new
     @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/File_Edsger_Wybe_Dijkstra_jpg.json')
-    @client.should_receive(:request).and_return(@edsger_dijkstra)
+    expect(@client).to receive(:request).and_return(@edsger_dijkstra)
   end
 
   it 'should execute a request for the image' do
@@ -102,17 +102,17 @@ describe Wikipedia::Client, '.find image (mocked)' do
   end
 
   it 'should return a page object' do
-    @client.find_image('File:Edsger Wybe Dijkstra.jpg').should be_an_instance_of(Wikipedia::Page)
+    expect(@client.find_image('File:Edsger Wybe Dijkstra.jpg')).to be_an_instance_of(Wikipedia::Page)
   end
 
   it 'should return a page with a title of File:Edsger Wybe Dijkstra.jpg' do
     @page = @client.find_image('File:Edsger Wybe Dijkstra.jpg')
-    @page.title.should == 'File:Edsger Wybe Dijkstra.jpg'
+    expect(@page.title).to eq('File:Edsger Wybe Dijkstra.jpg')
   end
 
   it 'should return a page with an image url' do
     @page = @client.find_image('File:Edsger Wybe Dijkstra.jpg')
-    @page.image_url.should == 'http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg'
+    expect(@page.image_url).to eq('http://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg')
   end
 end
 
@@ -124,13 +124,13 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
 
   it 'should get a redirect when trying Edsger Dijkstra' do
     @page = @client.find('Edsger Dijkstra')
-    @page.should be_redirect
+    expect(@page).to be_redirect
   end
 
   it 'should get a final page when follow_redirects is true' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
-    @page.should_not be_redirect
+    expect(@page).not_to be_redirect
   end
 
   it 'should collect the image urls' do
@@ -147,7 +147,7 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
       '/commons/7/7b/An_illustration_of_the_dining_philosophers_problem.png',
       '/commons/3/37/Detail_of_a_1Kb_ferrite_core_RAM-module_of_an_1960s_Electrologica_X1_computer.jpg'
     ].each do |image|
-      @page.image_urls.should include('https://upload.wikimedia.org/wikipedia' + image)
+      expect(@page.image_urls).to include('https://upload.wikimedia.org/wikipedia' + image)
     end
   end
 end
@@ -161,13 +161,13 @@ describe Wikipedia::Client, '.find page (Rails) at jp' do
 
   it 'should get a redirect when trying Rails' do
     @page = @client.find('Rails')
-    @page.should be_redirect
+    expect(@page).to be_redirect
   end
 
   it 'should get a final page when follow_redirects is true' do
     @client.follow_redirects = true
     @page = @client.find('Rails')
-    @page.should_not be_redirect
+    expect(@page).not_to be_redirect
   end
 end
 
@@ -179,7 +179,7 @@ describe Wikipedia::Client, '.find random page' do
   it 'should get random pages' do
     @page1 = @client.find_random.title
     @page2 = @client.find_random.title
-    @page1.should_not == @page2
+    expect(@page1).not_to eq(@page2)
   end
 end
 
@@ -188,16 +188,16 @@ describe Wikipedia::Client, 'page.summary (mocked)' do
     @client = Wikipedia::Client.new
     @edsger_dijkstra = File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_Dijkstra.json')
     @edsger_content  = JSON.parse(File.read(File.dirname(__FILE__) + '/../fixtures/Edsger_content.txt'))['content']
-    @client.should_receive(:request).and_return(@edsger_dijkstra)
+    expect(@client).to receive(:request).and_return(@edsger_dijkstra)
   end
 
   it 'should return only the summary' do
     @page = @client.find('Edsger_Dijkstra')
-    @page.summary.should == 'Edsger Wybe Dijkstra (Dutch pronunciation: [ˈɛtsxər ˈʋibə ˈdɛikstra] ( );'\
+    expect(@page.summary).to eq('Edsger Wybe Dijkstra (Dutch pronunciation: [ˈɛtsxər ˈʋibə ˈdɛikstra] ( );'\
     ' 11 May 1930 – 6 August 2002) was a Dutch computer scientist. He received the 1972 Turing Award for fundamental'\
     ' contributions to developing programming languages, and was the Schlumberger Centennial Chair of Computer'\
     " Sciences at The University of Texas at Austin from 1984 until 2000.\nShortly before his death in 2002, he"\
     ' received the ACM PODC Influential Paper Award in distributed computing for his work on self-stabilization of'\
-    ' program computation. This annual award was renamed the Dijkstra Prize the following year, in his honor.'
+    ' program computation. This annual award was renamed the Dijkstra Prize the following year, in his honor.')
   end
 end
