@@ -84,7 +84,7 @@ DEPENDENCIES
   jeweler
   rake
   rdoc
-  rspec (= 3.0)
+  rspec
   rubocop
   thoughtbot-shoulda
   wikipedia-client!
