@@ -8,7 +8,7 @@ describe Wikipedia::Page, '.sanitize wiki markup' do
     it "should sanitize #{name} properly" do
       @raw = File.read(raw_filename)
       @sanitized = File.read(sanitized_filename).strip
-      Wikipedia::Page.sanitize(@raw).strip.should == @sanitized
+      expect(Wikipedia::Page.sanitize(@raw).strip).to eq(@sanitized)
     end
   end
 end
