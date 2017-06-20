@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wikipedia-client (1.6.4)
+    wikipedia-client (1.7.0)
 
 GEM
   remote: https://rubygems.org/
@@ -81,12 +81,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jeweler
-  rake
-  rdoc
-  rspec
-  rubocop
-  thoughtbot-shoulda
+  jeweler (~> 1.8)
+  rake (~> 10.1)
+  rdoc (~> 4.0)
+  rspec (~> 3.0)
+  rubocop (~> 0.48)
+  thoughtbot-shoulda (~> 2.11, >= 2.11)
   wikipedia-client!
 
 BUNDLED WITH
