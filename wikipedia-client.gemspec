@@ -32,17 +32,17 @@ Gem::Specification.new do |s|
   s.require_paths    << 'lib'
   s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
 
-  s.add_development_dependency('rake')
-  s.add_development_dependency('rspec')
-  s.add_development_dependency('rdoc')
-  s.add_development_dependency('jeweler')
-  s.add_development_dependency('rubocop')
+  s.add_development_dependency('rake', '~> 10.1')
+  s.add_development_dependency('rspec', '~> 3.0')
+  s.add_development_dependency('rdoc', '~> 4.0')
+  s.add_development_dependency('jeweler', '~> 1.8')
+  s.add_development_dependency('rubocop', '~> 0.48')
 
   if s.respond_to? :specification_version
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0')
-      s.add_development_dependency('thoughtbot-shoulda', ['>= 0'])
+      s.add_development_dependency('thoughtbot-shoulda', '~> 2.11', ['>= 2.11'])
     else
       s.add_dependency('thoughtbot-shoulda', ['>= 0'])
     end
