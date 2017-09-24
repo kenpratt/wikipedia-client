@@ -81,7 +81,7 @@ module Wikipedia
     end
 
     def main_image_url
-      page['thumbnail']['source'].sub(/\/thumb/,"").sub(/\/[^\/]*$/, "") if page['thumbnail']
+      page['thumbnail']['source'].sub(/\/thumb/, '').sub(/\/[^\/]*$/, '') if page['thumbnail']
     end
 
     def coordinates
