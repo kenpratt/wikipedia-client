@@ -80,6 +80,10 @@ module Wikipedia
       image_metadata.map(&:image_descriptionurl) unless image_metadata.nil?
     end
 
+    def main_image_url
+      page['thumbnail']['source'].sub(/\/thumb/,"").sub(/\/[^\/]*$/, "") if page['thumbnail']
+    end
+
     def coordinates
       page['coordinates'].first.values if page['coordinates']
     end
