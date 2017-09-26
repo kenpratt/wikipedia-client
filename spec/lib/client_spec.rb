@@ -201,3 +201,16 @@ describe Wikipedia::Client, 'page.summary (mocked)' do
     ' program computation. This annual award was renamed the Dijkstra Prize the following year, in his honor.')
   end
 end
+
+describe Wikipedia::Client, '.find page (mocked)' do
+  before(:each) do
+    @client = Wikipedia::Client.new
+    @sealand_dynasty = File.read(File.dirname(__FILE__) + '/../fixtures/Sealand_Dynasty.json')
+    expect(@client).to receive(:request).and_return(@sealand_dynasty)
+  end
+
+  it 'should return nil' do
+    @page = @client.find('Sealand_Dynasty')
+    expect(@page.image_urls).to eq(nil)
+  end
+end
