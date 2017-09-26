@@ -22,3 +22,6 @@ Style/Documentation:
 
 Style/SymbolArray:
   Enabled: false
+
+Metrics/ClassLength:
+  Max: 120
