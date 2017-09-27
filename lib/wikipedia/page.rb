@@ -118,14 +118,22 @@ module Wikipedia
       # Spaced en dashes (https://en.wikipedia.org/wiki/Template:Spaced_en_dash_space)
       s.gsub!(/\{\{(spaced e?n\s?dash( space)?|snds?|spndsp|sndashs|spndashsp)\}\}/i, '&nbsp;&ndash;&nbsp;')
       # Bold middot (https://en.wikipedia.org/wiki/Template:·)
-      s.gsub!(/\{\{(·|dot|middot|\,)\}\}/i, "&nbsp;<b>&middot;</b>")
+      s.gsub!(/\{\{(·|dot|middot|\,)\}\}/i, '&nbsp;<b>&middot;</b>')
       # Bullets (https://en.wikipedia.org/wiki/Template:•)
-      s.gsub!(/\{\{(•|bull(et)?)\}\}/i, "&nbsp;&bull;")
+      s.gsub!(/\{\{(•|bull(et)?)\}\}/i, '&nbsp;&bull;')
       # Forward Slashes (https://en.wikipedia.org/wiki/Template:%5C)
-      s.gsub!(/\{\{\\\}\}/i, "&nbsp;/")
+      s.gsub!(/\{\{\\\}\}/i, '&nbsp;/')
 
       # Transform language specific blocks
       s.gsub!(/\{\{lang[\-\|]([a-z]+)\|([^\|\{\}]+)(\|[^\{\}]+)?\}\}/i, '<span lang="\1">\2</span>')
+
+      # Parse Old Style Date template blocks
+      # Old Style Dates (https://en.wikipedia.org/wiki/Template:OldStyleDate)
+      s.gsub!(/\{\{OldStyleDate\|([^\|]*)\|([^\|]*)\|([^\|]*)\}\}/i, '\1 [<abbr title="Old Style">O.S.</abbr> \3] \2')
+      # Old Style Dates with different years (https://en.wikipedia.org/wiki/Template:OldStyleDateDY)
+      s.gsub!(/\{\{OldStyleDateDY\|([^\|]*)\|([^\|]*)\|([^\|]*)\}\}/i, '\1 \2 [<abbr title="Old Style">O.S.</abbr> \3]')
+      # Old Style Dates with no year (https://en.wikipedia.org/wiki/Template:OldStyleDateNY)
+      s.gsub!(/\{\{OldStyleDateNY\|([^\|]*)\|([^\|]*)\}\}/i, '\1 [<abbr title="Old Style">O.S.</abbr> \2]')
 
       # strip anything else inside curly braces!
       s.gsub!(/\{\{[^\{\}]+?\}\}[\;\,]?/, '') while s =~ /\{\{[^\{\}]+?\}\}[\;\,]?/
