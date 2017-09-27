@@ -107,11 +107,28 @@ module Wikipedia
 
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/AbcSize
-    def self.sanitize( s )
+    def self.sanitize(s)
       return unless s
 
-      # strip anything inside curly braces!
-      s.gsub!(/\{\{[^\{\}]+?\}\}/, '') while s =~ /\{\{[^\{\}]+?\}\}/
+      # Transform punctuation templates
+      # Em dash (https://en.wikipedia.org/wiki/Template:Em_dash)
+      s.gsub!(/\{\{(em dash|emdash)\}\}/i, '&mdash;')
+      # En dash (https://en.wikipedia.org/wiki/Template:En_dash)
+      s.gsub!(/\{\{(en dash|ndash|nsndns)\}\}/i, '&ndash;')
+      # Spaced en dashes (https://en.wikipedia.org/wiki/Template:Spaced_en_dash_space)
+      s.gsub!(/\{\{(spaced e?n\s?dash( space)?|snds?|spndsp|sndashs|spndashsp)\}\}/i, '&nbsp;&ndash;&nbsp;')
+      # Bold middot (https://en.wikipedia.org/wiki/Template:·)
+      s.gsub!(/\{\{(·|dot|middot|\,)\}\}/i, "&nbsp;<b>&middot;</b>")
+      # Bullets (https://en.wikipedia.org/wiki/Template:•)
+      s.gsub!(/\{\{(•|bull(et)?)\}\}/i, "&nbsp;&bull;")
+      # Forward Slashes (https://en.wikipedia.org/wiki/Template:%5C)
+      s.gsub!(/\{\{\\\}\}/i, "&nbsp;/")
+
+      # Transform language specific blocks
+      s.gsub!(/\{\{lang[\-\|]([a-z]+)\|([^\|\{\}]+)(\|[^\{\}]+)?\}\}/i, '<span lang="\1">\2</span>')
+
+      # strip anything else inside curly braces!
+      s.gsub!(/\{\{[^\{\}]+?\}\}[\;\,]?/, '') while s =~ /\{\{[^\{\}]+?\}\}[\;\,]?/
 
       # strip info box
       s.sub!(/^\{\|[^\{\}]+?\n\|\}\n/, '')
@@ -121,8 +138,8 @@ module Wikipedia
       s.gsub!(/\[\[([^\]\|]+?)\]\]/, '\1')
 
       # strip images and file links
-      s.gsub!(/\[\[Image:[^\[\]]+?\]\]/, '')
-      s.gsub!(/\[\[File:[^\[\]]+?\]\]/, '')
+      s.gsub!(/\[\[Image:(.*?(?=\]\]))??\]\]/, '')
+      s.gsub!(/\[\[File:(.*?(?=\]\]))??\]\]/, '')
 
       # convert bold/italic to html
       s.gsub!(/'''''(.+?)'''''/, '<b><i>\1</i></b>')
@@ -130,16 +147,22 @@ module Wikipedia
       s.gsub!(/''(.+?)''/, '<i>\1</i>')
 
       # misc
+      s.gsub!(/(\d)<ref[^<>]*>[\s\S]*?<\/ref>(\d)/, '\1&nbsp;&ndash;&nbsp;\2')
       s.gsub!(/<ref[^<>]*>[\s\S]*?<\/ref>/, '')
+      s.gsub!(/<ref(.*?(?=\/>))??\/>/, '')
       s.gsub!(/<!--[^>]+?-->/, '')
+      s.gsub!(/\(\s+/, '(')
       s.gsub!('  ', ' ')
       s.strip!
 
       # create paragraphs
       sections = s.split("\n\n")
-      if sections.size > 1
-        s = sections.map { |paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
-      end
+      s =
+	if sections.size > 1
+	  sections.map { |paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
+	else
+	  "<p>#{s}</p>"
+	end
 
       s
     end
