@@ -166,11 +166,11 @@ module Wikipedia
       # create paragraphs
       sections = s.split("\n\n")
       s =
-	if sections.size > 1
-	  sections.map { |paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
-	else
-	  "<p>#{s}</p>"
-	end
+        if sections.size > 1
+          sections.map { |paragraph| "<p>#{paragraph.strip}</p>" }.join("\n")
+        else
+          "<p>#{s}</p>"
+        end
 
       s
     end
