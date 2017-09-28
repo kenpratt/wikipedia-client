@@ -64,6 +64,10 @@ page.image_descriptionurls
 
 => ["http://en.wikipedia.org/wiki/File:Getting_Things_Done.jpg"]
 
+page.main_image_url
+
+=> "https://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg"
+
 page.coordinates
 
 => [48.853, 2.3498, "", "earth"]
