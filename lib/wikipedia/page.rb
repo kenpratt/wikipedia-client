@@ -117,9 +117,9 @@ module Wikipedia
       s.gsub!(/\{\{(en dash|ndash|nsndns)\}\}/i, '&ndash;')
       # Spaced en dashes (https://en.wikipedia.org/wiki/Template:Spaced_en_dash_space)
       s.gsub!(/\{\{(spaced e?n\s?dash( space)?|snds?|spndsp|sndashs|spndashsp)\}\}/i, '&nbsp;&ndash;&nbsp;')
-      # Bold middot (https://en.wikipedia.org/wiki/Template:·)
+      # Bold middot
       s.gsub!(/\{\{(·|dot|middot|\,)\}\}/i, '&nbsp;<b>&middot;</b>')
-      # Bullets (https://en.wikipedia.org/wiki/Template:•)
+      # Bullets
       s.gsub!(/\{\{(•|bull(et)?)\}\}/i, '&nbsp;&bull;')
       # Forward Slashes (https://en.wikipedia.org/wiki/Template:%5C)
       s.gsub!(/\{\{\\\}\}/i, '&nbsp;/')
