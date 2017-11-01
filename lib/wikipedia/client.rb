@@ -48,7 +48,7 @@ module Wikipedia
         action: 'query',
         prop: 'imageinfo',
         iiprop: 'url',
-        iiurlwidth: options[:iiurlwidth].present? ? options[:iiurlwidth] : 200,
+        iiurlwidth: options && options[:iiurlwidth] ? options[:iiurlwidth] : 200,
         titles: title
       }.merge( options ) )
     end
