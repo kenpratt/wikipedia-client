@@ -60,6 +60,18 @@ page.image_urls
 
 => ["http://upload.wikimedia.org/wikipedia/en/e/e1/Getting_Things_Done.jpg"]
 
+default width: 200
+
+page.image_thumburls
+
+=> ["https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Getting_Things_Done.jpg/200px-Getting_Things_Done.jpg"]
+
+or with custom width argument:
+
+page.image_thumburls(100)
+
+=> ["https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Getting_Things_Done.jpg/100px-Getting_Things_Done.jpg"]
+
 page.image_descriptionurls
 
 => ["http://en.wikipedia.org/wiki/File:Getting_Things_Done.jpg"]
