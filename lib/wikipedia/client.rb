@@ -42,12 +42,13 @@ module Wikipedia
       }.merge( options ) )
     end
 
-    # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&titles=File:Flower.png
+    # http://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&iiurlwidth=200&titles=File:Albert%20Einstein%20Head.jpg
     def request_image( title, options = {} )
       request( {
         action: 'query',
         prop: 'imageinfo',
         iiprop: 'url',
+        iiurlwidth: options[:iiurlwidth].present? ? options[:iiurlwidth] : 200,
         titles: title
       }.merge( options ) )
     end
