@@ -68,12 +68,21 @@ module Wikipedia
       page['imageinfo'].first['url'] if page['imageinfo']
     end
 
+    def image_thumburl
+      page['imageinfo'].first['thumburl'] if page['imageinfo']
+    end
+
     def image_descriptionurl
       page['imageinfo'].first['descriptionurl'] if page['imageinfo']
     end
 
     def image_urls
       image_metadata.map(&:image_url) unless image_metadata.nil?
+    end
+
+    def image_thumburls( width = '' )
+      options = width.present? ? { iiurlwidth: width } : {}
+      image_metadata( options ).map(&:image_thumburl) unless image_metadata( options ).nil?
     end
 
     def image_descriptionurls
