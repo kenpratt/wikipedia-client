@@ -92,11 +92,11 @@ module Wikipedia
       @data
     end
 
-    def image_metadata
+    def image_metadata( options = {} )
       unless @cached_image_metadata
         return if images.nil?
         filtered = images.select { |i| i =~ /:.+\.(jpg|jpeg|png|gif|svg)$/i && !i.include?('LinkFA-star') }
-        @cached_image_metadata = filtered.map { |title| Wikipedia.find_image(title) }
+        @cached_image_metadata = filtered.map { |title| Wikipedia.find_image(title, options) }
       end
       @cached_image_metadata || []
     end
