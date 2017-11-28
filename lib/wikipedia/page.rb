@@ -80,8 +80,8 @@ module Wikipedia
       image_metadata.map(&:image_url) unless image_metadata.nil?
     end
 
-    def image_thumburls( width = '' )
-      options = width.present? ? { iiurlwidth: width } : {}
+    def image_thumburls( width = nil )
+      options = width.nil? ? {} : { iiurlwidth: width }
       image_metadata( options ).map(&:image_thumburl) unless image_metadata( options ).nil?
     end
 
