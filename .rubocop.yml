@@ -24,4 +24,4 @@ Style/SymbolArray:
   Enabled: false
 
 Metrics/ClassLength:
-  Max: 125
+  Max: 130
