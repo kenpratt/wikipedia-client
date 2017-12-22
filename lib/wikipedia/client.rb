@@ -34,9 +34,10 @@ module Wikipedia
     def request_page( title, options = {} )
       request( {
         action: 'query',
-        prop: %w[ info revisions links extlinks images categories coordinates templates extracts pageimages],
+        prop: %w[info revisions links extlinks images categories coordinates templates extracts pageimages],
         rvprop: 'content',
         inprop: 'url',
+        pithumbsize: 200,
         explaintext: '',
         titles: title
       }.merge( options ) )
