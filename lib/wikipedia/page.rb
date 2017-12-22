@@ -93,6 +93,10 @@ module Wikipedia
       page['thumbnail']['source'].sub(/\/thumb/, '').sub(/\/[^\/]*$/, '') if page['thumbnail']
     end
 
+    def main_image_thumburl
+      page['thumbnail']['source'] if page['thumbnail']
+    end
+
     def coordinates
       page['coordinates'].first.values if page['coordinates']
     end
