@@ -182,6 +182,13 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
       expect(@page.image_thumburls(100)).to include('https://upload.wikimedia.org/wikipedia' + image)
     end
   end
+
+  it 'should collect the main image thumburl' do
+    @client.follow_redirects = true
+    @page = @client.find('Edsger Dijkstra')
+    image = '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/150px-Edsger_Wybe_Dijkstra.jpg'
+    expect(@page.main_image_thumburl).to include('https://upload.wikimedia.org/wikipedia' + image)
+  end
 end
 
 describe Wikipedia::Client, '.find page (Rails) at jp' do
