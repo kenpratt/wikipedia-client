@@ -105,7 +105,7 @@ module Wikipedia
     def encode( val )
       case val
       when String
-        URI.encode( val ).gsub( '&', '%26' )
+        URI.encode( val, /#{URI::UNSAFE}|[\+&]/ )
       else
         val
       end
