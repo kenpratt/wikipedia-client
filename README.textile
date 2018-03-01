@@ -101,8 +101,7 @@ h2. Advanced
 
 See the API spec at "http://en.wikipedia.org/w/api.php":http://en.wikipedia.org/w/api.php
 
-If you need data that is not already present, you can override
-parameters.
+If you need data that is not already present, you can override parameters.
 
 For example, to retrieve only the page info:
 
