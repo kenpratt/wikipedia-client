@@ -91,11 +91,20 @@ describe Wikipedia::Client, '.find page with one section (mocked)' do
 end
 
 describe Wikipedia::Client, '.find page with special characters in title' do
-  it 'should properly escaped the special characters' do
+  before(:each) do
     @client = Wikipedia::Client.new
+  end
+
+  it 'should properly escape all special characters' do
     @page = @client.find('A +&%=?:/ B')
     expect(@page.title).to eq('A +&%=?:/ B')
     expect(@page.fullurl).to eq('https://en.wikipedia.org/wiki/A_%2B%26%25%3D%3F:/_B')
+  end
+
+  it 'should handle pluses in article titles' do
+    @page = @client.find('C++')
+    expect(@page.title).to eq('C++')
+    expect(@page.fullurl).to eq('https://en.wikipedia.org/wiki/C%2B%2B')
   end
 end
 
