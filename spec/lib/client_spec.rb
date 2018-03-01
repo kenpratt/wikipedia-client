@@ -106,6 +106,12 @@ describe Wikipedia::Client, '.find page with special characters in title' do
     expect(@page.title).to eq('C++')
     expect(@page.fullurl).to eq('https://en.wikipedia.org/wiki/C%2B%2B')
   end
+
+  it 'should handle slashes in article titles' do
+    @page = @client.find('PL/SQL')
+    expect(@page.title).to eq('PL/SQL')
+    expect(@page.fullurl).to eq('https://en.wikipedia.org/wiki/PL/SQL')
+  end
 end
 
 describe Wikipedia::Client, '.find image (mocked)' do
