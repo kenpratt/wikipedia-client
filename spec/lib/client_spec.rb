@@ -166,7 +166,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
       '/commons/5/57/Dijkstra_Animation.gif',
       '/commons/c/c9/Edsger_Dijkstra_1994.jpg',
       '/commons/d/d9/Edsger_Wybe_Dijkstra.jpg',
-      '/commons/0/00/Complex-adaptive-system.jpg',
       '/en/4/4d/Centrum-wiskunde-informatica-logo.png',
       '/commons/7/7b/An_illustration_of_the_dining_philosophers_problem.png',
       '/commons/3/37/Detail_of_a_1Kb_ferrite_core_RAM-module_of_an_1960s_Electrologica_X1_computer.jpg'
@@ -184,7 +183,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
       '/commons/thumb/5/57/Dijkstra_Animation.gif/200px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/200px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/200px-Edsger_Wybe_Dijkstra.jpg',
-      '/commons/thumb/0/00/Complex-adaptive-system.jpg/200px-Complex-adaptive-system.jpg',
       '/en/thumb/4/4d/Centrum-wiskunde-informatica-logo.png/200px-Centrum-wiskunde-informatica-logo.png'
     ].each do |image|
       expect(@page.image_thumburls).to include('https://upload.wikimedia.org/wikipedia' + image)
@@ -200,7 +198,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
       '/commons/thumb/5/57/Dijkstra_Animation.gif/100px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/100px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/100px-Edsger_Wybe_Dijkstra.jpg',
-      '/commons/thumb/0/00/Complex-adaptive-system.jpg/100px-Complex-adaptive-system.jpg',
       '/en/thumb/4/4d/Centrum-wiskunde-informatica-logo.png/100px-Centrum-wiskunde-informatica-logo.png'
     ].each do |image|
       expect(@page.image_thumburls(100)).to include('https://upload.wikimedia.org/wikipedia' + image)
