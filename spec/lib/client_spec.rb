@@ -277,3 +277,25 @@ describe Wikipedia::Client, '.find page (mocked)' do
     expect(@page.image_urls).to eq(nil)
   end
 end
+
+describe Wikipedia::Client, 'page.langlinks' do
+  before(:each) do
+    @client = Wikipedia::Client.new
+    @innopolis = File.read(File.dirname(__FILE__) + '/../fixtures/Innopolis.json')
+    expect(@client).to receive(:request).and_return(@innopolis)
+  end
+
+  it 'should contain langlinks' do
+    @page = @client.find('Innopolis')
+    expect(@page.langlinks).to include(
+      'ba' => 'Иннополис',
+      'bg' => 'Инополис',
+      'he' => 'אינופוליס',
+      'hsb' => 'Innopolis',
+      'lb' => 'Innopolis',
+      'ru' => 'Иннополис',
+      'tt' => 'Иннополис',
+      'wo' => 'Innopolis'
+    )
+  end
+end

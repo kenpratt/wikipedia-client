@@ -60,6 +60,10 @@ module Wikipedia
       page['extlinks'].map { |c| c['*'] } if page['extlinks']
     end
 
+    def langlinks
+      Hash[page['langlinks'].collect { |c| [c['lang'], c['*']] }] if page['langlinks']
+    end
+
     def images
       page['images'].map { |c| c['title'] } if page['images']
     end
