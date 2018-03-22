@@ -34,11 +34,12 @@ module Wikipedia
     def request_page( title, options = {} )
       request( {
         action: 'query',
-        prop: %w[info revisions links extlinks images categories coordinates templates extracts pageimages],
+        prop: %w[info revisions links extlinks images categories coordinates templates extracts pageimages langlinks],
         rvprop: 'content',
         inprop: 'url',
         pithumbsize: 200,
         explaintext: '',
+        lllimit: 500,
         titles: title
       }.merge( options ) )
     end
