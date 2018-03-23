@@ -86,7 +86,11 @@ page.coordinates
 
 page.templates
 
-=> [..., "Template:About", ...]</code></pre>
+=> [..., "Template:About", ...]
+
+page.langlinks
+
+=> {..., "de"=>"Getting Things Done", "eo"=>"Igi aferojn finitaj",  "zh"=>"尽管去做", ...}</code></pre>
 
 h2. Configuration
 
@@ -161,3 +165,4 @@ Pietro F. Menna <pietromenna@yahoo.com>
 Sophie Rapoport <sfrapoport@gmail.com>
 tsukasaoishi <tsukasa.oishi@gmail.com>
 V <thevalentino@gmail.com>
+Ilgiz Mustafin <ilgimustafin@gmail.com>
