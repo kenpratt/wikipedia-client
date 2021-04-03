@@ -106,7 +106,7 @@ module Wikipedia
     def encode( val )
       case val
       when String
-        CGI.escape(val)
+        URI.encode( val, /#{URI::UNSAFE}|[\+&]/ )
       else
         val
       end
