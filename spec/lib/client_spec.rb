@@ -161,14 +161,9 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/en/4/4a/Commons-logo.svg',
-      '/en/4/48/Folder_Hexagonal_Icon.svg',
       '/commons/5/57/Dijkstra_Animation.gif',
       '/commons/c/c9/Edsger_Dijkstra_1994.jpg',
       '/commons/d/d9/Edsger_Wybe_Dijkstra.jpg',
-      '/en/4/4d/Centrum-wiskunde-informatica-logo.png',
-      '/commons/7/7b/An_illustration_of_the_dining_philosophers_problem.png',
-      '/commons/3/37/Detail_of_a_1Kb_ferrite_core_RAM-module_of_an_1960s_Electrologica_X1_computer.jpg'
     ].each do |image|
       expect(@page.image_urls).to include('https://upload.wikimedia.org/wikipedia' + image)
     end
@@ -178,12 +173,9 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/en/thumb/4/4a/Commons-logo.svg/200px-Commons-logo.svg.png',
-      '/en/thumb/4/48/Folder_Hexagonal_Icon.svg/200px-Folder_Hexagonal_Icon.svg.png',
       '/commons/thumb/5/57/Dijkstra_Animation.gif/200px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/200px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/200px-Edsger_Wybe_Dijkstra.jpg',
-      '/en/thumb/4/4d/Centrum-wiskunde-informatica-logo.png/200px-Centrum-wiskunde-informatica-logo.png'
     ].each do |image|
       expect(@page.image_thumburls).to include('https://upload.wikimedia.org/wikipedia' + image)
     end
@@ -193,12 +185,9 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/en/thumb/4/4a/Commons-logo.svg/100px-Commons-logo.svg.png',
-      '/en/thumb/4/48/Folder_Hexagonal_Icon.svg/100px-Folder_Hexagonal_Icon.svg.png',
       '/commons/thumb/5/57/Dijkstra_Animation.gif/100px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/100px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/100px-Edsger_Wybe_Dijkstra.jpg',
-      '/en/thumb/4/4d/Centrum-wiskunde-informatica-logo.png/100px-Centrum-wiskunde-informatica-logo.png'
     ].each do |image|
       expect(@page.image_thumburls(100)).to include('https://upload.wikimedia.org/wikipedia' + image)
     end
