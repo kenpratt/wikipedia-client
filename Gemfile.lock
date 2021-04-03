@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wikipedia-client (1.11.0)
+    wikipedia-client (1.12.0)
 
 GEM
   remote: https://rubygems.org/
