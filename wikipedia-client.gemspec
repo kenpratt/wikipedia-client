@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.require_paths    << 'lib'
   s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
 
+  s.add_development_dependency('pry')
   s.add_development_dependency('rake', '~> 10.1')
   s.add_development_dependency('rspec', '~> 3.0')
   s.add_development_dependency('rdoc', '~> 4.0')
