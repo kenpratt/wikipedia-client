@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake', '~> 13.0')
   s.add_development_dependency('rspec', '~> 3.0')
   s.add_development_dependency('rdoc', '~> 4.0')
-  s.add_development_dependency('jeweler', '~> 1.8')
+  s.add_development_dependency('jeweler', '~> 2.0')
   s.add_development_dependency('rubocop', '~> 0.48')
 
   if s.respond_to? :specification_version
