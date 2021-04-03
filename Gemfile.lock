@@ -66,7 +66,7 @@ GEM
       rake
     rake (13.0.3)
     rchardet (1.8.0)
-    rdoc (4.3.0)
+    rdoc (6.3.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -99,7 +99,7 @@ DEPENDENCIES
   jeweler (~> 2.0)
   pry
   rake (~> 13.0)
-  rdoc (~> 4.0)
+  rdoc (~> 6.0)
   rspec (~> 3.0)
   rubocop (~> 0.48)
   thoughtbot-shoulda (~> 2.11, >= 2.11)
