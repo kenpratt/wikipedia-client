@@ -57,7 +57,7 @@ GEM
     rack (1.5.2)
     rainbow (2.2.2)
       rake
-    rake (10.1.0)
+    rake (13.0.3)
     rdoc (4.0.1)
       json (~> 1.4)
     rspec (3.0.0)
@@ -88,7 +88,7 @@ PLATFORMS
 DEPENDENCIES
   jeweler (~> 1.8)
   pry
-  rake (~> 10.1)
+  rake (~> 13.0)
   rdoc (~> 4.0)
   rspec (~> 3.0)
   rubocop (~> 0.48)
