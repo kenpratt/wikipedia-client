@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.email            = 'ken@kenpratt.net'
 
   s.homepage         = 'http://github.com/kenpratt/wikipedia-client'
-  s.rubygems_version = '1.11.0'
   s.summary          = 'Ruby client for the Wikipedia API'
   s.platform         = Gem::Platform::RUBY
   s.files            = `git ls-files`.split("\n")
