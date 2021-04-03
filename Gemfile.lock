@@ -97,7 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   jeweler (~> 2.0)
-  pry
+  pry (~> 0.14)
   rake (~> 13.0)
   rdoc (~> 6.0)
   rspec (~> 3.0)
