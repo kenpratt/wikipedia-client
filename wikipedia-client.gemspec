@@ -24,18 +24,19 @@ Gem::Specification.new do |s|
   s.files            = `git ls-files`.split("\n")
   s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables      = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
-  s.has_rdoc         = true
   s.extra_rdoc_files = ['README.textile']
   s.bindir           = 'bin'
 
   s.require_paths    << 'lib'
   s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
 
+  s.add_runtime_dependency 'addressable', '~> 2.7'
+
   s.add_development_dependency('pry', '~> 0.14')
   s.add_development_dependency('rake', '~> 13.0')
   s.add_development_dependency('rspec', '~> 3.0')
   s.add_development_dependency('rdoc', '~> 6.0')
-  s.add_development_dependency('jeweler', '~> 2.0')
+  s.add_development_dependency('jeweler', '~> 2.3')
   s.add_development_dependency('rubocop', '~> 0.48')
 
   if s.respond_to? :specification_version

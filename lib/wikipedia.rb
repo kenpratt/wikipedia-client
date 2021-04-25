@@ -1,6 +1,7 @@
 Dir[File.dirname(__FILE__) + '/wikipedia/**/*.rb'].each { |f| require f }
 
-require 'uri'
+require 'addressable'
+require 'cgi'
 
 module Wikipedia
   # Examples :

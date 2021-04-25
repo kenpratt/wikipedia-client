@@ -8,7 +8,7 @@ module Wikipedia
       return @title if @title
 
       uri     = URI.parse( @wiki_url )
-      @title  = URI.decode( uri.path.sub(/\/wiki\//, '') )
+      @title  = Addressable::URI.unencode( uri.path.sub(/\/wiki\//, '') )
     end
   end
 end
