@@ -1,3 +1,6 @@
+require 'uri'
+require 'addressable'
+
 module Wikipedia
   class Url
     def initialize(wiki_url)

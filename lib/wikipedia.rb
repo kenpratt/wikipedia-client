@@ -1,8 +1,5 @@
 Dir[File.dirname(__FILE__) + '/wikipedia/**/*.rb'].each { |f| require f }
 
-require 'addressable'
-require 'cgi'
-
 module Wikipedia
   # Examples :
   # page = Wikipedia.find('Rails')

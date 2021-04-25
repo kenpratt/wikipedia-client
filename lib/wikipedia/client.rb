@@ -1,3 +1,5 @@
+require 'cgi'
+
 module Wikipedia
   class Client
     # see http://en.wikipedia.org/w/api.php
@@ -106,7 +108,6 @@ module Wikipedia
     def encode( val )
       case val
       when String
-        # Addressable::URI.encode(val)
         CGI.escape(val)
       else
         val
