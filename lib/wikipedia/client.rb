@@ -1,7 +1,13 @@
+require 'addressable'
+require 'cgi'
+require 'open-uri'
+require 'set'
+
 module Wikipedia
   class Client
     # see http://en.wikipedia.org/w/api.php
-    BASE_URL = ':protocol://:domain/:path?action=:action&format=json'.freeze
+    BASE_URL_TEMPLATE = '%{protocol}://%{domain}/%{path}?action=%{action}&format=json'.freeze
+    BASE_URL_OPTIONS = Set.new([:protocol, :domain, :path, :action])
 
     attr_accessor :follow_redirects
 
@@ -66,7 +72,6 @@ module Wikipedia
     end
 
     def request( options )
-      require 'open-uri'
       URI.parse( url_for( options ) ).read( 'User-Agent' => Configuration[:user_agent] )
     end
 
@@ -80,36 +85,33 @@ module Wikipedia
       }
     end
 
-    def url_for( options )
-      url = BASE_URL.dup
+    def url_for(options)
       options = configuration_options.merge( options )
-      options.each do |key, val|
-        value = urlify_value( val )
-        if url.include?( ":#{key}" )
-          url.sub! ":#{key}", value
-        else
-          url << "&#{key}=#{value}"
-        end
-      end
-      url
+
+      url_options, query_options = split_hash(options, BASE_URL_OPTIONS)
+      normalized_query_options = query_options.map { |k, v| [k, normalize_value(v)] }
+
+      base_url = BASE_URL_TEMPLATE % url_options
+      query_string = Addressable::URI.form_encode(normalized_query_options)
+      base_url + '&' + query_string
     end
 
-    def urlify_value( val )
+    def normalize_value( val )
       case val
       when Array
-        encode( val.flatten.join( '|' ) )
-      else
-        encode( val )
-      end
-    end
-
-    def encode( val )
-      case val
-      when String
-        URI.encode( val, /#{URI::UNSAFE}|[\+&]/ )
+        val.flatten.join( '|' )
       else
         val
       end
+    end
+
+    def split_hash(hash, keys)
+      h1 = {}
+      h2 = {}
+      hash.each do |k, v|
+        (keys.include?(k) ? h1 : h2).store(k, v)
+      end
+      [h1, h2]
     end
   end
 end
