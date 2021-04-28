@@ -1,3 +1,4 @@
+require 'addressable'
 require 'cgi'
 require 'open-uri'
 require 'set'
@@ -88,7 +89,7 @@ module Wikipedia
       options = configuration_options.merge( options )
 
       url_options, query_options = split_hash(options, BASE_URL_OPTIONS)
-      normalized_query_options = query_options.map {|k, v| [k, normalize_value(v)]}
+      normalized_query_options = query_options.map { |k, v| [k, normalize_value(v)] }
 
       base_url = BASE_URL_TEMPLATE % url_options
       query_string = Addressable::URI.form_encode(normalized_query_options)
