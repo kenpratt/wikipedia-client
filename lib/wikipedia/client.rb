@@ -1,5 +1,6 @@
 require 'cgi'
 require 'open-uri'
+require 'set'
 
 module Wikipedia
   class Client
