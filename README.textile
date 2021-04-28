@@ -154,6 +154,7 @@ cdr-data <b_rhettbarber@yahoo.com>
 Christian Hellsten <christian.hellsten@gmail.com>
 Christopher Quackenbush <christopher@quackenbush.me>
 Cyril David
+Danny Ben Shitrit <db@dannyben.com>
 Francesco Serra <afnecors@gmail.com>
 Harman Singh
 ivobenedito <ivobenedito@gmail.com>
