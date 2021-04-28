@@ -4,7 +4,6 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'wikipedia/version'
 require 'date'
 
-# rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |s|
   s.name    = 'wikipedia-client'
   s.version = Wikipedia::VERSION
@@ -29,25 +28,4 @@ Gem::Specification.new do |s|
 
   s.require_paths    << 'lib'
   s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
-
-  s.add_runtime_dependency 'addressable', '~> 2.7'
-
-  s.add_development_dependency('pry', '~> 0.14')
-  s.add_development_dependency('rake', '~> 13.0')
-  s.add_development_dependency('rspec', '~> 3.0')
-  s.add_development_dependency('rdoc', '~> 6.0')
-  s.add_development_dependency('jeweler', '~> 2.3')
-  s.add_development_dependency('rubocop', '~> 0.48')
-
-  if s.respond_to? :specification_version
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0')
-      s.add_development_dependency('thoughtbot-shoulda', '~> 2.11', ['>= 2.11'])
-    else
-      s.add_dependency('thoughtbot-shoulda', ['>= 0'])
-    end
-  else
-    s.add_dependency('thoughtbot-shoulda', ['>= 0'])
-  end
 end
