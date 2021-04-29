@@ -90,7 +90,7 @@ Wikipedia.configure {
 
 ## Advanced
 
-See the API spec at "http://en.wikipedia.org/w/api.php":http://en.wikipedia.org/w/api.php
+See the API spec at <http://en.wikipedia.org/w/api.php>.
 
 If you need data that is not already present, you can override parameters.
 
