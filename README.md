@@ -1,4 +1,4 @@
-# Wikipedia API CLient
+# Wikipedia API Client
 
 [![Gem Version](https://badge.fury.io/rb/wikipedia-client.svg)](https://badge.fury.io/rb/wikipedia-client)
 [![Build Status](https://github.com/kenpratt/wikipedia-client/workflows/Test/badge.svg)](https://github.com/kenpratt/wikipedia-client/actions?query=workflow%3ATest)
