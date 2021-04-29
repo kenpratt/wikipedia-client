@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.require_paths    << 'lib'
   s.rdoc_options     << '--title' << 'wikipedia-client' << '--main' << '-ri'
 
-  s.add_runtime_dependency "addressable", "~> 2.7"
+  s.add_runtime_dependency 'addressable', '~> 2.7'
 end
