@@ -122,9 +122,27 @@ bundle exec spec
 ### Pushing a new release of the Gem
 
 1. Edit `lib/wikipedia/version.rb`, changing `VERSION`.
-2. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
-3. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
-4. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
+2. Test that the current branch will work as a gem, by testing in an external directory:
+  1. Make a test directory.
+  2. Add a `Gemfile` with:
+    ```
+    source 'https://rubygems.org'
+
+    gem 'wikipedia-client', :path => '/path/to/local/wikipedia-client'
+    ```
+
+  3. And a `test.rb` file with:
+    ```
+    require 'wikipedia'
+
+    page = Wikipedia.find('Ruby')
+    puts page.title
+    ```
+
+  4. And then run `bundle install && bundle exec ruby test.rb`
+3. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
+4. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
+5. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
 
 ## Thanks!
 
