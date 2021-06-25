@@ -3,7 +3,6 @@
 [![Gem Version](https://badge.fury.io/rb/wikipedia-client.svg)](https://badge.fury.io/rb/wikipedia-client)
 [![Build Status](https://github.com/kenpratt/wikipedia-client/workflows/Test/badge.svg)](https://github.com/kenpratt/wikipedia-client/actions?query=workflow%3ATest)
 
-
 Allows you to get wikipedia content through their API. This uses the
 alpha API, not the deprecated query.php API type.
 
@@ -80,6 +79,7 @@ page.langlinks
 ## Configuration
 
 ### Global
+
 This is by default configured like this:
 
 ```ruby
@@ -90,19 +90,19 @@ Wikipedia.configure {
 ```
 
 ### Local
+
 If you need to query multiple wikis indiviual clients with individual configurations can be
 used:
 
 ```ruby
-config_en = Wikipedia::Config.new(domain: 'en.wikipedia.org', path: 'w/api.php')
-config_de = Wikipedia::Config.new(domain: 'de.wikipedia.org', path: 'w/api.php')
+config_en = Wikipedia::Configuration.new(domain: 'en.wikipedia.org', path: 'w/api.php')
+config_de = Wikipedia::Configuration.new(domain: 'de.wikipedia.org', path: 'w/api.php')
 
 client_en = Wikipedia::Client.new(config_en)
 client_de = Wikipedia::Client.new(config_de)
 client_en.find( 'Getting Things Done' )
 client_de.find( 'Buch' )
 ```
-
 
 ## Advanced
 
@@ -139,15 +139,19 @@ bundle exec rspec
 
 1. Edit `lib/wikipedia/version.rb`, changing `VERSION`.
 2. Test that the current branch will work as a gem, by testing in an external directory:
-  1. Make a test directory.
-  2. Add a `Gemfile` with:
+3. Make a test directory.
+4. Add a `Gemfile` with:
+
+
     ```
     source 'https://rubygems.org'
 
     gem 'wikipedia-client', :path => '/path/to/local/wikipedia-client'
     ```
 
-  3. And a `test.rb` file with:
+3. And a `test.rb` file with:
+
+
     ```
     require 'wikipedia'
 
@@ -155,20 +159,24 @@ bundle exec rspec
     puts page.title
     ```
 
-  4. And then run `bundle install && bundle exec ruby test.rb`
-3. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
-4. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
-5. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
-6. Test the released gem in an external directory:
-  1. Make a test directory.
-  2. Add a `Gemfile` with:
+4. And then run `bundle install && bundle exec ruby test.rb`
+5. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
+6. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
+7. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
+8. Test the released gem in an external directory:
+9. Make a test directory.
+10. Add a `Gemfile` with:
+
+
     ```
     source 'https://rubygems.org'
 
     gem 'wikipedia-client'
     ```
 
-  3. And a `test.rb` file with:
+3. And a `test.rb` file with:
+
+
     ```
     require 'wikipedia'
 
@@ -176,7 +184,7 @@ bundle exec rspec
     puts page.title
     ```
 
-  4. And then run `bundle install && bundle exec ruby test.rb`
+4. And then run `bundle install && bundle exec ruby test.rb`
 
 ## Thanks!
 
