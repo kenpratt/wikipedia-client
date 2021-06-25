@@ -5,10 +5,10 @@ module Wikipedia
       domain: 'en.wikipedia.org',
       path: 'w/api.php',
       user_agent: 'wikipedia-client/1.7 (https://github.com/kenpratt/wikipedia-client)'
-    }
+    }.freeze
 
     def initialize(configuration = DEFAULT)
-      configuration.each { |args| send(*args) }
+      DEFAULT.merge(configuration).each { |args| send(*args) }
     end
 
     def [](directive)
