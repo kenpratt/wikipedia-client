@@ -8,7 +8,7 @@ module Wikipedia
     }
 
     def initialize(configuration = DEFAULT)
-      configuration.each { |args| self.send(*args) }
+      configuration.each { |args| send(*args) }
     end
 
     def [](directive)
