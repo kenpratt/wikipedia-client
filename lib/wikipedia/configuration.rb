@@ -1,8 +1,19 @@
-require 'singleton'
-
 module Wikipedia
   class Configuration
-    include Singleton
+    DEFAULT = {
+      protocol: 'https',
+      domain: 'en.wikipedia.org',
+      path: 'w/api.php',
+      user_agent: 'wikipedia-client/1.7 (https://github.com/kenpratt/wikipedia-client)'
+    }
+
+    def initialize(configuration = DEFAULT)
+      configuration.each { |args| self.send(*args) }
+    end
+
+    def [](directive)
+      send(directive)
+    end
 
     def self.directives(*directives)
       directives.each do |directive|
@@ -12,10 +23,6 @@ module Wikipedia
           instance_variable_set("@#{directive}", args.first)
         end
       end
-    end
-
-    def self.[](directive)
-      instance.send(directive)
     end
 
     directives :protocol, :domain, :path, :user_agent

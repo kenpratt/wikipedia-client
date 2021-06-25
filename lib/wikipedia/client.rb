@@ -11,7 +11,8 @@ module Wikipedia
 
     attr_accessor :follow_redirects
 
-    def initialize
+    def initialize(configuration = Wikipedia::Configuration.new)
+      @configuration = configuration
       self.follow_redirects = true
     end
 
@@ -72,16 +73,16 @@ module Wikipedia
     end
 
     def request( options )
-      URI.parse( url_for( options ) ).read( 'User-Agent' => Configuration[:user_agent] )
+      URI.parse( url_for( options ) ).read( 'User-Agent' => @configuration[:user_agent] )
     end
 
     protected
 
     def configuration_options
       {
-        protocol: Configuration[:protocol],
-        domain:   Configuration[:domain],
-        path:     Configuration[:path]
+        protocol: @configuration[:protocol],
+        domain:   @configuration[:domain],
+        path:     @configuration[:path]
       }
     end
 

@@ -79,6 +79,7 @@ page.langlinks
 
 ## Configuration
 
+### Global
 This is by default configured like this:
 
 ```ruby
@@ -87,6 +88,21 @@ Wikipedia.configure {
   path   'w/api.php'
 }
 ```
+
+### Local
+If you need to query multiple wikis indiviual clients with individual configurations can be
+used:
+
+```ruby
+config_en = Wikipedia::Config.new(domain: 'en.wikipedia.org', path: 'w/api.php')
+config_de = Wikipedia::Config.new(domain: 'de.wikipedia.org', path: 'w/api.php')
+
+client_en = Wikipedia::Client.new(config_en)
+client_de = Wikipedia::Client.new(config_de)
+client_en.find( 'Getting Things Done' )
+client_de.find( 'Buch' )
+```
+
 
 ## Advanced
 
@@ -116,7 +132,7 @@ page.raw_data
 git clone git@github.com:kenpratt/wikipedia-client.git
 cd wikipedia-client
 bundle install
-bundle exec spec
+bundle exec rspec
 ```
 
 ### Pushing a new release of the Gem
