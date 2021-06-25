@@ -24,7 +24,7 @@ module Wikipedia
   end
 
   def self.configure(&block)
-    Configuration.instance.instance_eval(&block)
+    @configuration.instance_eval(&block)
   end
 
   # rubocop:disable Style/MethodName
@@ -32,20 +32,12 @@ module Wikipedia
     configure(&block)
   end
 
-  configure do
-    protocol  'https'
-    domain    'en.wikipedia.org'
-    path      'w/api.php'
-    user_agent(
-      'wikipedia-client/1.7 (https://github.com/kenpratt/wikipedia-client)'
-    )
-  end
-
   class << self
     private
 
     def client
-      @client ||= Wikipedia::Client.new
+      @configuration ||= Wikipedia::Configuration.new
+      @client ||= Wikipedia::Client.new @configuration
     end
   end
 end
