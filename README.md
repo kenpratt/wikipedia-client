@@ -95,8 +95,8 @@ If you need to query multiple wikis indiviual clients with individual configurat
 used:
 
 ```ruby
-config_en = Wikipedia::Configuration.new(domain: 'en.wikipedia.org', path: 'w/api.php')
-config_de = Wikipedia::Configuration.new(domain: 'de.wikipedia.org', path: 'w/api.php')
+config_en = Wikipedia::Configuration.new(domain: 'en.wikipedia.org')
+config_de = Wikipedia::Configuration.new(domain: 'de.wikipedia.org')
 
 client_en = Wikipedia::Client.new(config_en)
 client_de = Wikipedia::Client.new(config_de)
@@ -142,31 +142,28 @@ bundle exec rspec
 3. Make a test directory.
 4. Add a `Gemfile` with:
 
+   ```
+   source 'https://rubygems.org'
 
-    ```
-    source 'https://rubygems.org'
+   gem 'wikipedia-client', :path => '/path/to/local/wikipedia-client'
+   ```
 
-    gem 'wikipedia-client', :path => '/path/to/local/wikipedia-client'
-    ```
+5. And a `test.rb` file with:
 
-3. And a `test.rb` file with:
+   ```
+   require 'wikipedia'
 
+   page = Wikipedia.find('Ruby')
+   puts page.title
+   ```
 
-    ```
-    require 'wikipedia'
-
-    page = Wikipedia.find('Ruby')
-    puts page.title
-    ```
-
-4. And then run `bundle install && bundle exec ruby test.rb`
-5. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
-6. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
-7. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
-8. Test the released gem in an external directory:
-9. Make a test directory.
-10. Add a `Gemfile` with:
-
+6. And then run `bundle install && bundle exec ruby test.rb`
+7. Build the gem: `bundle exec gem build wikipedia-client.gemspec`.
+8. Commit the changes: `git commit -a -m 'Version bump to 1.4.0' && git tag v1.4.0 && git push && git push --tag`
+9. Publish the result to RubyGems: `bundle exec gem push wikipedia-client-1.4.0.gem`.
+10. Test the released gem in an external directory:
+11. Make a test directory.
+12. Add a `Gemfile` with:
 
     ```
     source 'https://rubygems.org'
@@ -174,8 +171,7 @@ bundle exec rspec
     gem 'wikipedia-client'
     ```
 
-3. And a `test.rb` file with:
-
+13. And a `test.rb` file with:
 
     ```
     require 'wikipedia'
@@ -184,7 +180,7 @@ bundle exec rspec
     puts page.title
     ```
 
-4. And then run `bundle install && bundle exec ruby test.rb`
+14. And then run `bundle install && bundle exec ruby test.rb`
 
 ## Thanks!
 
