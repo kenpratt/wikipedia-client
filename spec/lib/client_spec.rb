@@ -285,3 +285,21 @@ describe Wikipedia::Client, 'page.langlinks' do
     )
   end
 end
+
+describe Wikipedia::Client, 'multiple configs' do
+  before(:each) do
+    config_en = Wikipedia::Configuration.new(domain: 'en.wikipedia.org')
+    config_de = Wikipedia::Configuration.new(domain: 'de.wikipedia.org')
+
+    @client_en = Wikipedia::Client.new(config_en)
+    @client_de = Wikipedia::Client.new(config_de)
+  end
+
+  it 'should return a page with the correct URL' do
+    @page_en = @client_en.find('Edsger_Dijkstra')
+    expect(@page_en.fullurl).to eq('https://en.wikipedia.org/wiki/Edsger_W._Dijkstra')
+
+    @page_de = @client_de.find('Edsger_Dijkstra')
+    expect(@page_de.fullurl).to eq('https://de.wikipedia.org/wiki/Edsger_W._Dijkstra')
+  end
+end
