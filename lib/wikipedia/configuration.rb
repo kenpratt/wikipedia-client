@@ -4,7 +4,8 @@ module Wikipedia
       protocol: 'https',
       domain: 'en.wikipedia.org',
       path: 'w/api.php',
-      user_agent: 'wikipedia-client/1.7 (https://github.com/kenpratt/wikipedia-client)'
+      user_agent: 'wikipedia-client/1.7 (https://github.com/kenpratt/wikipedia-client)',
+      headers: {}
     }.freeze
 
     def initialize(configuration = DEFAULT)
@@ -25,6 +26,6 @@ module Wikipedia
       end
     end
 
-    directives :protocol, :domain, :path, :user_agent
+    directives :protocol, :domain, :path, :user_agent, :headers
   end
 end

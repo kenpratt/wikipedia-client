@@ -73,7 +73,7 @@ module Wikipedia
     end
 
     def request( options )
-      URI.parse( url_for( options ) ).read( 'User-Agent' => @configuration[:user_agent] )
+      URI.parse( url_for( options ) ).read( headers )
     end
 
     protected
@@ -113,6 +113,12 @@ module Wikipedia
         (keys.include?(k) ? h1 : h2).store(k, v)
       end
       [h1, h2]
+    end
+
+    def headers
+      {
+        'User-Agent' => @configuration[:user_agent]
+      }.merge( @configuration[:headers] )
     end
   end
 end
