@@ -18,3 +18,15 @@ describe Wikipedia, '.find' do
     expect(page1.title).to eq(page2.title)
   end
 end
+
+describe Wikipedia, '.configure' do
+  it 'should set configuration' do
+    Wikipedia.configure do
+      protocol 'https'
+      domain 'zh.wikipedia.org'
+    end
+
+    page = Wikipedia.find('Getting_Things_Done')
+    expect(page.fullurl).to start_with('https://zh.wikipedia.org')
+  end
+end

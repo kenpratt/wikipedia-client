@@ -24,7 +24,7 @@ module Wikipedia
   end
 
   def self.configure(&block)
-    @configuration.instance_eval(&block)
+    configuration.instance_eval(&block)
   end
 
   # rubocop:disable Style/MethodName
@@ -35,9 +35,12 @@ module Wikipedia
   class << self
     private
 
-    def client
+    def configuration
       @configuration ||= Wikipedia::Configuration.new
-      @client ||= Wikipedia::Client.new @configuration
+    end
+
+    def client
+      @client ||= Wikipedia::Client.new configuration
     end
   end
 end
