@@ -11,7 +11,12 @@ module Wikipedia
       return @title if @title
 
       uri     = URI.parse( @wiki_url )
-      @title  = Addressable::URI.unencode( uri.path.sub(/\/wiki\//, '') )
+      @title  =
+        if uri.path.empty?
+          @wiki_url
+        else
+          Addressable::URI.unencode( uri.path.sub(/\/wiki\//, '') )
+        end
     end
   end
 end
