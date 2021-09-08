@@ -124,6 +124,29 @@ page.raw_data
 "lastrevid"=>348481810, "counter"=>0, "length"=>7891}}}}
 ```
 
+### Additional HTTP headers
+
+Some API features require tweaking HTTP headers. You can add additional headers via configuration.
+
+For example, to retrieve the same page in different language variants:
+
+```ruby
+Wikipedia.configure do
+   domain 'zh.wikipedia.org'
+   headers({ 'Accept-Language' => 'zh-tw' })
+end
+
+Wikipedia.find('牛肉').summary #=> "牛肉是指從牛身上得出的肉，為常見的肉品之一。肌肉部分可以切成牛排、牛肉塊或牛仔骨，也可以與其他的肉混合做成香腸或血腸。"
+
+Wikipedia.configure do
+   domain 'zh.wikipedia.org'
+   headers({ 'Accept-Language' => 'zh-cn' })
+end
+
+Wikipedia.find('牛肉').summary #=> "牛肉是指从牛身上得出的肉，为常见的肉品之一。肌肉部分可以切成牛排、牛肉块或牛仔骨，也可以与其他的肉混合做成香肠或血肠。"
+```
+
+
 ## Contributing
 
 ### Getting the code, and running the tests
