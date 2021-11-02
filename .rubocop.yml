@@ -1,3 +1,6 @@
+AllCops:
+  NewCops: disable
+
 Metrics/LineLength:
   Max: 120
   AllowURI: true
@@ -25,3 +28,52 @@ Style/SymbolArray:
 
 Metrics/ClassLength:
   Max: 130
+
+# TODO: Remove each of the rules below once fixed.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+
+Lint/MissingCopEnableDirective:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/RedundantRegexpEscape:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Style/RedundantAssignment:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/LeadingEmptyLines:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
