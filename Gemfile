@@ -6,7 +6,7 @@ gem 'rake'
 gem 'rdoc'
 gem 'rspec'
 # FIXME: Remove rubocop version restriction and fix or disable cops
-gem 'rubocop', '= 0.48.1'
+gem 'rubocop', '~> 1.22', require: false
 gem 'thoughtbot-shoulda'
 
 gemspec
