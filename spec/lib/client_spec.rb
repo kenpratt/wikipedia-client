@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 require 'json'
 
-# rubocop:disable Metrics/BlockLength
 describe Wikipedia::Client, '.find page (mocked)' do
   before(:each) do
     @client = Wikipedia::Client.new
