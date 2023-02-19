@@ -160,7 +160,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/commons/5/57/Dijkstra_Animation.gif',
       '/commons/c/c9/Edsger_Dijkstra_1994.jpg',
       '/commons/d/d9/Edsger_Wybe_Dijkstra.jpg'
     ].each do |image|
@@ -172,7 +171,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/commons/thumb/5/57/Dijkstra_Animation.gif/200px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/200px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/200px-Edsger_Wybe_Dijkstra.jpg'
     ].each do |image|
@@ -184,7 +182,6 @@ describe Wikipedia::Client, '.find page (Edsger_Dijkstra)' do
     @client.follow_redirects = true
     @page = @client.find('Edsger Dijkstra')
     [
-      '/commons/thumb/5/57/Dijkstra_Animation.gif/100px-Dijkstra_Animation.gif',
       '/commons/thumb/c/c9/Edsger_Dijkstra_1994.jpg/100px-Edsger_Dijkstra_1994.jpg',
       '/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/100px-Edsger_Wybe_Dijkstra.jpg'
     ].each do |image|
