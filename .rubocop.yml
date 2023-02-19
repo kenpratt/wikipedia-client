@@ -8,13 +8,13 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 15
 
-Style/SpaceInsideParens:
+Layout/SpaceInsideParens:
   Enabled: false
 
 Style/RescueModifier:
   Enabled: false
 
-Style/SpaceInsidePercentLiteralDelimiters:
+Layout/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
 
 Style/RegexpLiteral:

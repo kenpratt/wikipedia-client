@@ -27,7 +27,7 @@ module Wikipedia
     configuration.instance_eval(&block)
   end
 
-  # rubocop:disable Style/MethodName
+  # rubocop:disable Naming/MethodName
   def self.Configure(&block)
     configure(&block)
   end

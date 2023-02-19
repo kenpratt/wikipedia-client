@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jeweler'
 gem 'pry'
 gem 'rake'
 gem 'rdoc'
